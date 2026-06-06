@@ -130,16 +130,18 @@
     .tcard-name { font-family: "Raleway", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); margin-bottom: 3px; }
     .tcard-title { font-family: "Raleway", sans-serif; font-size: 9px; color: var(--gold); letter-spacing: 0.08em; }
 
-    .application { background: var(--linen); border-top: 1px solid rgba(160,127,86,0.25); }
-    .application .section-label { color: var(--russet); }
+    .application { background: var(--jet); border-top: 1px solid rgba(160,127,86,0.25); }
+    .application .section-label { color: var(--gold); justify-content: center; }
     .application .section-label::after { display: none; }
-    .app-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .app-copy p { font-family: "EB Garamond", serif; font-size: 18px; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
-    .criteria-wrap { margin-top: 28px; }
-    .criteria-label { font-family: "Raleway", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--russet); margin-bottom: 14px; }
+    .app-layout { display: block; max-width: 760px; margin: 0 auto; }
+    .app-copy { text-align: center; }
+    .form-box-embed { margin-top: 48px; }
+    .app-copy p { font-family: "EB Garamond", serif; font-size: 18px; color: var(--linen); line-height: 1.7; margin-bottom: 14px; }
+    .criteria-wrap { margin-top: 28px; display: inline-block; text-align: left; }
+    .criteria-label { font-family: "Raleway", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .criteria-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 5px; }
     .criteria-dot { width: 5px; height: 5px; min-width: 5px; background: var(--gold); border-radius: 50%; margin-top: 9px; }
-    .criteria-text { font-family: "EB Garamond", serif; font-size: 17px; color: var(--gray); line-height: 1.5; }
+    .criteria-text { font-family: "EB Garamond", serif; font-size: 17px; color: var(--linen); line-height: 1.5; }
     .form-box { background: var(--jet); border: 1px solid rgba(160,127,86,0.25); padding: 44px 38px; }
     .form-box-label { font-family: "Raleway", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
     .form-box h3 { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 28px; color: var(--white); margin-bottom: 28px; line-height: 1.15; }
@@ -235,7 +237,7 @@
     <div class="app-layout">
       <div class="app-copy">
         <p class="section-label">Schedule a Consult</p>
-        <h2 class="section-headline" style="color:var(--jet);">This Is Not<br>For Everyone.</h2>
+        <h2 class="section-headline" style="color:var(--white);">This Is Not<br>For Everyone.</h2>
         <p style="margin-top:26px;">We work with a select number of founders and CEOs at a time. If your business is ready to become the only choice in your market, we want to hear from you.</p>
         <div class="criteria-wrap">
           <p class="criteria-label">You Are the Right Fit If:</p>
