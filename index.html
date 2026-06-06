@@ -44,7 +44,7 @@
     .hero {
       position: relative; min-height: 100vh;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 140px 40px 100px;
+      text-align: center; padding: 140px 40px 230px;
       background: var(--jet); overflow: hidden;
     }
     .hero::before {
@@ -67,9 +67,6 @@
       font-family: "EB Garamond", serif; font-size: clamp(17px, 2vw, 21px);
       color: rgba(237,227,218,0.72); max-width: 580px; line-height: 1.6; margin-bottom: 48px;
     }
-    .hero-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; opacity: 0.35; }
-    .hero-scroll span { font-family: "Raleway", sans-serif; font-size: 8px; letter-spacing: 0.22em; text-transform: uppercase; }
-    .scroll-line { width: 1px; height: 38px; background: linear-gradient(to bottom, var(--gold), transparent); }
 
     section { position: relative; padding: 96px 60px; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -93,10 +90,7 @@
     .stat-number { font-family: "Cormorant Garamond", serif; font-size: 46px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 6px; }
     .stat-label { font-family: "Raleway", sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(237,227,218,0.45); }
 
-    .testimonials { background: var(--jet); border-top: 1px solid rgba(160,127,86,0.12); padding-left: 0; padding-right: 0; overflow: hidden; }
-    .testimonials-header { text-align: center; margin-bottom: 56px; padding: 96px 60px 0; }
-    .testimonials-header .section-label { justify-content: center; }
-    .testimonials-header .section-label::after { display: none; }
+    .testimonials { background: transparent; margin-top: -170px; position: relative; z-index: 5; padding: 0; overflow: hidden; }
 
     .ticker-wrapper { position: relative; width: 100%; overflow: hidden; padding: 8px 0 80px; }
     .ticker-wrapper::before, .ticker-wrapper::after {
@@ -151,8 +145,9 @@
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       section { padding: 68px 24px; }
+      .hero { padding-bottom: 190px; }
+      .testimonials { margin-top: -140px; }
       .about-grid, .app-layout { grid-template-columns: 1fr; gap: 44px; }
-      .testimonials-header { padding: 68px 24px 0; }
       footer { padding: 32px 24px 20px; }
       .footer-inner { flex-direction: column; gap: 14px; }
       .footer-copy { text-align: center; }
@@ -171,34 +166,9 @@
   <h1>We Don't Just Build Brands.<span>We Build Categories.</span></h1>
   <p class="hero-sub">By Application Only.</p>
   <a href="#apply" class="btn-primary">Schedule a Consult</a>
-  <div class="hero-scroll" aria-hidden="true"><span>Scroll</span><div class="scroll-line"></div></div>
-</section>
-
-<section class="about" id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-copy">
-        <p class="section-label">Who We Are</p>
-        <h2 class="section-headline">Not Your Average Branding Firm.</h2>
-        <p style="margin-top:28px;">Category of One Branding is a bespoke brand consultancy for mission-driven brands. We work exclusively with founders and CEOs who are ready to stop chasing market share and start defining what the market measures itself by.</p>
-        <p>Founded by Re Perez, a well-respected brand strategist with 25+ years advising Fortune 500 companies and top global brand consulting firms. Re has spent his career helping CEOs, founders, and business owners build category of one brands. He is also the author of <em>Your Brand Should Be Gay (Even If You're Not)</em>, a book about the art and science of creating an authentic brand.</p>
-        
-      </div>
-      <div class="about-stats">
-        <div class="stat-block"><div class="stat-number">25+</div><div class="stat-label">Years of Branding Experience</div></div>
-        <div class="stat-block"><div class="stat-number">1,000+</div><div class="stat-label">Brand Transformations</div></div>
-        <div class="stat-block"><div class="stat-number">1M+</div><div class="stat-label">People Impacted</div></div>
-        <div class="stat-block"><div class="stat-number">428%</div><div class="stat-label">Average Growth. 6 Months Post-Rebrand.</div></div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="testimonials" id="testimonials">
-  <div class="testimonials-header">
-    <p class="section-label">Client Results</p>
-    <h2 class="section-headline" style="color:var(--white);">What Happens When<br>the Brand Gets Right.</h2>
-  </div>
   <div class="ticker-wrapper">
     <div class="ticker-track">
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">In just a month after rebranding with Re Perez, we grew 399%. Fast forwarded to today, we have nearly 10x'd our business.</p><div class="tcard-rule"></div><p class="tcard-name">Jon McCarty</p><p class="tcard-title">CEO, Odyssey Test Prep</p></div>
@@ -223,6 +193,27 @@
     </div>
   </div>
 </section>
+
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-headline">Not Your Average Branding Firm.</h2>
+        <p style="margin-top:28px;">Category of One Branding is a bespoke brand consultancy for mission-driven brands. We work exclusively with founders and CEOs who are ready to stop chasing market share and start defining what the market measures itself by.</p>
+        <p>Founded by Re Perez, a well-respected brand strategist with 25+ years advising Fortune 500 companies and top global brand consulting firms. Re has spent his career helping CEOs, founders, and business owners build category of one brands. He is also the author of <em>Your Brand Should Be Gay (Even If You're Not)</em>, a book about the art and science of creating an authentic brand.</p>
+        
+      </div>
+      <div class="about-stats">
+        <div class="stat-block"><div class="stat-number">25+</div><div class="stat-label">Years of Branding Experience</div></div>
+        <div class="stat-block"><div class="stat-number">1,000+</div><div class="stat-label">Brand Transformations</div></div>
+        <div class="stat-block"><div class="stat-number">1M+</div><div class="stat-label">People Impacted</div></div>
+        <div class="stat-block"><div class="stat-number">428%</div><div class="stat-label">Average Growth. 6 Months Post-Rebrand.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="application" id="apply">
   <div class="section-inner">
