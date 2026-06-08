@@ -23,7 +23,7 @@
 
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: center;
+      display: flex; align-items: center; justify-content: flex-start;
       padding: 20px 60px;
       background: rgba(0,0,0,0.98);
       border-bottom: 1px solid rgba(160,127,86,0.2);
@@ -54,7 +54,7 @@
       pointer-events: none;
     }
     .eyebrow {
-      font-family: "Raleway", sans-serif; font-size: 10px; font-weight: 600;
+      font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 600;
       letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 22px;
     }
     .hero h1 {
@@ -141,7 +141,7 @@
     footer { background: #0D0D0D; border-top: 1px solid rgba(160,127,86,0.18); padding: 44px 60px 28px; }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
     .footer-logo img { height: 34px; width: auto; display: block; }
-    .footer-copy { font-family: "Raleway", sans-serif; font-size: 12px; letter-spacing: 0.1em; color: var(--gold); text-align: right; }
+    .footer-copy { font-family: "Raleway", sans-serif; font-size: 12px; letter-spacing: 0.1em; color: var(--gold); text-align: right; text-transform: uppercase; }
 
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
@@ -230,7 +230,6 @@
       <div class="app-copy">
         <p class="section-label">Schedule a Consult</p>
         <h2 class="section-headline" style="color:var(--white);">THIS IS NOT<br>FOR EVERYONE.</h2>
-        <p style="margin-top:26px;">We work with a select number of founders and CEOs at a time. If your business is ready to become the only choice in your market, we want to hear from you.</p>
         <div class="criteria-wrap">
           <p class="criteria-label">You Are the Right Fit If:</p>
           <div class="criteria-item"><div class="criteria-dot"></div><p class="criteria-text">Your business generates $3M&ndash;$100M in annual revenue</p></div>
