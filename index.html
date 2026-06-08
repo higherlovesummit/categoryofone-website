@@ -103,6 +103,8 @@
     .ticker-track { display: flex; gap: 20px; width: max-content; animation: tickerScroll 55s linear infinite; }
     .ticker-track:hover { animation-play-state: paused; }
     @keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    @keyframes tickerScrollRev { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+    .ticker-track.rev { animation: tickerScrollRev 55s linear infinite; margin-top: 20px; }
 
     .tcard {
       flex: 0 0 360px; background: #111111;
@@ -117,7 +119,7 @@
     .tcard-name { font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); margin-bottom: 3px; }
     .tcard-title { font-family: "Raleway", sans-serif; font-size: 12px; color: var(--gold); letter-spacing: 0.08em; }
 
-    .application { background: var(--jet); border-top: 1px solid rgba(160,127,86,0.25); }
+    .application { background: var(--jet); border-top: 1px solid rgba(160,127,86,0.25); padding-bottom: 40px; }
     .application .section-label { color: var(--gold); justify-content: center; }
     .application .section-label::after { display: none; }
     .app-layout { display: block; max-width: 760px; margin: 0 auto; }
@@ -125,7 +127,7 @@
     .form-box-embed { margin-top: 48px; }
     .app-copy p { font-family: "EB Garamond", serif; font-size: 18px; color: var(--linen); line-height: 1.7; margin-bottom: 14px; }
     .criteria-wrap { margin-top: 28px; display: inline-block; text-align: left; }
-    .criteria-label { font-family: "Raleway", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .criteria-label { font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .criteria-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1px; }
     .criteria-dot { width: 5px; height: 5px; min-width: 5px; background: var(--gold); border-radius: 50%; margin-top: 8px; }
     .criteria-text { font-family: "EB Garamond", serif; font-size: 17px; color: var(--linen); line-height: 1.3; }
@@ -187,19 +189,26 @@
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision your firm does!</p><div class="tcard-rule"></div><p class="tcard-name">Angelique Rewers</p><p class="tcard-title">CEO, BoldHaus</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">The 8-figure companies that grow every year has everything to do with branding. Re has helped many of my friends build powerhouse brands.</p><div class="tcard-rule"></div><p class="tcard-name">Michael Lovitch</p><p class="tcard-title">Co-Founder, Baby Bathwater Institute</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Ryan Deiss</p><p class="tcard-title">Co-Founder, Digital Marketer</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's understanding of our business was incredible. Since rebranding, we've tripled in size.</p><div class="tcard-rule"></div><p class="tcard-name">Adam Hailstone</p><p class="tcard-title">CMO, Williamsburg Learning</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez on my branding was arguably one of the most important things I did for my business.</p><div class="tcard-rule"></div><p class="tcard-name">Raj Jana</p><p class="tcard-title">CEO, Liber8</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez is my go-to oracle when it comes to branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="tcard-rule"></div><p class="tcard-name">Brent Weaver</p><p class="tcard-title">CEO, E2M Solutions</p></div>
-      <!-- Duplicate for seamless loop -->
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">In just a month after rebranding with Re Perez, we grew 399%. Fast forwarded to today, we have nearly 10x'd our business.</p><div class="tcard-rule"></div><p class="tcard-name">Jon McCarty</p><p class="tcard-title">CEO, Odyssey Test Prep</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Justin Berg</p><p class="tcard-title">CEO, Purple Care</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re's leadership helped us stand out. Immediately after rebranding with Re Perez, we landed a $1M contract.</p><div class="tcard-rule"></div><p class="tcard-name">Chris Koomey</p><p class="tcard-title">COO, Thorben</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision your firm does!</p><div class="tcard-rule"></div><p class="tcard-name">Angelique Rewers</p><p class="tcard-title">CEO, BoldHaus</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">The 8-figure companies that grow every year has everything to do with branding. Re has helped many of my friends build powerhouse brands.</p><div class="tcard-rule"></div><p class="tcard-name">Michael Lovitch</p><p class="tcard-title">Co-Founder, Baby Bathwater Institute</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Ryan Deiss</p><p class="tcard-title">Co-Founder, Digital Marketer</p></div>
+    </div>
+    <div class="ticker-track rev">
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's understanding of our business was incredible. Since rebranding, we've tripled in size.</p><div class="tcard-rule"></div><p class="tcard-name">Adam Hailstone</p><p class="tcard-title">CMO, Williamsburg Learning</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez on my branding was arguably one of the most important things I did for my business.</p><div class="tcard-rule"></div><p class="tcard-name">Raj Jana</p><p class="tcard-title">CEO, Liber8</p></div>
       <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez is my go-to oracle when it comes to branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="tcard-rule"></div><p class="tcard-name">Brent Weaver</p><p class="tcard-title">CEO, E2M Solutions</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez exceeded my expectations. It became a spiritual experience! I have a brand I'm proud of.</p><div class="tcard-rule"></div><p class="tcard-name">Gina Worful</p><p class="tcard-title">CEO, Mastering Mindfulness Institute</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's intuition and creative flare are unmatched. He's one of the most thought-provoking, caring, genuine people I've met.</p><div class="tcard-rule"></div><p class="tcard-name">Drew Cameron</p><p class="tcard-title">CEO, Flow Odyssey</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="tcard-rule"></div><p class="tcard-name">Melanie Merkling</p><p class="tcard-title">CEO, SoulFire</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's understanding of our business was incredible. Since rebranding, we've tripled in size.</p><div class="tcard-rule"></div><p class="tcard-name">Adam Hailstone</p><p class="tcard-title">CMO, Williamsburg Learning</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez on my branding was arguably one of the most important things I did for my business.</p><div class="tcard-rule"></div><p class="tcard-name">Raj Jana</p><p class="tcard-title">CEO, Liber8</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez is my go-to oracle when it comes to branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="tcard-rule"></div><p class="tcard-name">Brent Weaver</p><p class="tcard-title">CEO, E2M Solutions</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez exceeded my expectations. It became a spiritual experience! I have a brand I'm proud of.</p><div class="tcard-rule"></div><p class="tcard-name">Gina Worful</p><p class="tcard-title">CEO, Mastering Mindfulness Institute</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's intuition and creative flare are unmatched. He's one of the most thought-provoking, caring, genuine people I've met.</p><div class="tcard-rule"></div><p class="tcard-name">Drew Cameron</p><p class="tcard-title">CEO, Flow Odyssey</p></div>
+      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="tcard-rule"></div><p class="tcard-name">Melanie Merkling</p><p class="tcard-title">CEO, SoulFire</p></div>
     </div>
   </div>
 </section>
@@ -228,8 +237,8 @@
   <div class="section-inner">
     <div class="app-layout">
       <div class="app-copy">
-        <p class="section-label">Schedule a Consult</p>
-        <h2 class="section-headline" style="color:var(--white);">THIS IS NOT<br>FOR EVERYONE.</h2>
+        <p class="section-label">Let's Talk</p>
+        <h2 class="section-headline" style="color:var(--white);">SCHEDULE YOUR CONSULTATION BELOW</h2>
         <div class="criteria-wrap">
           <p class="criteria-label">You Are the Right Fit If:</p>
           <div class="criteria-item"><div class="criteria-dot"></div><p class="criteria-text">Your business generates $3M&ndash;$100M in annual revenue</p></div>
