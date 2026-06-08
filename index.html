@@ -83,10 +83,11 @@
     }
 
     .about { background: #111111; border-top: 1px solid rgba(160,127,86,0.12); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-grid { display: block; text-align: center; }
+    .about-copy { max-width: 780px; margin: 0 auto; }
     .about-copy p { font-family: "EB Garamond", serif; font-size: 18px; color: rgba(237,227,218,0.78); line-height: 1.72; margin-bottom: 16px; }
     .about-copy p:last-child { margin-bottom: 0; }
-    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 52px; }
     .stat-block { background: rgba(160,127,86,0.06); border: 1px solid rgba(160,127,86,0.14); padding: 30px 26px; }
     .stat-number { font-family: "Cormorant Garamond", serif; font-size: 46px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 6px; }
     .stat-label { font-family: "Raleway", sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(237,227,218,0.45); }
@@ -113,7 +114,7 @@
       position: relative; transition: border-color 0.2s;
     }
     .tcard:hover { border-color: rgba(160,127,86,0.45); }
-    .tcard-quote { font-family: "Cormorant Garamond", serif; font-size: 80px; font-weight: 300; color: rgba(255,255,255,0.18); line-height: 0.55; margin-bottom: 12px; display: block; }
+    .tcard-quote { font-family: "Cormorant Garamond", serif; font-size: 96px; font-weight: 400; color: var(--gold); line-height: 0.55; margin-bottom: 12px; display: block; }
     .tcard-text { font-family: "EB Garamond", serif; font-size: 21px; font-style: italic; color: rgba(237,227,218,0.9); line-height: 1.55; margin-bottom: 20px; flex: 1; }
     .tcard-rule { width: 24px; height: 1px; background: var(--gold); margin-bottom: 12px; }
     .tcard-name { font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); margin-bottom: 3px; }
@@ -159,7 +160,8 @@
       section { padding: 68px 24px; }
       .hero { padding-bottom: 190px; }
       .testimonials { margin-top: -140px; }
-      .about-grid, .app-layout { grid-template-columns: 1fr; gap: 44px; }
+      .app-layout { grid-template-columns: 1fr; gap: 44px; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
       footer { padding: 32px 24px 20px; }
       .footer-inner { flex-direction: column; gap: 14px; }
       .footer-copy { text-align: center; }
@@ -175,7 +177,7 @@
 <a href="#apply" class="sticky-cta">Schedule a Consult</a>
 
 <section class="hero" id="hero">
-  <p class="eyebrow">For Mission-Driven CEOs, Founders, and Entrepreneurs Running $3M&ndash;$100M Brands.</p>
+  <p class="eyebrow">For Mission-Driven CEOs, Founders, and Entrepreneurs.</p>
   <h1>We Build Category-Defining Brands.</h1>
   <a href="#apply" class="btn-primary">Schedule a Consult</a>
 </section>
@@ -183,32 +185,32 @@
 <section class="testimonials" id="testimonials">
   <div class="ticker-wrapper">
     <div class="ticker-track">
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">In just a month after rebranding with Re Perez, we grew 399%. Fast forwarded to today, we have nearly 10x'd our business.</p><div class="tcard-rule"></div><p class="tcard-name">Jon McCarty</p><p class="tcard-title">CEO, Odyssey Test Prep</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Justin Berg</p><p class="tcard-title">CEO, Purple Care</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re's leadership helped us stand out. Immediately after rebranding with Re Perez, we landed a $1M contract.</p><div class="tcard-rule"></div><p class="tcard-name">Chris Koomey</p><p class="tcard-title">COO, Thorben</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision your firm does!</p><div class="tcard-rule"></div><p class="tcard-name">Angelique Rewers</p><p class="tcard-title">CEO, BoldHaus</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">The 8-figure companies that grow every year has everything to do with branding. Re has helped many of my friends build powerhouse brands.</p><div class="tcard-rule"></div><p class="tcard-name">Michael Lovitch</p><p class="tcard-title">Co-Founder, Baby Bathwater Institute</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Ryan Deiss</p><p class="tcard-title">Co-Founder, Digital Marketer</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">In just a month after rebranding with Re Perez, we grew 399%. Fast forwarded to today, we have nearly 10x'd our business.</p><div class="tcard-rule"></div><p class="tcard-name">Jon McCarty</p><p class="tcard-title">CEO, Odyssey Test Prep</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Justin Berg</p><p class="tcard-title">CEO, Purple Care</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re's leadership helped us stand out. Immediately after rebranding with Re Perez, we landed a $1M contract.</p><div class="tcard-rule"></div><p class="tcard-name">Chris Koomey</p><p class="tcard-title">COO, Thorben</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision your firm does!</p><div class="tcard-rule"></div><p class="tcard-name">Angelique Rewers</p><p class="tcard-title">CEO, BoldHaus</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">The 8-figure companies that grow every year has everything to do with branding. Re has helped many of my friends build powerhouse brands.</p><div class="tcard-rule"></div><p class="tcard-name">Michael Lovitch</p><p class="tcard-title">Co-Founder, Baby Bathwater Institute</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Ryan Deiss</p><p class="tcard-title">Co-Founder, Digital Marketer</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">In just a month after rebranding with Re Perez, we grew 399%. Fast forwarded to today, we have nearly 10x'd our business.</p><div class="tcard-rule"></div><p class="tcard-name">Jon McCarty</p><p class="tcard-title">CEO, Odyssey Test Prep</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Justin Berg</p><p class="tcard-title">CEO, Purple Care</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re's leadership helped us stand out. Immediately after rebranding with Re Perez, we landed a $1M contract.</p><div class="tcard-rule"></div><p class="tcard-name">Chris Koomey</p><p class="tcard-title">COO, Thorben</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision your firm does!</p><div class="tcard-rule"></div><p class="tcard-name">Angelique Rewers</p><p class="tcard-title">CEO, BoldHaus</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">The 8-figure companies that grow every year has everything to do with branding. Re has helped many of my friends build powerhouse brands.</p><div class="tcard-rule"></div><p class="tcard-name">Michael Lovitch</p><p class="tcard-title">Co-Founder, Baby Bathwater Institute</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Ryan Deiss</p><p class="tcard-title">Co-Founder, Digital Marketer</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">In just a month after rebranding with Re Perez, we grew 399%. Fast forwarded to today, we have nearly 10x'd our business.</p><div class="tcard-rule"></div><p class="tcard-name">Jon McCarty</p><p class="tcard-title">CEO, Odyssey Test Prep</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Justin Berg</p><p class="tcard-title">CEO, Purple Care</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re's leadership helped us stand out. Immediately after rebranding with Re Perez, we landed a $1M contract.</p><div class="tcard-rule"></div><p class="tcard-name">Chris Koomey</p><p class="tcard-title">COO, Thorben</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision your firm does!</p><div class="tcard-rule"></div><p class="tcard-name">Angelique Rewers</p><p class="tcard-title">CEO, BoldHaus</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">The 8-figure companies that grow every year has everything to do with branding. Re has helped many of my friends build powerhouse brands.</p><div class="tcard-rule"></div><p class="tcard-name">Michael Lovitch</p><p class="tcard-title">Co-Founder, Baby Bathwater Institute</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez.</p><div class="tcard-rule"></div><p class="tcard-name">Ryan Deiss</p><p class="tcard-title">Co-Founder, Digital Marketer</p></div>
     </div>
     <div class="ticker-track rev">
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's understanding of our business was incredible. Since rebranding, we've tripled in size.</p><div class="tcard-rule"></div><p class="tcard-name">Adam Hailstone</p><p class="tcard-title">CMO, Williamsburg Learning</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez on my branding was arguably one of the most important things I did for my business.</p><div class="tcard-rule"></div><p class="tcard-name">Raj Jana</p><p class="tcard-title">CEO, Liber8</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez is my go-to oracle when it comes to branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="tcard-rule"></div><p class="tcard-name">Brent Weaver</p><p class="tcard-title">CEO, E2M Solutions</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez exceeded my expectations. It became a spiritual experience! I have a brand I'm proud of.</p><div class="tcard-rule"></div><p class="tcard-name">Gina Worful</p><p class="tcard-title">CEO, Mastering Mindfulness Institute</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's intuition and creative flare are unmatched. He's one of the most thought-provoking, caring, genuine people I've met.</p><div class="tcard-rule"></div><p class="tcard-name">Drew Cameron</p><p class="tcard-title">CEO, Flow Odyssey</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="tcard-rule"></div><p class="tcard-name">Melanie Merkling</p><p class="tcard-title">CEO, SoulFire</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's understanding of our business was incredible. Since rebranding, we've tripled in size.</p><div class="tcard-rule"></div><p class="tcard-name">Adam Hailstone</p><p class="tcard-title">CMO, Williamsburg Learning</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez on my branding was arguably one of the most important things I did for my business.</p><div class="tcard-rule"></div><p class="tcard-name">Raj Jana</p><p class="tcard-title">CEO, Liber8</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez is my go-to oracle when it comes to branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="tcard-rule"></div><p class="tcard-name">Brent Weaver</p><p class="tcard-title">CEO, E2M Solutions</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Working with Re Perez exceeded my expectations. It became a spiritual experience! I have a brand I'm proud of.</p><div class="tcard-rule"></div><p class="tcard-name">Gina Worful</p><p class="tcard-title">CEO, Mastering Mindfulness Institute</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re Perez's intuition and creative flare are unmatched. He's one of the most thought-provoking, caring, genuine people I've met.</p><div class="tcard-rule"></div><p class="tcard-name">Drew Cameron</p><p class="tcard-title">CEO, Flow Odyssey</p></div>
-      <div class="tcard"><span class="tcard-quote">"</span><p class="tcard-text">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="tcard-rule"></div><p class="tcard-name">Melanie Merkling</p><p class="tcard-title">CEO, SoulFire</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez's understanding of our business was incredible. Since rebranding, we've tripled in size.</p><div class="tcard-rule"></div><p class="tcard-name">Adam Hailstone</p><p class="tcard-title">CMO, Williamsburg Learning</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Working with Re Perez on my branding was arguably one of the most important things I did for my business.</p><div class="tcard-rule"></div><p class="tcard-name">Raj Jana</p><p class="tcard-title">CEO, Liber8</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez is my go-to oracle when it comes to branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="tcard-rule"></div><p class="tcard-name">Brent Weaver</p><p class="tcard-title">CEO, E2M Solutions</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Working with Re Perez exceeded my expectations. It became a spiritual experience! I have a brand I'm proud of.</p><div class="tcard-rule"></div><p class="tcard-name">Gina Worful</p><p class="tcard-title">CEO, Mastering Mindfulness Institute</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez's intuition and creative flare are unmatched. He's one of the most thought-provoking, caring, genuine people I've met.</p><div class="tcard-rule"></div><p class="tcard-name">Drew Cameron</p><p class="tcard-title">CEO, Flow Odyssey</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="tcard-rule"></div><p class="tcard-name">Melanie Merkling</p><p class="tcard-title">CEO, SoulFire</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez's understanding of our business was incredible. Since rebranding, we've tripled in size.</p><div class="tcard-rule"></div><p class="tcard-name">Adam Hailstone</p><p class="tcard-title">CMO, Williamsburg Learning</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Working with Re Perez on my branding was arguably one of the most important things I did for my business.</p><div class="tcard-rule"></div><p class="tcard-name">Raj Jana</p><p class="tcard-title">CEO, Liber8</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez is my go-to oracle when it comes to branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="tcard-rule"></div><p class="tcard-name">Brent Weaver</p><p class="tcard-title">CEO, E2M Solutions</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Working with Re Perez exceeded my expectations. It became a spiritual experience! I have a brand I'm proud of.</p><div class="tcard-rule"></div><p class="tcard-name">Gina Worful</p><p class="tcard-title">CEO, Mastering Mindfulness Institute</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez's intuition and creative flare are unmatched. He's one of the most thought-provoking, caring, genuine people I've met.</p><div class="tcard-rule"></div><p class="tcard-name">Drew Cameron</p><p class="tcard-title">CEO, Flow Odyssey</p></div>
+      <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="tcard-rule"></div><p class="tcard-name">Melanie Merkling</p><p class="tcard-title">CEO, SoulFire</p></div>
     </div>
   </div>
 </section>
@@ -218,8 +220,7 @@
     <div class="about-grid">
       <div class="about-copy">
         <h2 class="section-headline">NOT YOUR AVERAGE BRANDING FIRM.</h2>
-        <p style="margin-top:28px;">Category of One Branding is a bespoke brand consultancy for mission-driven brands. We work exclusively with founders and CEOs who are ready to stop chasing market share and start defining what the market measures itself by.</p>
-        <p>Founded by Re Perez, a well-respected brand strategist with 25+ years advising Fortune 500 companies and top global brand consulting firms. Re has spent his career helping CEOs, founders, and business owners build category of one brands. He is also the author of <em>Your Brand Should Be Gay (Even If You're Not)</em>, a book about the art and science of creating an authentic brand.</p>
+        <p style="margin-top:28px;">Category of One Branding is a bespoke brand consultancy for mission-driven brands. We work exclusively with founders and CEOs who are ready to stop chasing market share and start defining what the market measures itself by. Founded by Re Perez, a well-respected brand strategist with 25+ years advising Fortune 500 companies and top global brand consulting firms, Re has spent his career helping CEOs, founders, and business owners build category of one brands. He is also the author of <em>Your Brand Should Be Gay (Even If You're Not)</em>, a book about the art and science of creating an authentic brand.</p>
         
       </div>
       <div class="about-stats">
