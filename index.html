@@ -259,6 +259,12 @@
     .mf-imprint { color: var(--gold); font-style: italic; }
     .mf-close { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 32px; line-height: 1.22; color: var(--white); max-width: 620px; margin: 8px auto 0; }
     .mf-close .gold { color: var(--gold); white-space: nowrap; }
+    .video-section { background: var(--jet); border-top: 1px solid rgba(160,127,86,0.12); }
+    .video-wrap { max-width: 900px; margin: 0 auto; border: 1px solid rgba(160,127,86,0.25); line-height: 0; }
+    .video-wrap video { width: 100%; height: auto; display: block; }
+    .video-cta { text-align: center; margin-top: 30px; font-family: "Raleway", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+    .video-cta a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
+    .video-cta a:hover { color: var(--white); }
     @media (max-width: 600px) {
       .hero { padding: 110px 22px 150px; }
       .hero h1 { font-size: clamp(27px, 8.5vw, 38px); letter-spacing: 0.02em; }
@@ -327,6 +333,17 @@
       <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez's intuition and creative flare are unmatched. He's one of the most thought-provoking, caring, genuine people I've met.</p><div class="tcard-rule"></div><p class="tcard-name">Drew Cameron</p><p class="tcard-title">CEO, Flow Odyssey</p></div>
       <div class="tcard"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="tcard-rule"></div><p class="tcard-name">Melanie Merkling</p><p class="tcard-title">CEO, SoulFire</p></div>
     </div>
+  </div>
+</section>
+<section class="video-section" id="video">
+  <div class="section-inner">
+    <div class="video-wrap">
+      <video controls playsinline preload="metadata" poster="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c4613cee8b968c6f27713.png">
+        <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c67b2b7f1c7326ed2777b.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="video-cta"><a href="#manifesto">Or Read Our Founder&rsquo;s Message Below &darr;</a></p>
   </div>
 </section>
 <section class="manifesto" id="manifesto">
