@@ -224,6 +224,10 @@
     .pillar-name { font-family: "Raleway", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
     .pillar-q { font-family: "Cormorant Garamond", serif; font-size: 19px; color: var(--white); line-height: 1.35; }
     @media (max-width: 900px) { .pillars { grid-template-columns: 1fr; gap: 22px; } }
+    .venn-legend { display: none; }
+    @media (max-width: 600px) {
+      .venn-legend { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; text-align: center; }
+    }
   </style>
 </head>
 <body>
@@ -361,6 +365,11 @@
           <text x="300" y="408" text-anchor="middle" font-family="Raleway, sans-serif" font-size="13" font-weight="700" letter-spacing="2.5" fill="#A07F56">PROMISE</text>
           <text x="300" y="434" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="18" fill="#FFFFFF">How people<tspan x="300" dy="20">will benefit.</tspan></text>
         </svg>
+        <div class="venn-legend">
+          <div><div class="pillar-name">Vision</div><p class="pillar-q">Who you strive to be.</p></div>
+          <div><div class="pillar-name">Purpose</div><p class="pillar-q">Why your brand exists.</p></div>
+          <div><div class="pillar-name">Promise</div><p class="pillar-q">How people will benefit.</p></div>
+        </div>
       </div>
       <div class="form-box-embed">
         <p class="criteria-label" style="text-align:center; margin-bottom:22px;">Answer Below to Request Your Consultation</p>
