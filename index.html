@@ -143,10 +143,12 @@
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       section { padding: 68px 24px; }
-      .hero { padding-bottom: 200px; }
+      .hero { padding: 122px 24px 180px; }
       .testimonials { margin-top: -140px; }
       .app-layout { grid-template-columns: 1fr; gap: 44px; }
-      .about-stats { grid-template-columns: 1fr 1fr; }
+      .about-stats { gap: 1px; }
+      .stat-block { padding: 24px 14px; }
+      .stat-number { font-size: 36px; }
       footer { padding: 44px 24px 32px; }
       .footer-inner { flex-direction: column; gap: 22px; }
       .footer-right { align-items: center; }
@@ -243,6 +245,26 @@
     .founder-section .section-label { justify-content: center; }
     .founder-section .section-label::after { display: none; }
     .founder-bio { font-family: "EB Garamond", serif; font-size: 18px; color: rgba(237,227,218,0.78); line-height: 1.72; }
+    @media (max-width: 600px) {
+      .hero { padding: 110px 22px 150px; }
+      .hero h1 { font-size: clamp(27px, 8.5vw, 38px); letter-spacing: 0.02em; }
+      .hero-sub { font-size: 17px; margin-bottom: 34px; }
+      .eyebrow { font-size: 11px; letter-spacing: 0.22em; }
+      .testimonials { margin-top: -110px; }
+      .tcard { flex: 0 0 286px; padding: 26px 24px; }
+      .tcard-text { font-size: 18px; }
+      .tcard-quote { font-size: 78px; }
+      .nav-logo img { height: 44px; }
+      .footer-logo img { height: 44px; }
+      .stat-block { padding: 18px 8px; }
+      .stat-number { font-size: 30px; }
+      .stat-label { font-size: 8px; letter-spacing: 0.12em; }
+      .case-card { padding: 26px 22px; }
+      .flow-card { padding: 30px 24px; }
+      .apply-sub, .questions-sub { font-size: 16px; }
+      .founder-bio { font-size: 17px; }
+      .section-headline { font-size: 27px; }
+    }
   </style>
 </head>
 <body>
