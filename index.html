@@ -42,7 +42,7 @@
     .hero {
       position: relative; min-height: 100vh;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 140px 40px 110px;
+      text-align: center; padding: 140px 40px 230px;
       background: var(--jet); overflow: hidden;
     }
     .hero::before {
@@ -88,7 +88,7 @@
     .stat-block { background: rgba(160,127,86,0.06); border: 1px solid rgba(160,127,86,0.14); padding: 30px 26px; }
     .stat-number { font-family: "Cormorant Garamond", serif; font-size: 46px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 6px; }
     .stat-label { font-family: "Raleway", sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(237,227,218,0.45); }
-    .testimonials { background: var(--jet); padding: 0 0 56px; overflow: hidden; }
+    .testimonials { background: var(--jet); padding: 0 0 56px; overflow: hidden; margin-top: -170px; position: relative; z-index: 5; }
     .ticker-wrapper { position: relative; width: 100%; overflow: hidden; padding: 8px 0 80px; }
     .ticker-wrapper::before, .ticker-wrapper::after {
       content: ""; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
@@ -143,7 +143,8 @@
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       section { padding: 68px 24px; }
-      .hero { padding-bottom: 90px; }
+      .hero { padding-bottom: 200px; }
+      .testimonials { margin-top: -140px; }
       .app-layout { grid-template-columns: 1fr; gap: 44px; }
       .about-stats { grid-template-columns: 1fr 1fr; }
       footer { padding: 44px 24px 32px; }
@@ -236,7 +237,11 @@
     @media (max-width: 600px) {
       .venn-legend { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; text-align: center; }
     }
-    .founder { margin-top: 46px; padding-top: 42px; border-top: 1px solid rgba(160,127,86,0.18); }
+    .founder-section { background: var(--jet); }
+    .founder-section .section-inner { text-align: center; }
+    .founder-copy { max-width: 780px; margin: 0 auto; }
+    .founder-section .section-label { justify-content: center; }
+    .founder-section .section-label::after { display: none; }
     .founder-bio { font-family: "EB Garamond", serif; font-size: 18px; color: rgba(237,227,218,0.78); line-height: 1.72; }
   </style>
 </head>
@@ -293,18 +298,21 @@
         <p class="section-label">Who We Are</p>
         <h2 class="section-headline">Not Your Average Branding Firm.</h2>
         <p style="margin-top:28px;">Category of One Branding is a bespoke brand consultancy for mission-driven brands. We work exclusively with founders and CEOs who are ready to stop chasing market share and start defining what the market measures itself by.</p>
-        <div class="founder">
-          <p class="section-label">The Founder</p>
-          <h2 class="section-headline">Re Perez</h2>
-          <p class="founder-bio">Re Perez is a well-respected brand strategist who has spent 25+ years advising Fortune 500 companies and helping CEOs, founders, and business owners build category of one brands. Taking his own advice, Re authored the boldly titled book <em>Your Brand Should Be Gay (Even If You're Not)</em>, a book on the art and science of creating an authentic brand. Today, he offers bespoke brand consulting for mission-driven companies ready to lead their category.</p>
-        </div>
-        
       </div>
       <div class="about-stats">
         <div class="stat-block"><div class="stat-number">25+</div><div class="stat-label">Years of Branding Experience</div></div>
         <div class="stat-block"><div class="stat-number">1,000+</div><div class="stat-label">Brand Transformations</div></div>
         <div class="stat-block"><div class="stat-number">1M+</div><div class="stat-label">People Impacted</div></div>
       </div>
+    </div>
+  </div>
+</section>
+<section class="founder-section" id="founder">
+  <div class="section-inner">
+    <div class="founder-copy">
+      <p class="section-label">The Founder</p>
+      <h2 class="section-headline">Re Perez</h2>
+      <p class="founder-bio">Re Perez is a well-respected brand strategist who has spent 25+ years advising Fortune 500 companies and helping CEOs, founders, and business owners build category of one brands. Taking his own advice, Re authored the boldly titled book <em>Your Brand Should Be Gay (Even If You're Not)</em>, a book on the art and science of creating an authentic brand.</p>
     </div>
   </div>
 </section>
