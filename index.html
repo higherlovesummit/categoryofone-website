@@ -256,10 +256,14 @@
     .mf-body { font-family: "EB Garamond", serif; font-size: 19px; line-height: 1.75; color: rgba(237,227,218,0.82); margin: 0 auto 22px; max-width: 600px; }
     .mf-pull { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 27px; line-height: 1.3; color: var(--white); margin: 36px auto; max-width: 560px; }
     .mf-rule { width: 40px; height: 1px; background: var(--gold); margin: 34px auto; }
-    .mf-imprint { color: var(--gold); font-style: italic; }
+    .mf-imprint { color: var(--gold); }
     .mf-close { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 32px; line-height: 1.22; color: var(--white); max-width: 620px; margin: 8px auto 0; }
     .mf-close .gold { color: var(--gold); white-space: nowrap; }
     .video-section { background: var(--jet); border-top: 1px solid rgba(160,127,86,0.12); }
+    .video-section .section-inner { text-align: center; }
+    .video-section .section-label { justify-content: center; }
+    .video-section .section-label::after { display: none; }
+    .video-head { margin-bottom: 40px; }
     .video-wrap { max-width: 900px; margin: 0 auto; border: 1px solid rgba(160,127,86,0.25); line-height: 0; }
     .video-wrap video { width: 100%; height: auto; display: block; }
     .video-cta { text-align: center; margin-top: 30px; font-family: "Raleway", sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
@@ -337,6 +341,10 @@
 </section>
 <section class="video-section" id="video">
   <div class="section-inner">
+    <div class="video-head">
+      <p class="section-label">Have You Noticed?</p>
+      <h2 class="section-headline">We are living through the most significant shift in modern business history</h2>
+    </div>
     <div class="video-wrap">
       <video controls playsinline preload="metadata" poster="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c4613cee8b968c6f27713.png">
         <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c67b2b7f1c7326ed2777b.mp4" type="video/mp4">
@@ -349,12 +357,10 @@
 <section class="manifesto" id="manifesto">
   <div class="section-inner">
     <div class="mf-in">
-      <p class="section-label">Have You Noticed?</p>
-      <h2 class="section-headline">We are living through the most significant shift in modern business history</h2>
       <p class="mf-body">AI has accelerated what's possible. Over 5 million new businesses launched in the U.S. last year alone. Content is being created faster than most people can consume it. And in the process, trust is dissolving.</p>
       <p class="mf-pull">People no longer ask, &ldquo;Is this good?&rdquo;<br>They ask, &ldquo;Is this real?&rdquo;</p>
       <p class="mf-body">If you're building a brand in this era, you already feel the pressure: to be everywhere. To keep up. To stand out. But the answer isn't louder marketing. It's deeper resonance.</p>
-      <p class="mf-body">AI may be the engine. But without a Brand Blueprint, you're accelerating without direction. Just because you can build fast doesn't mean you're building something that lasts.</p>
+      <p class="mf-body">AI may be the engine. But without a <span class="mf-imprint">Brand Blueprint</span>, you're accelerating without direction. Just because you can build fast doesn't mean you're building something that lasts.</p>
       <div class="mf-rule"></div>
       <p class="mf-body">The brands that move people don't just say the right things. They transmit something. This is what I call your <span class="mf-imprint">Brand Imprint</span>, the soul of the founder expressed through every part of the brand. It's what makes a brand feel true. And no matter how advanced AI becomes, it can't replicate human frequency.</p>
       <p class="mf-body">Everyone's using the same tools. Similar prompts. Same formulas. AI isn't just creating speed. It's multiplying sameness.</p>
@@ -387,7 +393,7 @@
       <h2 class="section-headline">Re Perez</h2>
       <p class="founder-bio">Re Perez is the Founder and CEO of Category of One Branding and a well-respected brand strategist with 25+ years of experience. He doesn’t just build brands; he helps successful brands become more successful. Across more than 1,000 brand transformations for impact-driven CEOs and service-based entrepreneurs, Re has developed a proven methodology for elevating brands by blending enterprise-level branding, A.I., and human optimization.</p>
       <p class="founder-bio">Before stepping into entrepreneurship in 2010, he cut his teeth at some of the top global brand consultancies in New York City, advising Fortune 500 companies including Abbott Nutrition, GE Money, Lilly, Novo Nordisk, TD Ameritrade, and Xerox. Today he is also a sought-after speaker, sharing forward-thinking insights and actionable strategies at events such as the Baby Bathwater Institute, CADRECon, EO’s Global Leadership Conference, SellerCon, Traffic &amp; Conversion Summit, and Ontrapalooza.</p>
-      <p class="founder-bio">He is also the author of the boldly titled book <a href="https://reperez.com/book"><em>Your Brand Should Be Gay (Even If You’re Not)</em></a>. Through real-life case studies and behind-the-scenes stories, it reveals how branding transforms his clients from unknown to celebrity-like status, pre-revenue to multi-million-dollar success, outdated to cutting-edge, and embarrassingly inauthentic to unapologetically authentic.</p>
+      <p class="founder-bio">He is also the author of the boldly titled book <a href="https://amzn.to/3tduCQT"><em>Your Brand Should Be Gay (Even If You’re Not)</em></a>. Through real-life case studies and behind-the-scenes stories, it reveals how branding transforms his clients from unknown to celebrity-like status, pre-revenue to multi-million-dollar success, outdated to cutting-edge, and embarrassingly inauthentic to unapologetically authentic.</p>
     </div>
   </div>
 </section>
@@ -450,7 +456,7 @@
     </div>
     <div class="questions-block">
       <div class="form-box-embed">
-        <p class="criteria-label" style="text-align:center; margin-bottom:22px;">Answer Below to Request Your Consultation</p>
+        <p class="criteria-label" style="text-align:center; margin-bottom:22px;">Step 01: Schedule Your Complimentary Consultation Below</p>
         <iframe
             src="https://link.reperez.com/widget/survey/rJI9n2v6PomG6f3FOlWd"
             style="border:none;width:100%;min-height:600px;"
