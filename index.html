@@ -54,6 +54,7 @@
       font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 600;
       letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 22px;
     }
+    .m-br { display: none; }
     .hero h1 {
       font-family: "Cormorant Garamond", serif; font-weight: 700;
       font-size: clamp(36px, 6vw, 74px); line-height: 1.04;
@@ -270,8 +271,9 @@
     .video-cta a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
     .video-cta a:hover { color: var(--white); }
     @media (max-width: 600px) {
-      .hero { padding: 110px 22px 150px; }
-      .hero h1 { font-size: clamp(36px, 12vw, 50px); letter-spacing: 0.02em; }
+      .hero { justify-content: flex-start; padding: 90px 22px 130px; }
+      .m-br { display: inline; }
+      .hero h1 { font-size: clamp(40px, 13.5vw, 56px); letter-spacing: 0.02em; }
       .hero-sub { font-size: 17px; margin-bottom: 34px; }
       .eyebrow { font-size: 11px; letter-spacing: 0.22em; }
       .testimonials { margin-top: -110px; }
@@ -301,7 +303,7 @@
 </nav>
 <a href="#apply" class="sticky-cta">Schedule a Consult</a>
 <section class="hero" id="hero">
-  <p class="eyebrow">For Mission-Driven CEOs, Founders, and Entrepreneurs</p>
+  <p class="eyebrow">For Mission-Driven <br class="m-br">CEOs, Founders, <br class="m-br">and Entrepreneurs</p>
   <h1>We Build Category-Defining Brands.</h1>
   <a href="#apply" class="btn-primary">Schedule a Consult</a>
 </section>
