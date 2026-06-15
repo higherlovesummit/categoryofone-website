@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Re Perez — Personal Calendar</title>
+  <style>
+    body { margin:0; background:#000; color:#fff; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; text-align:center; }
+    a { color:#a07f56; }
+  </style>
+  <script>
+    (function () {
+      var p = window.location.pathname.toLowerCase().replace(/\/+$/, "");
+      // Any casing of /reperez forwards to the branded /RePerez page
+      if (p === "/reperez") {
+        window.location.replace("https://categoryofonebranding.com/RePerez");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Page not found. Go to <a href="/">categoryofonebranding.com</a>
+     or <a href="https://categoryofonebranding.com/RePerez">book a call with Re Perez</a>.</p>
+</body>
+</html>
