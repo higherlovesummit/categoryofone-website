@@ -126,6 +126,7 @@
     .app-layout { display: block; max-width: 760px; margin: 0 auto; }
     .app-copy { text-align: center; }
     .form-box-embed { margin-top: 48px; }
+    .cal-embed-card { background: #FFFFFF; border: 1px solid rgba(160,127,86,0.35); border-radius: 4px; padding: 16px; }
     .app-copy p { font-family: "EB Garamond", serif; font-size: 18px; color: var(--linen); line-height: 1.7; margin-bottom: 14px; }
     .criteria-wrap { margin-top: 28px; display: inline-block; text-align: left; }
     .criteria-label { font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
@@ -489,13 +490,9 @@
       <div class="form-box-embed">
         <p class="criteria-label" style="text-align:center; margin-bottom:12px;">Step 01</p>
         <h3 class="form-heading">Schedule a Consult Below</h3>
-        <iframe
-            src="https://link.reperez.com/widget/survey/rJI9n2v6PomG6f3FOlWd"
-            style="border:none;width:100%;min-height:480px;"
-            scrolling="no"
-            id="rJI9n2v6PomG6f3FOlWd"
-            title="survey">
-        </iframe>
+        <div class="cal-embed-card">
+          <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" style="border:0;width:100%;display:block;" height="600" frameborder="0" title="Schedule a Consult"></iframe>
+        </div>
       </div>
     </div>  </div>
 </section>
@@ -511,6 +508,5 @@
     </div>
   </div>
 </footer>
-<script src="https://link.reperez.com/js/form_embed.js"></script>
 </body>
 </html>
