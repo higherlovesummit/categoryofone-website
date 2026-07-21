@@ -33,6 +33,18 @@
     .nav-links { display: flex; gap: 32px; }
     .nav-links a { font-family: "Raleway", sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(237,227,218,0.75); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--gold); }
+    .nav-toggle { display: none; width: 28px; height: 20px; position: relative; background: transparent; border: none; padding: 0; cursor: pointer; }
+    .nav-toggle span { position: absolute; left: 0; right: 0; height: 2px; background: var(--gold); transition: top .25s, transform .25s, opacity .2s; }
+    .nav-toggle span:nth-child(1) { top: 0; }
+    .nav-toggle span:nth-child(2) { top: 9px; }
+    .nav-toggle span:nth-child(3) { top: 18px; }
+    .nav-toggle.open span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 90; background: #000; border-bottom: 1px solid rgba(160,127,86,0.2); flex-direction: column; padding: 90px 28px 28px; }
+    .mobile-menu a { font-family: "Raleway", sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,227,218,0.85); text-decoration: none; padding: 18px 0; border-bottom: 1px solid rgba(160,127,86,0.14); }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu .mm-cta { color: var(--gold); }
     .case-link { font-family: "Raleway", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); text-decoration: none; display: inline-block; margin-top: 16px; }
     .case-link:hover { color: var(--white); }
     .cases-all { text-align: center; margin-top: 48px; }
@@ -248,9 +260,11 @@
       .q-num { font-size: 34px; }
       .q-text { font-size: 20px; }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .hero .btn-primary { display: none; }
       .nav-cta { display: none; }
+      .nav-toggle { display: block; }
+      .mobile-menu.open { display: flex; }
       .sticky-cta-bar {
         display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
         background: #000; border-top: 1px solid rgba(160,127,86,0.25);
@@ -348,8 +362,15 @@
       <a href="/case-studies/">Case Studies</a>
     </div>
     <a href="#apply" class="btn-primary nav-cta">Schedule a Consult</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+  <a href="/case-studies/">Case Studies</a>
+  <a href="#apply" class="mm-cta">Schedule a Consult</a>
+</div>
 <div class="sticky-cta-bar"><a href="#apply" class="sticky-cta">Schedule a Consult</a></div>
 <section class="hero" id="hero">
   <div class="hero-grid">
@@ -445,7 +466,7 @@
     <div class="apply-head">
       <p class="section-label">Let's Talk</p>
       <h2 class="section-headline" style="color:var(--white);">Let's See What Your Brand Could Become.</h2>
-      <p class="apply-sub">This isn't a pitch. It's a focused conversation to see whether your brand is keeping pace with your vision, and whether what we do can move you toward becoming the category of one in your space. Either way, you'll leave with clarity.</p>
+      <p class="apply-sub">A focused, no-pitch conversation about whether your brand is keeping pace with your vision, and you'll leave with clarity either way.</p>
     </div>
     <div class="book-steps">
       <p class="criteria-label book-steps-label">Three Steps To Becoming A Category of One Brand</p>
@@ -471,7 +492,6 @@
     </div>
     <div class="questions-block">
       <div class="form-box-embed">
-        <p class="criteria-label" style="text-align:center; margin-bottom:12px;">Step 01</p>
         <h3 class="form-heading">Schedule a Consult Below</h3>
         <div class="cal-embed-card">
           <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" style="border:0;width:100%;display:block;" height="600" frameborder="0" title="Schedule a Consult"></iframe>
@@ -501,6 +521,9 @@
     btn.textContent = ex ? 'Show Fewer Testimonials' : 'Read More Testimonials';
   });}
 })();
+</script>
+<script>
+(function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();
 </script>
 </body>
 </html>
