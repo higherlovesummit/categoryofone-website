@@ -48,10 +48,15 @@
     .sticky-cta-bar { display: none; }
     .hero {
       position: relative; min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 190px 40px 230px;
+      display: flex; align-items: center; justify-content: center;
+      padding: 140px 40px 120px;
       background: var(--jet); overflow: hidden;
     }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; max-width: 1200px; width: 100%; }
+    .hero-copy { text-align: left; }
+    .hero-video-frame { position: relative; border: 1px solid rgba(160,127,86,0.35); background: #000; }
+    .hero-video-frame video { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+    .hero-video-cap { font-family: "Raleway", sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(237,227,218,0.5); margin-top: 12px; text-align: center; }
     .hero::before {
       content: ""; position: absolute; inset: 0;
       background: none;
@@ -96,7 +101,7 @@
     .stat-block { background: rgba(160,127,86,0.06); border: 1px solid rgba(160,127,86,0.14); padding: 30px 26px; }
     .stat-number { font-family: "Cormorant Garamond", serif; font-size: 46px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 6px; }
     .stat-label { font-family: "Raleway", sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(237,227,218,0.45); }
-    .testimonials { background: var(--jet); padding: 0 0 56px; overflow: hidden; margin-top: -170px; position: relative; z-index: 5; }
+    .testimonials { background: var(--jet); padding: 0 0 56px; overflow: hidden; margin-top: -120px; position: relative; z-index: 5; }
     .ticker-wrapper { position: relative; width: 100%; overflow: hidden; padding: 8px 0 80px; }
     .ticker-wrapper::before, .ticker-wrapper::after {
       content: ""; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
@@ -163,8 +168,10 @@
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
       section { padding: 68px 24px; }
-      .hero { padding: 122px 24px 180px; }
-      .testimonials { margin-top: -140px; }
+      .hero { padding: 108px 24px 60px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero-copy { text-align: center; }
+      .testimonials { margin-top: -90px; }
       .app-layout { grid-template-columns: 1fr; gap: 44px; }
       .about-stats { gap: 1px; }
       .stat-block { padding: 24px 14px; }
@@ -295,12 +302,12 @@
     .video-cta a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
     .video-cta a:hover { color: var(--white); }
     @media (max-width: 600px) {
-      .hero { justify-content: flex-start; padding: 108px 22px 130px; }
+      .hero { justify-content: flex-start; padding: 96px 20px 52px; }
       .m-br { display: inline; }
       .hero h1 { font-size: clamp(30px, 10vw, 42px); letter-spacing: 0.02em; }
       .hero-sub { font-size: 17px; margin-bottom: 34px; }
       .eyebrow { font-size: 11px; letter-spacing: 0.22em; }
-      .testimonials { margin-top: -110px; }
+      .testimonials { margin-top: -70px; }
       .tcard { flex: 0 0 286px; padding: 26px 24px; }
       .tcard-text { font-size: 18px; }
       .tcard-quote { font-size: 78px; }
@@ -334,7 +341,7 @@
   <div class="nav-right">
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="/#about">About</a>
+      <a href="/about">About</a>
       <a href="/case-studies/">Case Studies</a>
     </div>
     <a href="#apply" class="btn-primary nav-cta">Schedule a Consult</a>
@@ -342,9 +349,22 @@
 </nav>
 <div class="sticky-cta-bar"><a href="#apply" class="sticky-cta">Schedule a Consult</a></div>
 <section class="hero" id="hero">
-  <h1>Become the Only Choice in Your Market.</h1>
-  <p class="hero-sub">We help CEOs, founders, and marketing teams scale their businesses by becoming a category of one brand.</p>
-  <a href="#apply" class="btn-primary">Schedule a Consult</a>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1>Become the Only Choice in Your Market.</h1>
+      <p class="hero-sub">We partner with entrepreneurs and small businesses to build scalable brands.</p>
+      <a href="#apply" class="btn-primary">Schedule a Consult</a>
+    </div>
+    <div class="hero-media">
+      <div class="hero-video-frame">
+        <video controls playsinline preload="metadata" poster="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c4613cee8b968c6f27713.png">
+          <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c67b2b7f1c7326ed2777b.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="hero-video-cap">A message from Re Perez of Category of One Branding</p>
+    </div>
+  </div>
 </section>
 <section class="testimonials" id="testimonials">
   <div class="t-header">
@@ -372,23 +392,10 @@
     <div class="t-more"><button type="button" id="tMoreBtn" aria-expanded="false">Read More Testimonials</button></div>
   </div>
 </section>
-<section class="video-section" id="video">
-  <div class="section-inner">
-    <div class="video-head">
-      <p class="section-label">A Message From Our CEO &amp; Founder</p>
-      <h2 class="section-headline">We are living through the most significant shift in modern business history</h2>
-    </div>
-    <div class="video-wrap">
-      <video controls playsinline preload="metadata" poster="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c4613cee8b968c6f27713.png">
-        <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c67b2b7f1c7326ed2777b.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <p class="video-cta"><a href="#manifesto">Or Read Our Founder&rsquo;s Message Below &darr;</a></p>
-  </div>
-</section>
 <section class="manifesto" id="manifesto">
   <div class="section-inner">
+    <p class="section-label">The Manifesto</p>
+    <h2 class="section-headline" style="max-width: 880px; margin: 0 auto 44px;">We are living through the most significant shift in modern business history.</h2>
     <div class="mf-in">
       <p class="mf-body">AI has accelerated what's possible. Over 5 million new businesses launched in the U.S. last year alone. Content is being created faster than most people can consume it. And in the process, trust is dissolving.</p>
       <p class="mf-pull">People no longer ask, &ldquo;Is this good?&rdquo;<br>They ask, &ldquo;Is this real?&rdquo;</p>
@@ -417,17 +424,7 @@
         <div class="stat-block"><div class="stat-number">1M+</div><div class="stat-label">People Impacted</div></div>
       </div>
     </div>
-  </div>
-</section>
-<section class="founder-section" id="founder">
-  <div class="section-inner">
-    <div class="founder-copy">
-      <p class="section-label">The Founder</p>
-      <h2 class="section-headline">Re Perez</h2>
-      <p class="founder-bio">Re Perez is the Founder and CEO of Category of One Branding and a well-respected brand strategist with 25+ years of experience. He doesn’t just build brands; he helps successful brands become more successful. Across more than 1,000 brand transformations for impact-driven CEOs and service-based entrepreneurs, Re has developed a proven methodology for elevating brands by blending enterprise-level branding, A.I., and human optimization.</p>
-      <p class="founder-bio">Before stepping into entrepreneurship in 2010, he cut his teeth at some of the top global brand consultancies in New York City, advising Fortune 500 companies including Abbott Nutrition, GE Money, Lilly, Novo Nordisk, TD Ameritrade, and Xerox. Today he is also a sought-after speaker, sharing forward-thinking insights and actionable strategies at events such as the Baby Bathwater Institute, CADRECon, EO’s Global Leadership Conference, SellerCon, Traffic &amp; Conversion Summit, and Ontrapalooza.</p>
-      <p class="founder-bio">He is also the author of the boldly titled book <a href="https://amzn.to/3tduCQT"><em>Your Brand Should Be Gay (Even If You’re Not)</em></a>. Through real-life case studies and behind-the-scenes stories, it reveals how branding transforms his clients from unknown to celebrity-like status, pre-revenue to multi-million-dollar success, outdated to cutting-edge, and embarrassingly inauthentic to unapologetically authentic.</p>
-    </div>
+    <div style="text-align:center; margin-top:44px;"><a href="/about" class="btn-primary">Learn More About Us</a></div>
   </div>
 </section>
 <section class="cases" id="cases">
