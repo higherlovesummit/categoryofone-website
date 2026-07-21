@@ -41,15 +41,15 @@
       font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700;
       letter-spacing: 0.22em; text-transform: uppercase;
       color: var(--jet); background: var(--gold);
-      padding: 13px 32px; text-decoration: none; border: none; cursor: pointer;
+      padding: 13px 32px; text-decoration: none; border: 1px solid transparent; cursor: pointer;
       transition: background 0.2s, color 0.2s, transform 0.15s;
     }
-    .btn-primary:hover { background: var(--russet); color: var(--white); transform: translateY(-1px); }
+    .btn-primary:hover { background: transparent; color: var(--white); border-color: var(--white); transform: translateY(-1px); }
     .sticky-cta-bar { display: none; }
     .hero {
       position: relative; min-height: 100vh;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 140px 40px 230px;
+      text-align: center; padding: 190px 40px 230px;
       background: var(--jet); overflow: hidden;
     }
     .hero::before {
@@ -115,7 +115,7 @@
     .tgrid.expanded .tw-card.is-hidden { display: flex; }
     .t-more { text-align: center; margin-top: 40px; }
     .t-more button { font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); background: transparent; border: 1px solid rgba(160,127,86,0.5); padding: 14px 34px; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
-    .t-more button:hover { background: var(--gold); color: var(--jet); border-color: var(--gold); }
+    .t-more button:hover { background: transparent; color: var(--white); border-color: var(--white); }
     @media (max-width: 768px) { .tgrid { grid-template-columns: 1fr; } .tgrid-wrap { padding: 0 24px 30px; } }
     .tcard {
       flex: 0 0 360px; background: #111111;
@@ -239,7 +239,7 @@
       .q-text { font-size: 20px; }
     }
     @media (max-width: 768px) {
-      .hero .btn-primary { display: inline-block; background: transparent; color: var(--white); border: 1px solid var(--white); }
+      .hero .btn-primary { display: none; }
       .nav-cta { display: none; }
       .sticky-cta-bar {
         display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
@@ -297,7 +297,7 @@
     @media (max-width: 600px) {
       .hero { justify-content: flex-start; padding: 108px 22px 130px; }
       .m-br { display: inline; }
-      .hero h1 { font-size: clamp(40px, 13.5vw, 56px); letter-spacing: 0.02em; }
+      .hero h1 { font-size: clamp(30px, 10vw, 42px); letter-spacing: 0.02em; }
       .hero-sub { font-size: 17px; margin-bottom: 34px; }
       .eyebrow { font-size: 11px; letter-spacing: 0.22em; }
       .testimonials { margin-top: -110px; }
@@ -345,7 +345,6 @@
   <h1>Become the Only Choice in Your Market.</h1>
   <p class="hero-sub">We help CEOs, founders, and marketing teams scale their businesses by becoming a category of one brand.</p>
   <a href="#apply" class="btn-primary">Schedule a Consult</a>
-  <p class="hero-stat"><span>25+</span> Years &middot; <span>1,000+</span> Brand Transformations &middot; <span>Fortune 500</span> Pedigree</p>
 </section>
 <section class="testimonials" id="testimonials">
   <div class="t-header">
