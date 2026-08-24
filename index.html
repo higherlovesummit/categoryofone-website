@@ -73,8 +73,8 @@
     .sticky-cta-bar { display: none; }
     .hero {
       position: relative; min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      padding: 140px 40px 120px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 150px 40px 110px;
       background: var(--jet); overflow: hidden;
     }
     .hero-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; max-width: 1200px; width: 100%; }
@@ -96,13 +96,22 @@
       font-family: "Cormorant Garamond", serif; font-weight: 700;
       font-size: clamp(36px, 6vw, 74px); line-height: 1.04;
       letter-spacing: 0.04em; text-transform: uppercase;
-      color: var(--white); max-width: 960px; margin-bottom: 24px;
+      color: var(--white); max-width: 900px; margin: 0 auto 22px;
     }
+    .hero h1 em { color: var(--gold); font-style: italic; }
     .hero h1 span { color: var(--gold); display: block; }
     .hero-sub {
       font-family: "EB Garamond", serif; font-size: clamp(17px, 2vw, 21px);
-      color: rgba(237,227,218,0.72); max-width: 580px; line-height: 1.6; margin-bottom: 48px;
+      color: rgba(237,227,218,0.72); max-width: 600px; line-height: 1.6; margin: 0 auto 40px;
     }
+    .hero-stats { display: flex; justify-content: center; gap: 56px; margin-top: 56px; flex-wrap: wrap; }
+    .hs-block { text-align: center; }
+    .hs-num { display: block; font-family: "Cormorant Garamond", serif; font-size: 46px; font-weight: 300; color: var(--gold); line-height: 1; }
+    .hs-label { display: block; font-family: "Raleway", sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(237,227,218,0.5); margin-top: 8px; }
+    .video-below { background: var(--jet); padding: 8px 40px 90px; }
+    .video-below-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+    .video-below .section-label { justify-content: center; margin-bottom: 24px; }
+    .video-below .section-label::after { display: none; }
     section { position: relative; padding: 96px 60px; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
     .section-label {
@@ -194,6 +203,8 @@
       .nav-links { display: none; }
       section { padding: 68px 24px; }
       .hero { padding: 108px 24px 60px; }
+      .hero-stats { gap: 30px; margin-top: 40px; }
+      .hs-num { font-size: 38px; }
       .hero-grid { grid-template-columns: 1fr; gap: 30px; }
       .hero-copy { text-align: center; }
       .testimonials { margin-top: -90px; }
@@ -384,21 +395,25 @@
 </div>
 <div class="sticky-cta-bar"><a href="#apply" class="sticky-cta">Schedule a Consult</a></div>
 <section class="hero" id="hero">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <h1>Become the Only Choice in Your Market.</h1>
-      <p class="hero-sub">For CEOs and founders ready to stop competing and start defining their category with world-class branding, AI systems, and an unmatched customer experience.</p>
-      <a href="#apply" class="btn-primary">Schedule a Consult</a>
+  <h1>Build a <em>Category of One</em> Brand.</h1>
+  <p class="hero-sub">We help established B2B businesses build industry-leading brands.</p>
+  <a href="#apply" class="btn-primary">Schedule a Consult</a>
+  <div class="hero-stats">
+    <div class="hs-block"><span class="hs-num">25+</span><span class="hs-label">Years of Branding Experience</span></div>
+    <div class="hs-block"><span class="hs-num">1,000+</span><span class="hs-label">Brand Transformations</span></div>
+    <div class="hs-block"><span class="hs-num">1M+</span><span class="hs-label">People Impacted</span></div>
+  </div>
+</section>
+<section class="video-below" id="video">
+  <div class="video-below-inner">
+    <p class="section-label">A Message From Our Founder</p>
+    <div class="hero-video-frame">
+      <video controls playsinline preload="metadata" poster="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c4613cee8b968c6f27713.png">
+        <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c67b2b7f1c7326ed2777b.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <div class="hero-media">
-      <div class="hero-video-frame">
-        <video controls playsinline preload="metadata" poster="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c4613cee8b968c6f27713.png">
-          <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c67b2b7f1c7326ed2777b.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <p class="hero-video-cap">A message from Re Perez of Category of One Branding</p>
-    </div>
+    <p class="hero-video-cap">A message from Re Perez of Category of One Branding</p>
   </div>
 </section>
 <section class="testimonials" id="testimonials">
