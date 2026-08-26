@@ -1,1 +1,25 @@
+# macOS
 .DS_Store
+
+# Case study source assets - working files, never published.
+# Web-ready exports live in case-studies/img/<slug>/ and ARE tracked.
+Case Studies Assets/
+_archive/
+_REVIEW - New Case Studies/
+
+# Design source files, wherever they land
+*.psd
+*.ai
+*.eps
+*.sketch
+*.fig
+*.indd
+
+# Internal decks and master reference documents - not for public hosting
+*.pptx
+*.potx
+/MASTER - Brand Story _ Manifesto Examples 2026.pdf
+
+# Internal review pages - local preview only, never publish
+case-studies/_review.html
+case-studies/_review-hub.html
