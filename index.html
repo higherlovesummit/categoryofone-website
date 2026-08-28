@@ -259,7 +259,7 @@
     .flow-card:hover { border-color: rgba(160,127,86,0.45); }
     .flow-num { font-family: "Cormorant Garamond", serif; font-size: 54px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 16px; }
     .flow-title { font-family: "Raleway", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); margin-bottom: 12px; }
-    .flow-text { font-family: "EB Garamond", serif; font-size: 17px; color: var(--linen); line-height: 1.55; }
+    .flow-text { font-family: "EB Garamond", serif; font-size: 18px; color: var(--linen); line-height: 1.55; }
     .flow-connector { flex: 0 0 66px; align-self: center; position: relative; height: 2px; background: rgba(160,127,86,0.6); }
     .flow-connector::after { content: ""; position: absolute; right: -1px; top: 50%; width: 13px; height: 13px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); transform: translateY(-50%) rotate(45deg); }
     /* ---- Three-questions block ---- */
@@ -319,7 +319,7 @@
     .founder-copy { max-width: 780px; margin: 0 auto; }
     .founder-section .section-label { justify-content: center; }
     .founder-section .section-label::after { display: none; }
-    .founder-bio { font-family: "EB Garamond", serif; font-size: 19px; color: rgba(237,227,218,0.78); line-height: 1.72; margin-bottom: 18px; }
+    .founder-bio { font-family: "Cormorant Garamond", serif; font-size: clamp(20px, 2.3vw, 28px); color: var(--white); line-height: 1.5; margin-bottom: 20px; }
     .founder-bio:last-child { margin-bottom: 0; }
     .founder-bio a { color: var(--gold); text-decoration: underline; }
     .manifesto { background: var(--jet); border-top: 1px solid rgba(160,127,86,0.12); padding-top: 36px; }
@@ -349,12 +349,15 @@
     @media (max-width: 600px) {
       .hero { justify-content: flex-start; min-height: auto; padding: 124px 20px 36px; }
       .m-br { display: inline; }
-      .hero h1 { font-size: clamp(38px, 11vw, 56px); letter-spacing: normal; }
-      .hero-sub { font-size: 17px; margin-bottom: 34px; }
+      .hero h1 { font-size: clamp(46px, 13.5vw, 66px); letter-spacing: normal; }
+      .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 34px; }
+      .hs-num { font-size: clamp(24px, 7.6vw, 34px); }
+      .hs-label { font-size: 9px; letter-spacing: 0.08em; margin-top: 8px; }
+      .hero-sub { font-size: 18px; margin-bottom: 34px; }
       .eyebrow { font-size: 11px; letter-spacing: 0.22em; }
       .testimonials { margin-top: 0; }
       .tcard { flex: 0 0 286px; padding: 26px 24px; }
-      .tcard-text { font-size: 18px; }
+      .tcard-text { font-size: 19px; }
       .tcard-quote { font-size: 78px; }
       .nav-logo img { height: 44px; }
       .footer-logo img { height: 44px; }
@@ -364,9 +367,7 @@
       .case-card { padding: 26px 22px; }
       .flow-card { padding: 30px 24px; }
       .apply-sub, .questions-sub { font-size: 18px; }
-      .founder-bio { font-size: 18px; }
       .section-headline { font-size: 27px; }
-      .mf-body { font-size: 18px; }
       .mf-pull { font-size: 22px; }
       .mf-close { font-size: 26px; }
     }
