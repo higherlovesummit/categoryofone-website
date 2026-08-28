@@ -105,6 +105,9 @@
       color: rgba(237,227,218,0.72); max-width: 600px; line-height: 1.6; margin: 0 auto 40px;
     }
     .hero-stats { display: flex; justify-content: center; gap: 50px; margin-top: 60px; flex-wrap: wrap; }
+    .hero-learn { display: inline-block; margin-top: 20px; font-family: "Raleway", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: color 0.2s; }
+    .hero-learn span { display: inline-block; margin-left: 6px; }
+    .hero-learn:hover { color: var(--white); }
     .hs-block { text-align: center; }
     .hs-num { display: block; font-family: "Cormorant Garamond", serif; font-size: clamp(52px, 7vw, 104px); font-weight: 500; color: var(--white); line-height: 1; }
     .hs-num em { color: var(--gold); font-style: normal; }
@@ -349,10 +352,10 @@
     .video-cta a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
     .video-cta a:hover { color: var(--white); }
     @media (max-width: 600px) {
-      .hero { justify-content: flex-start; min-height: auto; padding: 124px 20px 36px; }
+      .hero { justify-content: center; min-height: 100vh; min-height: 100svh; padding: 76px 20px 118px; }
       .m-br { display: inline; }
       .hero h1 { font-size: clamp(46px, 13.5vw, 66px); letter-spacing: normal; }
-      .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 34px; }
+      .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; position: absolute; left: 20px; right: 20px; bottom: 26px; margin-top: 0; }
       .hs-num { font-size: clamp(24px, 7.6vw, 34px); }
       .hs-label { font-size: 9px; letter-spacing: 0.08em; margin-top: 8px; }
       .hero-sub { font-size: 18px; margin-bottom: 34px; }
@@ -406,6 +409,7 @@
   <h1>Build a <em>Category of One</em> Brand.</h1>
   <p class="hero-sub">We help established B2B businesses build industry-leading brands.</p>
   <a href="#apply" class="btn-primary">Schedule a Consult</a>
+  <a href="#video" class="hero-learn">Learn More <span aria-hidden="true">&darr;</span></a>
   <div class="hero-stats">
     <div class="hs-block"><span class="hs-num">25<em>+</em></span><span class="hs-label">Years of Branding Experience</span></div>
     <div class="hs-block"><span class="hs-num">1,000<em>+</em></span><span class="hs-label">Brand Transformations</span></div>
