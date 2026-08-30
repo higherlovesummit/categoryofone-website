@@ -79,7 +79,7 @@
     .cs-nav-row { display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin:0 auto; padding:0 0 8px; }
     .cs-nav-row a { font-family:"Raleway",sans-serif; font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); text-decoration:none; }
     .cs-nav-row a:hover { color:var(--white); }
-    .hub-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:48px; }
+    .hub-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px; }
     .hub-card { display:block; text-decoration:none; color:inherit; background:#111111; border:1px solid rgba(216, 180, 120,0.14); transition:border-color .2s, transform .15s; }
     .hub-card:hover { border-color:rgba(216, 180, 120,0.5); transform:translateY(-2px); }
     .hub-card img { width:100%; display:block; aspect-ratio:16/10; object-fit:cover; border-bottom:1px solid rgba(216, 180, 120,0.14); }
@@ -123,7 +123,7 @@
       .sticky-cta { display: block; background: var(--gold); color: var(--jet); font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; text-align: center; padding: 16px; text-decoration: none; }
       section { padding:72px 24px; } .cs-hero { padding:140px 24px 48px; }
       .cs-grid { grid-template-columns:1fr; gap:40px; } .cs-side { position:static; }
-      .ba-grid, .g-grid, .hub-grid { grid-template-columns:1fr; }
+      .ba-grid, .g-grid { grid-template-columns:1fr; }
       .cs-metric-band { flex-direction:column; }
       footer { padding:40px 24px 100px; } .footer-inner { flex-direction:column; text-align:center; } .footer-right { text-align:center; } .footer-links { justify-content:center; }
     }
@@ -164,6 +164,22 @@
     .cs-ftab.on{color:var(--gold);border-bottom-color:var(--gold);}
     .hub-card.is-hidden{display:none;}
     @media(max-width:600px){.cs-filter{gap:20px;}.cs-ftab{font-size:11px;letter-spacing:0.16em;padding-bottom:12px;}}
+    /* logo/name tiles + client wall */
+    .ct{aspect-ratio:4/3;position:relative;display:flex;align-items:center;justify-content:center;background:#000;border:1px solid rgba(216,180,120,0.14);padding:13% 14%;overflow:hidden;text-decoration:none;transition:background .35s ease,border-color .3s ease;}
+    .ct img{max-width:100%;max-height:100%;width:auto;object-fit:contain;}
+    a.ct{cursor:pointer;}
+    a.ct-logo:hover{background:var(--brand);border-color:transparent;}
+    .ct-name span{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,2vw,28px);font-weight:600;color:#fff;text-align:center;line-height:1.12;transition:color .3s ease;}
+    a.ct-name:hover{border-color:rgba(216,180,120,0.5);}
+    a.ct-name:hover span{color:var(--gold);}
+    .ct.is-hidden{display:none;}
+    .client-wall{border-top:1px solid rgba(216,180,120,0.16);}
+    .cw-label{text-align:center;font-family:"Raleway",sans-serif;font-size:12px;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .cw-head{text-align:center;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(26px,4vw,42px);margin-bottom:10px;}
+    .cw-sub{text-align:center;color:rgba(237,227,218,0.62);max-width:560px;margin:0 auto 6px;font-size:17px;}
+    .cw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px;}
+    @media(max-width:900px){.hub-grid{grid-template-columns:repeat(2,1fr);} .cw-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:520px){.hub-grid{grid-template-columns:repeat(2,1fr);gap:10px;} .cw-grid{grid-template-columns:repeat(2,1fr);gap:10px;} .ct{padding:15%;}}
 </style>
 </head>
 <body>
@@ -200,215 +216,49 @@
       <button class="cs-ftab" data-filter="lifestyle">Consumer &amp; Lifestyle</button>
     </div>
     <div class="hub-grid">
-      <a class="hub-card" data-cat="education" href="/case-studies/odyssey-test-prep/">
-        <img src="/case-studies/img/odyssey-test-prep/odyssey-test-prep-t-shirts.jpg" alt="Odyssey Test Prep brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Odyssey Test Prep</p>
-        <p class="hub-card-industry">Education · Test Prep</p>
-          <div class="hub-card-metric">10x</div>
-          <div class="hub-card-metric-label">Revenue Growth</div>
-          <p class="hub-card-text">Repositioning a founder-built tutoring service into a premium law-school partner.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="home" href="/case-studies/purple-care/">
-        <img src="/case-studies/img/purple-care/purple-care-billboard.jpg" alt="Purple Care brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Purple Care</p>
-        <p class="hub-card-industry">Home Services</p>
-          <div class="hub-card-metric">1,900%</div>
-          <div class="hub-card-metric-label">Customer Growth</div>
-          <p class="hub-card-text">Turning a commodity lawn care service into the region&#x27;s market leader.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="professional" href="/case-studies/thorben/">
-        <img src="/case-studies/img/thorben/thorben-laptop-1.jpg" alt="Thorben brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Thorben</p>
-        <p class="hub-card-industry">Government IT &amp; Technical Consulting</p>
-          <div class="hub-card-metric">$1M</div>
-          <div class="hub-card-metric-label">Contract Landed</div>
-          <p class="hub-card-text">Giving a federal-trusted, woman-owned firm the brand authority to match its work.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="professional" href="/case-studies/boldhaus/">
-        <img src="/case-studies/img/boldhaus/boldhaus-laptop-after-mockup-1.jpg" alt="BoldHaus brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">BoldHaus</p>
-        <p class="hub-card-industry">Corporate Consulting &amp; Advisory</p>
-          <div class="hub-card-metric">Market Leader</div>
-          <div class="hub-card-metric-label">Reclaimed Industry Authority</div>
-          <p class="hub-card-text">From &quot;The Corporate Agent&quot; to a powerhouse brand that commands the room.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="home" href="/case-studies/organize-and-flow/">
-        <img src="/case-studies/img/organize-and-flow/o-f-7.jpg" alt="Organize &amp; Flow brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Organize &amp; Flow</p>
-        <p class="hub-card-industry">Media &amp; Lifestyle</p>
-          <div class="hub-card-metric">A Movement</div>
-          <div class="hub-card-metric-label">From Personality Brand to Movement</div>
-          <p class="hub-card-text">Architecting a masterbrand that outgrows the personality it started with.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="tech" href="/case-studies/esencia/">
-        <img src="/case-studies/img/esencia/esencia-billboard.jpg" alt="Esencia brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Esencia</p>
-        <p class="hub-card-industry">Tech-Enabled Property Services</p>
-          <div class="hub-card-metric">Inc. 5000</div>
-          <div class="hub-card-metric-label">Fastest-Growing Companies Honoree</div>
-          <p class="hub-card-text">A family business rebuilt as a bold, modern, tech-enabled brand.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="professional" href="/case-studies/xchange/">
-        <img src="/case-studies/img/xchange/xchange-visual-system.jpg" alt="xchange brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">xchange</p>
-        <p class="hub-card-industry">Facilitation &amp; Human Potential</p>
-          <div class="hub-card-metric">At Scale</div>
-          <div class="hub-card-metric-label">Unlocking Human Potential at Scale</div>
-          <p class="hub-card-text">Evolving a mission-driven brand without losing its heart.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="education" href="/case-studies/cheeky-scientist/">
-        <img src="/case-studies/img/cheeky-scientist/cheeky-scientist-ipad.jpg" alt="Cheeky Scientist brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Cheeky Scientist</p>
-        <p class="hub-card-industry">Career Training &amp; EdTech</p>
-          <div class="hub-card-metric">Authority</div>
-          <div class="hub-card-metric-label">The Definitive Leader for PhD Careers</div>
-          <p class="hub-card-text">Replacing clutter with clarity for the world&#x27;s largest PhD job-search platform.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="education" href="/case-studies/mirasee/">
-        <img src="/case-studies/img/mirasee/mirasee-brand-marketing-stationery-print-design.jpg" alt="Mirasee brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Mirasee</p>
-        <p class="hub-card-industry">Business Education</p>
-          <div class="hub-card-metric">Unified</div>
-          <div class="hub-card-metric-label">A Fragmented Portfolio Made Whole</div>
-          <p class="hub-card-text">A scalable house of brands for a company growing by acquisition.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="wellness" href="/case-studies/changing-habits/">
-        <img src="/case-studies/img/changing-habits/changing-habits-packaging.jpg" alt="Changing Habits brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Changing Habits</p>
-        <p class="hub-card-industry">Food &amp; Nutrition</p>
-          <div class="hub-card-metric">Worldwide</div>
-          <div class="hub-card-metric-label">Chosen in a Global Search</div>
-          <p class="hub-card-text">Unifying products, programs, and a truth-telling mission under one platform.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="lifestyle" href="/case-studies/bendt-distilling/">
-        <img src="/case-studies/img/bendt-distilling/bendt-bottle-barrels.jpg" alt="BENDT Distilling Co. brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">BENDT Distilling Co.</p>
-          <p class="hub-card-industry">Craft Spirits &amp; Distilling</p>
-          <div class="hub-card-metric">5 Brands</div>
-          <div class="hub-card-metric-label">One Architecture Built to Scale</div>
-          <p class="hub-card-text">Transforming old-school, pretentious whiskey tradition into something refreshing and welcoming.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="home" href="/case-studies/hinkle-outdoor-living/">
-        <img src="/case-studies/img/hinkle-outdoor-living/hinkle-website.jpg" alt="Hinkle Outdoor Living brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Hinkle Outdoor Living</p>
-          <p class="hub-card-industry">Outdoor Living &amp; Construction</p>
-          <div class="hub-card-metric">2,000+</div>
-          <div class="hub-card-metric-label">Kansas City Backyards Transformed</div>
-          <p class="hub-card-text">From backyard contractor to the premier outdoor luxury living company in Kansas City.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="tech" href="/case-studies/optx/">
-        <img src="/case-studies/img/optx/optx-billboard.jpg" alt="OPTX brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">OPTX</p>
-          <p class="hub-card-industry">Gaming Technology</p>
-          <div class="hub-card-metric">Elevated</div>
-          <div class="hub-card-metric-label">The Gaming Industry Standard, Raised</div>
-          <p class="hub-card-text">A challenger brand built on one defensible claim: operators for operators.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="education" href="/case-studies/williamsburg-learning/">
-        <img src="/case-studies/img/williamsburg-learning/williamsburg-website.jpg" alt="Williamsburg Learning brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Williamsburg Learning</p>
-          <p class="hub-card-industry">Education &amp; Online Learning</p>
-          <div class="hub-card-metric">Reframed</div>
-          <div class="hub-card-metric-label">The Conversation on Alternative Education</div>
-          <p class="hub-card-text">Teaching students how to think, not what to think.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="professional" href="/case-studies/future-flow-media/">
-        <img src="/case-studies/img/future-flow-media/future-flow-media-billboard.jpg" alt="Future Flow Media brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Future Flow Media</p>
-          <p class="hub-card-industry">Digital Media &amp; Advertising</p>
-          <div class="hub-card-metric">Performance</div>
-          <div class="hub-card-metric-label">A Media Partner Built on Results</div>
-          <p class="hub-card-text">A media partner that looks like the intelligence it sells.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="professional lifestyle" href="/case-studies/quantum-orange/">
-        <img src="/case-studies/img/quantum-orange/quantum-orange-website.jpg" alt="Quantum Orange brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Quantum Orange</p>
-          <p class="hub-card-industry">Coaching &amp; Professional Development</p>
-          <div class="hub-card-metric">Reimagined</div>
-          <div class="hub-card-metric-label">A Full Brand Transformation</div>
-          <p class="hub-card-text">A bold new brand identity for a coaching and professional development company.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="professional lifestyle" href="/case-studies/extraordinary-life/">
-        <img src="/case-studies/img/extraordinary-life/extraordinary-life-website.jpg" alt="Extraordinary Life brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Extraordinary Life</p>
-          <p class="hub-card-industry">Executive Coaching</p>
-          <div class="hub-card-metric">Rebuilt</div>
-          <div class="hub-card-metric-label">New Name, Identity &amp; Website</div>
-          <p class="hub-card-text">A stale brand replaced to match the depth of a groundbreaking company.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="professional" href="/case-studies/triumpha/">
-        <img src="/case-studies/img/triumpha/triumpha-01.jpg" alt="Triumpha brand transformation by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Triumpha</p>
-          <p class="hub-card-industry">Leadership &amp; Consulting</p>
-          <div class="hub-card-metric">50%</div>
-          <div class="hub-card-metric-label">Newsletter Open Rate</div>
-          <p class="hub-card-text">Repositioning a boutique consultancy to stand alongside the biggest names in the field.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
-      <a class="hub-card" data-cat="professional" href="/case-studies/hawkins-laakso/">
-        <img src="/case-studies/img/hawkins-laakso/hl-logo.jpg" alt="Hawkins Laakso brand identity by Category of One Branding" loading="lazy" />
-        <div class="hub-card-body">
-          <p class="hub-card-name">Hawkins Laakso</p>
-          <p class="hub-card-industry">Wealth Management</p>
-          <div class="hub-card-metric">Reimagined</div>
-          <div class="hub-card-metric-label">A Modern Wealth Brand</div>
-          <p class="hub-card-text">A modern brand and Family Office Experience for a wealth firm built on 50 years of trust.</p>
-          <span class="hub-card-more">Read the Case Study &rarr;</span>
-        </div>
-      </a>
+      <a class="ct ct-logo" data-cat="education" style="--brand:#32D2BE" href="/case-studies/odyssey-test-prep/"><img src="/case-studies/img/logos/odyssey-test-prep.png" alt="Odyssey Test Prep by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="professional" style="--brand:#E43C24" href="/case-studies/boldhaus/"><img src="/case-studies/img/logos/boldhaus.png" alt="BoldHaus by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="education" style="--brand:#0C2454" href="/case-studies/cheeky-scientist/"><img src="/case-studies/img/logos/cheeky-scientist.png" alt="Cheeky Scientist by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="professional" href="/case-studies/thorben/"><span>Thorben</span></a>
+      <a class="ct ct-logo" data-cat="home" style="--brand:#84249C" href="/case-studies/purple-care/"><img src="/case-studies/img/logos/purple-care.png" alt="Purple Care by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="tech" style="--brand:#FA960A" href="/case-studies/optx/"><img src="/case-studies/img/logos/optx.png" alt="OPTX by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="tech" href="/case-studies/esencia/"><span>Esencia</span></a>
+      <a class="ct ct-logo" data-cat="wellness" style="--brand:#0CB4B4" href="/case-studies/changing-habits/"><img src="/case-studies/img/logos/changing-habits.png" alt="Changing Habits by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="education" style="--brand:#0C3C9C" href="/case-studies/mirasee/"><img src="/case-studies/img/logos/mirasee.png" alt="Mirasee by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="home" href="/case-studies/organize-and-flow/"><span>Organize &amp; Flow</span></a>
+      <a class="ct ct-logo" data-cat="home" style="--brand:#966E5A" href="/case-studies/hinkle-outdoor-living/"><img src="/case-studies/img/logos/hinkle-outdoor-living.png" alt="Hinkle Outdoor Living by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="professional lifestyle" style="--brand:#FC6C0C" href="/case-studies/quantum-orange/"><img src="/case-studies/img/logos/quantum-orange.png" alt="Quantum Orange by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="professional" href="/case-studies/xchange/"><span>xchange</span></a>
+      <a class="ct ct-logo" data-cat="professional" style="--brand:#3296BE" href="/case-studies/triumpha/"><img src="/case-studies/img/logos/triumpha.png" alt="Triumpha by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="professional" href="/case-studies/future-flow-media/"><span>Future Flow Media</span></a>
+      <a class="ct ct-name" data-cat="lifestyle" href="/case-studies/bendt-distilling/"><span>BENDT Distilling Co.</span></a>
+      <a class="ct ct-logo" data-cat="professional" style="--brand:#0C2454" href="/case-studies/hawkins-laakso/"><img src="/case-studies/img/logos/hawkins-laakso.png" alt="Hawkins Laakso by Category of One Branding" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="education" href="/case-studies/williamsburg-learning/"><span>Williamsburg Learning</span></a>
+      <a class="ct ct-name" data-cat="professional lifestyle" href="/case-studies/extraordinary-life/"><span>Extraordinary Life</span></a>
+    </div>
+  </div>
+</section>
+<section class="client-wall">
+  <div class="section-inner">
+    <p class="cw-label">Selected Clients</p>
+    <h2 class="cw-head">Brands We&rsquo;ve Built</h2>
+    <p class="cw-sub">A selection of the brands we&rsquo;ve partnered with.</p>
+    <div class="cw-grid">
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/beyond-burials.png" alt="Beyond Burials" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/bloo-executive-coaching.png" alt="Bloom Executive Coaching" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/the-cfo-agency.png" alt="The CFO Agency" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/emily-prendiville.png" alt="Emily Prendiville" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/jennifer-trinkner.png" alt="Jennifer Trinkner" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/kaikini-bikinis.png" alt="Kaikini Bikinis" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/life-force-academy.png" alt="Life-Force Academy" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/mastering-mindfulness.png" alt="Mastering Mindfulness Institute" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/sol-serenity.png" alt="Sol &amp; Serenity" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/dunn-orthodontics.png" alt="Dunn Orthodontics" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/the-drz.png" alt="The Dr.Z" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/the-fresh-king-benjamin.png" alt="The Fresh King Benjamin" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/wildfit.png" alt="WILDFIT" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/msi-consulting.png" alt="msi Consulting" loading="lazy"/></div>
+      <div class="ct ct-logo ct-static"><img src="/case-studies/img/logos/soulfire.png" alt="Soulfire" loading="lazy"/></div>
     </div>
   </div>
 </section>
@@ -469,7 +319,7 @@
 <script>
 (function(){
   var tabs=document.querySelectorAll('.cs-ftab');
-  var cards=document.querySelectorAll('.hub-card');
+  var cards=document.querySelectorAll('.hub-grid .ct');
   tabs.forEach(function(t){
     t.addEventListener('click',function(){
       tabs.forEach(function(x){x.classList.remove('on');});
