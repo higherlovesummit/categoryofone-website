@@ -167,11 +167,12 @@
     /* logo/name tiles + client wall */
     .ct{aspect-ratio:4/3;position:relative;display:flex;align-items:center;justify-content:center;background:#000;border:1px solid rgba(216,180,120,0.14);padding:13% 14%;overflow:hidden;text-decoration:none;transition:background .35s ease,border-color .3s ease;}
     .ct img{max-width:100%;max-height:100%;width:auto;object-fit:contain;}
+    .ct > img:not(.hover-photo),.ct > span{position:relative;z-index:2;transition:opacity .35s ease;}
+    .ct .hover-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;opacity:0;z-index:1;transition:opacity .4s ease;}
     a.ct{cursor:pointer;}
-    a.ct-logo:hover{background:var(--brand);border-color:transparent;}
+    a.ct:hover .hover-photo{opacity:1;}
+    a.ct:hover > img:not(.hover-photo),a.ct:hover > span{opacity:0;}
     .ct-name span{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,2vw,28px);font-weight:600;color:#fff;text-align:center;line-height:1.12;transition:color .3s ease;}
-    a.ct-name:hover{border-color:rgba(216,180,120,0.5);}
-    a.ct-name:hover span{color:var(--gold);}
     .ct.is-hidden{display:none;}
     .client-wall{border-top:1px solid rgba(216,180,120,0.16);}
     .cw-label{text-align:center;font-family:"Raleway",sans-serif;font-size:12px;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
@@ -216,25 +217,25 @@
       <button class="cs-ftab" data-filter="lifestyle">Consumer &amp; Lifestyle</button>
     </div>
     <div class="hub-grid">
-      <a class="ct ct-logo" data-cat="education" style="--brand:#32D2BE" href="/case-studies/odyssey-test-prep/"><img src="/case-studies/img/logos/odyssey-test-prep.png" alt="Odyssey Test Prep by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-logo" data-cat="professional" style="--brand:#E43C24" href="/case-studies/boldhaus/"><img src="/case-studies/img/logos/boldhaus.png" alt="BoldHaus by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-logo" data-cat="education" style="--brand:#0C2454" href="/case-studies/cheeky-scientist/"><img src="/case-studies/img/logos/cheeky-scientist.png" alt="Cheeky Scientist by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-name" data-cat="professional" href="/case-studies/thorben/"><span>Thorben</span></a>
-      <a class="ct ct-logo" data-cat="home" style="--brand:#84249C" href="/case-studies/purple-care/"><img src="/case-studies/img/logos/purple-care.png" alt="Purple Care by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-logo" data-cat="tech" style="--brand:#FA960A" href="/case-studies/optx/"><img src="/case-studies/img/logos/optx.png" alt="OPTX by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-name" data-cat="tech" href="/case-studies/esencia/"><span>Esencia</span></a>
-      <a class="ct ct-logo" data-cat="wellness" style="--brand:#0CB4B4" href="/case-studies/changing-habits/"><img src="/case-studies/img/logos/changing-habits.png" alt="Changing Habits by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-logo" data-cat="education" style="--brand:#0C3C9C" href="/case-studies/mirasee/"><img src="/case-studies/img/logos/mirasee.png" alt="Mirasee by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-name" data-cat="home" href="/case-studies/organize-and-flow/"><span>Organize &amp; Flow</span></a>
-      <a class="ct ct-logo" data-cat="home" style="--brand:#966E5A" href="/case-studies/hinkle-outdoor-living/"><img src="/case-studies/img/logos/hinkle-outdoor-living.png" alt="Hinkle Outdoor Living by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-logo" data-cat="professional lifestyle" style="--brand:#FC6C0C" href="/case-studies/quantum-orange/"><img src="/case-studies/img/logos/quantum-orange.png" alt="Quantum Orange by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-name" data-cat="professional" href="/case-studies/xchange/"><span>xchange</span></a>
-      <a class="ct ct-logo" data-cat="professional" style="--brand:#3296BE" href="/case-studies/triumpha/"><img src="/case-studies/img/logos/triumpha.png" alt="Triumpha by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-name" data-cat="professional" href="/case-studies/future-flow-media/"><span>Future Flow Media</span></a>
-      <a class="ct ct-name" data-cat="lifestyle" href="/case-studies/bendt-distilling/"><span>BENDT Distilling Co.</span></a>
-      <a class="ct ct-logo" data-cat="professional" style="--brand:#0C2454" href="/case-studies/hawkins-laakso/"><img src="/case-studies/img/logos/hawkins-laakso.png" alt="Hawkins Laakso by Category of One Branding" loading="lazy"/></a>
-      <a class="ct ct-name" data-cat="education" href="/case-studies/williamsburg-learning/"><span>Williamsburg Learning</span></a>
-      <a class="ct ct-name" data-cat="professional lifestyle" href="/case-studies/extraordinary-life/"><span>Extraordinary Life</span></a>
+      <a class="ct ct-logo" data-cat="education" style="--brand:#32D2BE" href="/case-studies/odyssey-test-prep/"><img src="/case-studies/img/logos/odyssey-test-prep.png" alt="Odyssey Test Prep by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/odyssey-test-prep/odyssey-test-prep-ipad.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="professional" style="--brand:#E43C24" href="/case-studies/boldhaus/"><img src="/case-studies/img/logos/boldhaus.png" alt="BoldHaus by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/boldhaus/boldhaus-laptop-after-mockup-1.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="education" style="--brand:#0C2454" href="/case-studies/cheeky-scientist/"><img src="/case-studies/img/logos/cheeky-scientist.png" alt="Cheeky Scientist by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/cheeky-scientist/cheeky-scientist-laptop.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="professional" href="/case-studies/thorben/"><span>Thorben</span><img class="hover-photo" src="/case-studies/img/thorben/thorben-laptop-1.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="home" style="--brand:#84249C" href="/case-studies/purple-care/"><img src="/case-studies/img/logos/purple-care.png" alt="Purple Care by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/purple-care/purple-care-billboard.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="tech" style="--brand:#FA960A" href="/case-studies/optx/"><img src="/case-studies/img/logos/optx.png" alt="OPTX by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/optx/optx-billboard.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="tech" href="/case-studies/esencia/"><span>Esencia</span><img class="hover-photo" src="/case-studies/img/esencia/esencia-billboard.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="wellness" style="--brand:#0CB4B4" href="/case-studies/changing-habits/"><img src="/case-studies/img/logos/changing-habits.png" alt="Changing Habits by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/changing-habits/changing-habits-packaging.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="education" style="--brand:#0C3C9C" href="/case-studies/mirasee/"><img src="/case-studies/img/logos/mirasee.png" alt="Mirasee by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/mirasee/mirasee-visual-system.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="home" href="/case-studies/organize-and-flow/"><span>Organize &amp; Flow</span><img class="hover-photo" src="/case-studies/img/organize-and-flow/o-f-1.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="home" style="--brand:#966E5A" href="/case-studies/hinkle-outdoor-living/"><img src="/case-studies/img/logos/hinkle-outdoor-living.png" alt="Hinkle Outdoor Living by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/hinkle-outdoor-living/hinkle-website.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="professional lifestyle" style="--brand:#FC6C0C" href="/case-studies/quantum-orange/"><img src="/case-studies/img/logos/quantum-orange.png" alt="Quantum Orange by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/quantum-orange/quantum-orange-website.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="professional" href="/case-studies/xchange/"><span>xchange</span><img class="hover-photo" src="/case-studies/img/xchange/xchange-visual-system.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="professional" style="--brand:#3296BE" href="/case-studies/triumpha/"><img src="/case-studies/img/logos/triumpha.png" alt="Triumpha by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/triumpha/triumpha-02.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="professional" href="/case-studies/future-flow-media/"><span>Future Flow Media</span><img class="hover-photo" src="/case-studies/img/future-flow-media/future-flow-media-billboard.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="lifestyle" href="/case-studies/bendt-distilling/"><span>BENDT Distilling Co.</span><img class="hover-photo" src="/case-studies/img/bendt-distilling/bendt-cans.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-logo" data-cat="professional" style="--brand:#0C2454" href="/case-studies/hawkins-laakso/"><img src="/case-studies/img/logos/hawkins-laakso.png" alt="Hawkins Laakso by Category of One Branding" loading="lazy"/><img class="hover-photo" src="/case-studies/img/hawkins-laakso/hl-site.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="education" href="/case-studies/williamsburg-learning/"><span>Williamsburg Learning</span><img class="hover-photo" src="/case-studies/img/williamsburg-learning/williamsburg-apparel.jpg" alt="" loading="lazy"/></a>
+      <a class="ct ct-name" data-cat="professional lifestyle" href="/case-studies/extraordinary-life/"><span>Extraordinary Life</span><img class="hover-photo" src="/case-studies/img/extraordinary-life/extraordinary-life-website.jpg" alt="" loading="lazy"/></a>
     </div>
   </div>
 </section>
