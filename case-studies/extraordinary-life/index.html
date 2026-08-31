@@ -129,6 +129,27 @@
     .btn-primary { background: #D8B478; color: #111; border-color: #D8B478; }
     .btn-primary:hover { background: #1A1510; color: #fff; border-color: #1A1510; }
     .sticky-cta { background: #D8B478; color: #111; }
+    /* standardized booking CTA (matches homepage) */
+    .apply-head{text-align:center;max-width:720px;margin:0 auto;}
+    .apply-sub{font-family:"EB Garamond",serif;font-size:20px;color:var(--linen);line-height:1.6;margin-top:18px;}
+    .criteria-label{font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .book-steps{max-width:920px;margin:56px auto 0;}
+    .flow-grid{display:flex;align-items:stretch;justify-content:center;gap:0;margin-top:30px;flex-wrap:nowrap;}
+    .flow-card{flex:1 1 0;max-width:270px;background:rgba(216,180,120,0.05);border:1px solid rgba(216,180,120,0.18);padding:36px 26px;text-align:center;display:flex;flex-direction:column;transition:border-color 0.2s;}
+    .flow-card:hover{border-color:rgba(216,180,120,0.45);}
+    .flow-num{font-family:"Cormorant Garamond",serif;font-size:54px;font-weight:300;color:var(--gold);line-height:1;margin-bottom:16px;}
+    .flow-title{font-family:"Raleway",sans-serif;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--white);margin-bottom:12px;}
+    .flow-text{font-family:"EB Garamond",serif;font-size:18px;color:var(--linen);line-height:1.55;}
+    .flow-connector{flex:0 0 66px;align-self:center;position:relative;height:2px;background:rgba(216,180,120,0.6);}
+    .flow-connector::after{content:"";position:absolute;right:-1px;top:50%;width:13px;height:13px;border-top:2px solid var(--gold);border-right:2px solid var(--gold);transform:translateY(-50%) rotate(45deg);}
+    .questions-block{max-width:720px;margin:60px auto 0;text-align:center;}
+    .form-box-embed{margin-top:48px;}
+    .form-heading{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(28px,4vw,46px);line-height:1.1;color:var(--white);text-align:center;margin-bottom:26px;}
+    .cal-embed-card{background:#FFFFFF;border:1px solid rgba(216,180,120,0.35);border-radius:4px;padding:16px;}
+    .secondary-cta{font-family:"Raleway",sans-serif;font-size:13px;letter-spacing:0.06em;color:rgba(237,227,218,0.6);margin-top:26px;text-align:center;}
+    .secondary-cta a{color:var(--gold);text-decoration:none;font-weight:700;letter-spacing:0.1em;}
+    .secondary-cta a:hover{text-decoration:underline;}
+    @media (max-width:900px){.flow-grid{flex-direction:column;align-items:center;}.flow-card{max-width:420px;width:100%;padding:30px 24px;}.flow-connector{width:2px;height:44px;flex-basis:44px;}.flow-connector::after{right:50%;top:auto;bottom:-1px;transform:translateX(50%) rotate(135deg);}.apply-sub{font-size:18px;}}
 </style>
 </head>
 <body>
@@ -222,11 +243,27 @@
     <a href="/case-studies/">All Case Studies</a>
     <a href="/case-studies/hinkle-outdoor-living/">Hinkle Outdoor Living &rarr;</a>
   </div>
-  <div class="section-inner" style="padding-top:56px;">
-    <h2>Let&rsquo;s See What Your Brand Could Become.</h2>
-    <p>A focused conversation to see whether your brand is keeping pace with your vision - and whether we can move you toward becoming the category of one in your space.</p>
-    <a href="/#apply" class="btn-primary">Schedule a Consult</a>
-  </div>
+    <div class="section-inner" style="padding-top:48px;"><div class="apply-head">
+      <p class="criteria-label">Let&rsquo;s Talk</p>
+      <h2 class="section-headline" style="color:var(--white);">Let&rsquo;s See What Your Brand Could Become.</h2>
+      <p class="apply-sub">A focused, no-pitch conversation about whether your brand is keeping pace with your vision, and you&rsquo;ll leave with clarity either way.</p>
+    </div>
+    <div class="book-steps">
+      <div class="flow-grid">
+        <div class="flow-card"><div class="flow-num">01</div><div class="flow-title">Schedule a Complimentary Consultation</div><p class="flow-text">An exploratory discovery call to talk through your business, where you want to take it, and whether we&rsquo;re the right fit to help. You&rsquo;ll walk away with clarity either way.</p></div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-card"><div class="flow-num">02</div><div class="flow-title">Build a Custom Brand Engagement</div><p class="flow-text">If it&rsquo;s a fit, we put together a plan built around your goals, your timeline, and your budget, so you get exactly what your brand needs and nothing you don&rsquo;t.</p></div>
+        <div class="flow-connector" aria-hidden="true"></div>
+        <div class="flow-card"><div class="flow-num">03</div><div class="flow-title">Kick Off the Branding Initiative</div><p class="flow-text">We set a start date and get to work, with a clear plan and timeline so you always know what&rsquo;s happening now and what comes next.</p></div>
+      </div>
+    </div>
+    <div class="questions-block">
+      <div class="form-box-embed">
+        <h3 class="form-heading">Schedule a Consult Below</h3>
+        <div class="cal-embed-card"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" style="border:0;width:100%;display:block;" height="600" frameborder="0" title="Schedule a Consult"></iframe></div>
+        <p class="secondary-cta">Not ready to book? <a href="/case-studies/">See the work first &rarr;</a></p>
+      </div>
+    </div></div>
 </section>
 <footer>
   <div class="footer-inner">
