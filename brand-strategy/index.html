@@ -16,10 +16,7 @@
  *{box-sizing:border-box;margin:0;padding:0;}
  body{background:var(--jet);color:var(--linen);font-family:"EB Garamond",Georgia,serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
  a{color:var(--gold);}
- .nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:rgba(0,0,0,0.82);backdrop-filter:blur(8px);border-bottom:1px solid rgba(216,180,120,0.16);}
- .nav img{height:42px;}
- .nav a.cta{font-family:"Raleway",sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--jet);background:var(--gold);padding:12px 24px;text-decoration:none;}
- .hero{max-width:900px;margin:0 auto;padding:90px 32px 40px;text-align:center;}
+ .hero{max-width:900px;margin:0 auto;padding:140px 32px 40px;text-align:center;}
  .eyebrow{font-family:"Raleway",sans-serif;font-size:12px;font-weight:700;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;}
  h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(40px,6vw,76px);line-height:1.04;color:var(--white);margin-bottom:30px;}
  .lead{font-family:"Cormorant Garamond",serif;font-size:clamp(22px,2.6vw,30px);line-height:1.35;color:var(--white);max-width:760px;margin:0 auto;}
@@ -59,9 +56,50 @@
  .btn:hover{background:#1A1510;color:var(--white);}
  footer{text-align:center;padding:50px 32px 70px;color:rgba(237,227,218,0.4);font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;}
  @media(max-width:760px){.toc{grid-template-columns:1fr;}.nav{padding:14px 20px;}}
+    /* site chrome (nav + footer) */
+    nav { position: fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:20px 60px; background:#000; border-bottom:1px solid rgba(216,180,120,0.2); backdrop-filter: blur(8px); }
+    .nav-logo img { height:56px; width:auto; display:block; }
+    .nav-right { display:flex; align-items:center; gap:36px; }
+    .nav-links { display:flex; gap:32px; }
+    .nav-links a { font-family:"Raleway",sans-serif; font-size:12px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(237,227,218,0.75); text-decoration:none; transition:color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-toggle { display: none; width: 28px; height: 20px; position: relative; background: transparent; border: none; padding: 0; cursor: pointer; }
+    .nav-toggle span { position: absolute; left: 0; right: 0; height: 2px; background: var(--gold); transition: top .25s, transform .25s, opacity .2s; }
+    .nav-toggle span:nth-child(1) { top: 0; } .nav-toggle span:nth-child(2) { top: 9px; } .nav-toggle span:nth-child(3) { top: 18px; }
+    .nav-toggle.open span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 90; background: #000; border-bottom: 1px solid rgba(216,180,120,0.2); flex-direction: column; padding: 88px 24px 24px; }
+    .mobile-menu a { font-family: "Raleway", sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(237,227,218,0.85); text-decoration: none; padding: 18px 0; border-bottom: 1px solid rgba(216,180,120,0.14); }
+    .mobile-menu a:last-child { border-bottom: none; }
+    footer { padding:48px 60px; border-top:1px solid rgba(216,180,120,0.2); }
+    .footer-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .footer-logo img { height:48px; width:auto; }
+    .footer-right { text-align:right; }
+    .footer-links { display:flex; gap:24px; justify-content:flex-end; margin-bottom:10px; }
+    .footer-links a { font-family:"Raleway",sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(237,227,218,0.6); text-decoration:none; }
+    .footer-links a:hover { color:var(--gold); }
+    .footer-copy { font-family:"Raleway",sans-serif; font-size:11px; color:rgba(237,227,218,0.4); letter-spacing:0.06em; }
+    @media (max-width: 900px) {
+      nav { padding:16px 24px; } .nav-links { display:none; } .nav-toggle { display: block; } .mobile-menu.open { display: flex; }
+      footer { padding:40px 24px; } .footer-inner { flex-direction:column; text-align:center; } .footer-right { text-align:center; } .footer-links { justify-content:center; }
+    }
+    .cob-fig{margin:32px 0;}
+    .cob-fig svg{width:100%;height:auto;display:block;}
 </style></head>
 <body>
-<div class="nav"><img src="data:image/png;base64,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" alt="Category of One Branding"/><a class="cta" href="https://categoryofonebranding.com/RePerez">Let&rsquo;s Talk</a></div>
+<nav>
+  <div class="nav-logo"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/case-studies/">Case Studies</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/case-studies/">Case Studies</a>
+</div>
 
 <header class="hero">
   <p class="eyebrow">The Brand Strategy Guide</p>
@@ -75,7 +113,7 @@
   <p>Understanding Brand Strategy can be overwhelming, which is why we created this guide to teach you the fundamentals. While not exhaustive, it should give you a starting point in the world of strategy.</p>
 </div>
 
-<div class="book"><p>For a complete explanation, we recommend our CEO Re Perez&rsquo;s book, <a href="https://yourbrandshouldbegay.com/"><em>Your Brand Should Be Gay (Even If You&rsquo;re Not)</em></a>.</p></div>
+
 
 <div class="callout"><div class="box">Your Brand Strategy defines and articulates several layers of your brand &mdash; the nine building blocks below.</div></div>
 
@@ -93,7 +131,26 @@
 <p>While simple questions, answering them is key to uncovering everything else in your Brand Strategy.</p>
 <h4>Who are your target audiences?</h4>
 <p>To get more clarity, we recommend creating a <strong>demographic</strong> profile (factors such as age, race, gender, income, and location) and a <strong>psychographic</strong> profile (your customer's fears, frustrations, wants, aspirations, lifestyle, etc.) of your customers.</p>
-<div class="ph">Psychographic profile &mdash; example</div>
+<div class="cob-fig"><svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Psychographic profile example">
+<rect x="1" y="1" width="758" height="398" rx="6" fill="#0d0d0d" stroke="#D8B478" stroke-opacity="0.28"/>
+<text x="36" y="44" font-family="Raleway,sans-serif" font-size="12" letter-spacing="3" fill="#D8B478" font-weight="700">PSYCHOGRAPHIC PROFILE &#8212; EXAMPLE</text>
+<line x1="36" y1="60" x2="724" y2="60" stroke="#D8B478" stroke-opacity="0.16"/>
+<circle cx="98" cy="140" r="44" fill="none" stroke="#D8B478" stroke-width="1.5"/>
+<text x="98" y="153" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" fill="#D8B478">M</text>
+<text x="36" y="222" font-family="Cormorant Garamond,serif" font-size="27" fill="#fff">Maria, 38</text>
+<text x="36" y="247" font-family="EB Garamond,serif" font-size="15" fill="#EDE3DA" opacity="0.65">Founder &amp; CEO</text>
+<text x="36" y="292" font-family="Raleway,sans-serif" font-size="10.5" letter-spacing="2" fill="#D8B478">DEMOGRAPHICS</text>
+<text x="36" y="315" font-family="EB Garamond,serif" font-size="14.5" fill="#EDE3DA" opacity="0.85">Income $250K+ &#183; Urban US</text>
+<text x="36" y="337" font-family="EB Garamond,serif" font-size="14.5" fill="#EDE3DA" opacity="0.85">Married, two children</text>
+<line x1="300" y1="86" x2="300" y2="360" stroke="#D8B478" stroke-opacity="0.14"/>
+<g font-family="Raleway,sans-serif" font-size="10.5" letter-spacing="2" fill="#D8B478">
+<text x="336" y="120">FEARS</text><text x="540" y="120">WANTS</text><text x="336" y="238">FRUSTRATIONS</text><text x="540" y="238">ASPIRATIONS</text></g>
+<g font-family="Cormorant Garamond,serif" font-size="20" fill="#fff">
+<text x="336" y="150">Being seen as</text><text x="336" y="174">replaceable</text>
+<text x="540" y="150">To own her</text><text x="540" y="174">category</text>
+<text x="336" y="268">Marketing that</text><text x="336" y="292">underdelivers</text>
+<text x="540" y="268">A brand that</text><text x="540" y="292">outlasts her</text></g>
+</svg></div>
 <h4>What are the problems you solve for your target audiences?</h4>
 <p>All businesses and brands should solve people's problems. Knowing the problems you solve will inform your messaging and go-to-market approach. These are often defined by their functional, economic, and emotional utility to customers.</p>
 <h4>Why should your target audiences listen to, buy from, or recommend you?</h4>
@@ -108,7 +165,22 @@
   <h2>Brand Archetypes</h2>
   <p>Archetypes are a concept originally conceived by famed Swiss psychiatrist Carl Jung. When used in branding and marketing, the idea is referred to as Brand Archetypes.</p>
 <p>Essentially, Brand Archetypes are used by branding professionals as a heuristic to infuse personality into a company's brand. A Brand Archetype is identified when you fill in the blank to the following statement: <em>If our company were a person, that person would be described as __________.</em> It's essential to identify your Brand Archetypes based on where the brand is heading &mdash; not where it has historically been.</p>
-<div class="ph">A sample of Brand Archetypes we use with clients</div>
+<div class="cob-fig"><svg viewBox="0 0 760 356" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sample brand archetypes">
+<text x="36" y="44" font-family="Raleway,sans-serif" font-size="12" letter-spacing="3" fill="#D8B478" font-weight="700">A SAMPLE OF BRAND ARCHETYPES</text>
+<line x1="36" y1="60" x2="724" y2="60" stroke="#D8B478" stroke-opacity="0.16"/>
+<rect x="36" y="84" width="208" height="112" rx="5" fill="#000" stroke="#D8B478" stroke-opacity="0.22"/>
+<text x="58" y="134" font-family="Cormorant Garamond,serif" font-size="25" fill="#D8B478">The Sage</text>
+<text x="58" y="164" font-family="EB Garamond,serif" font-size="14" fill="#EDE3DA" opacity="0.78">Truth, wisdom, expertise</text><rect x="276" y="84" width="208" height="112" rx="5" fill="#000" stroke="#D8B478" stroke-opacity="0.22"/>
+<text x="298" y="134" font-family="Cormorant Garamond,serif" font-size="25" fill="#D8B478">The Hero</text>
+<text x="298" y="164" font-family="EB Garamond,serif" font-size="14" fill="#EDE3DA" opacity="0.78">Courage, mastery, results</text><rect x="516" y="84" width="208" height="112" rx="5" fill="#000" stroke="#D8B478" stroke-opacity="0.22"/>
+<text x="538" y="134" font-family="Cormorant Garamond,serif" font-size="25" fill="#D8B478">The Creator</text>
+<text x="538" y="164" font-family="EB Garamond,serif" font-size="14" fill="#EDE3DA" opacity="0.78">Imagination &amp; innovation</text><rect x="36" y="214" width="208" height="112" rx="5" fill="#000" stroke="#D8B478" stroke-opacity="0.22"/>
+<text x="58" y="264" font-family="Cormorant Garamond,serif" font-size="25" fill="#D8B478">The Explorer</text>
+<text x="58" y="294" font-family="EB Garamond,serif" font-size="14" fill="#EDE3DA" opacity="0.78">Freedom and discovery</text><rect x="276" y="214" width="208" height="112" rx="5" fill="#000" stroke="#D8B478" stroke-opacity="0.22"/>
+<text x="298" y="264" font-family="Cormorant Garamond,serif" font-size="25" fill="#D8B478">The Ruler</text>
+<text x="298" y="294" font-family="EB Garamond,serif" font-size="14" fill="#EDE3DA" opacity="0.78">Authority, control, order</text><rect x="516" y="214" width="208" height="112" rx="5" fill="#000" stroke="#D8B478" stroke-opacity="0.22"/>
+<text x="538" y="264" font-family="Cormorant Garamond,serif" font-size="25" fill="#D8B478">The Everyman</text>
+<text x="538" y="294" font-family="EB Garamond,serif" font-size="14" fill="#EDE3DA" opacity="0.78">Belonging &amp; relatability</text></svg></div>
 </section><section class="pillar" id="brand-architecture">
   <p class="p-num">04</p>
   <h2>Brand Architecture</h2>
@@ -126,14 +198,44 @@
   <p>Brand Positioning is the space you occupy (or intend to occupy) in your target audiences' minds. This is what we call the &ldquo;white space&rdquo; in your industry or category &mdash; the place in your marketplace where no one else is. Taking ownership of this space is what helps differentiate you from your competitors.</p>
 <p>There are many ways to &ldquo;position&rdquo; your brand, all depending on which variables you believe will help you differentiate. You can position around a word or concept, through color, or even through time.</p>
 <p>To help find the white space in your industry, create a <strong>Brand Positioning Map</strong> &mdash; it enables you to visualize how your brand is unique in the competitive landscape.</p>
-<div class="ph">Brand Positioning Map &mdash; example</div>
+<div class="cob-fig"><svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brand positioning map example">
+<rect x="1" y="1" width="758" height="468" rx="6" fill="#0d0d0d" stroke="#D8B478" stroke-opacity="0.28"/>
+<text x="36" y="44" font-family="Raleway,sans-serif" font-size="12" letter-spacing="3" fill="#D8B478" font-weight="700">BRAND POSITIONING MAP &#8212; EXAMPLE</text>
+<line x1="36" y1="60" x2="724" y2="60" stroke="#D8B478" stroke-opacity="0.16"/>
+<line x1="380" y1="96" x2="380" y2="440" stroke="#D8B478" stroke-opacity="0.35"/>
+<line x1="120" y1="268" x2="640" y2="268" stroke="#D8B478" stroke-opacity="0.35"/>
+<g font-family="Raleway,sans-serif" font-size="11" letter-spacing="2" fill="#EDE3DA" opacity="0.75">
+<text x="380" y="90" text-anchor="middle">PREMIUM</text>
+<text x="380" y="458" text-anchor="middle">ACCESSIBLE</text>
+<text x="112" y="272" text-anchor="end">TRADITIONAL</text>
+<text x="648" y="272" text-anchor="start">MODERN</text></g>
+<circle cx="300" cy="330" r="6" fill="#6b6b6b"/><circle cx="268" cy="300" r="6" fill="#6b6b6b"/><circle cx="340" cy="360" r="6" fill="#6b6b6b"/><circle cx="240" cy="250" r="6" fill="#6b6b6b"/><circle cx="410" cy="320" r="6" fill="#6b6b6b"/>
+<circle cx="512" cy="178" r="11" fill="#D8B478"/>
+<circle cx="512" cy="178" r="21" fill="none" stroke="#D8B478" stroke-opacity="0.5"/>
+<text x="512" y="150" text-anchor="middle" font-family="Raleway,sans-serif" font-size="10.5" letter-spacing="2" fill="#D8B478">THE WHITE SPACE</text>
+<text x="512" y="212" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="20" fill="#fff">Your Brand</text>
+</svg></div>
 </section><section class="pillar" id="brand-promise">
   <p class="p-num">07</p>
   <h2>Brand Promise</h2>
   <p>Your Brand Promise is the ultimate benefit that your customers or clients will receive when buying your products or services. It guides everything about your brand &mdash; from how you look, to how you speak, to the customer experience.</p>
 <p>We recommend articulating your Brand Promise in <strong>fourteen words or less</strong>. The shorter, the better. Why? When your Brand Promise is concise, it's easy to remember &mdash; and memorability is key in branding. Plus, it will be easier to implement.</p>
 <p>Avoid lengthy Brand Promise statements in an attempt to include everything. You don't need to put the responsibility on your Brand Promise to communicate everything.</p>
-<div class="ph">The three criteria of a strong Brand Promise</div>
+<div class="cob-fig"><svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three criteria of a strong brand promise">
+<text x="36" y="30" font-family="Raleway,sans-serif" font-size="12" letter-spacing="3" fill="#D8B478" font-weight="700">A STRONG BRAND PROMISE IS&#8230;</text>
+<text x="36" y="66" font-family="Cormorant Garamond,serif" font-size="34" fill="#D8B478" opacity="0.55">01</text>
+<text x="36" y="112" font-family="Cormorant Garamond,serif" font-size="26" fill="#fff">Relevant</text>
+<line x1="36" y1="128" x2="76" y2="128" stroke="#D8B478"/>
+<text x="36" y="160" font-family="EB Garamond,serif" font-size="15" fill="#EDE3DA" opacity="0.8">It matters deeply to</text>
+<text x="36" y="182" font-family="EB Garamond,serif" font-size="15" fill="#EDE3DA" opacity="0.8">the customers you want.</text><text x="280" y="66" font-family="Cormorant Garamond,serif" font-size="34" fill="#D8B478" opacity="0.55">02</text>
+<text x="280" y="112" font-family="Cormorant Garamond,serif" font-size="26" fill="#fff">Differentiated</text>
+<line x1="280" y1="128" x2="320" y2="128" stroke="#D8B478"/>
+<text x="280" y="160" font-family="EB Garamond,serif" font-size="15" fill="#EDE3DA" opacity="0.8">No competitor can</text>
+<text x="280" y="182" font-family="EB Garamond,serif" font-size="15" fill="#EDE3DA" opacity="0.8">credibly claim it.</text><text x="524" y="66" font-family="Cormorant Garamond,serif" font-size="34" fill="#D8B478" opacity="0.55">03</text>
+<text x="524" y="112" font-family="Cormorant Garamond,serif" font-size="26" fill="#fff">Credible</text>
+<line x1="524" y1="128" x2="564" y2="128" stroke="#D8B478"/>
+<text x="524" y="160" font-family="EB Garamond,serif" font-size="15" fill="#EDE3DA" opacity="0.8">You can deliver it,</text>
+<text x="524" y="182" font-family="EB Garamond,serif" font-size="15" fill="#EDE3DA" opacity="0.8">consistently.</text></svg></div>
 </section><section class="pillar" id="brand-platform">
   <p class="p-num">08</p>
   <h2>Brand Platform</h2>
@@ -160,5 +262,18 @@
   <a class="btn" href="https://categoryofonebranding.com/RePerez">Start the Conversation</a>
 </section>
 
-<footer>Category of One Branding &middot; Led by Re Perez</footer>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms &amp; Conditions</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Category of One Branding, LLC. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>(function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();</script>
 </body></html>
