@@ -10,16 +10,14 @@
  *{box-sizing:border-box;margin:0;padding:0;}
  body{background:var(--jet);color:var(--linen);font-family:"EB Garamond",Georgia,serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
  a{color:var(--gold);text-decoration:none;}
- .wrap{max-width:1160px;margin:0 auto;padding:0 44px;}
+ .wrap{max-width:1200px;margin:0 auto;padding:0 44px;}
  h1,h2,h3,h4{font-family:"Cormorant Garamond",serif;font-weight:600;color:var(--white);line-height:1.08;}
  .eyebrow{font-family:"Raleway",sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);}
- /* shared thumb */
  .thumb{position:relative;aspect-ratio:16/9;background:#000;border:1px solid rgba(216,180,120,0.2);overflow:hidden;}
  .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
- .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;border:1.5px solid var(--gold);background:rgba(0,0,0,0.35);}
+ .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;border:1.5px solid var(--gold);background:rgba(0,0,0,0.35);transition:background .2s;}
  .play::after{content:"";position:absolute;top:16px;left:22px;border-left:15px solid var(--gold);border-top:9px solid transparent;border-bottom:9px solid transparent;}
- .play.sm{width:34px;height:34px;}
- .play.sm::after{top:10px;left:14px;border-left:9px solid var(--gold);border-top:6px solid transparent;border-bottom:6px solid transparent;}
+ .card:hover .play{background:rgba(216,180,120,0.25);}
  /* ---- site chrome ---- */
  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:#000;border-bottom:1px solid rgba(216,180,120,0.2);backdrop-filter:blur(8px);}
  .nav-logo img{height:52px;width:auto;display:block;}
@@ -46,44 +44,20 @@
  .footer-links a{font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(237,227,218,0.6);text-decoration:none;}
  .footer-links a:hover{color:var(--gold);}
  .footer-copy{font-family:"Raleway",sans-serif;font-size:11px;color:rgba(237,227,218,0.4);letter-spacing:0.06em;}
-
- /* ---- slim hero ---- */
- .lede{padding:122px 0 28px;}
- .lede h1{font-size:clamp(38px,5vw,60px);margin:12px 0 10px;}
- .lede .lead{font-size:17px;color:rgba(237,227,218,0.66);max-width:640px;}
-
- /* ---- featured + rail ---- */
- .feat-row{display:grid;grid-template-columns:1.55fr 1fr;gap:40px;align-items:start;}
- .feat-main .thumb{margin-bottom:16px;}
- .f-no{font-family:"Raleway",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
- .feat-main h2{font-size:clamp(26px,2.6vw,33px);line-height:1.07;margin-bottom:9px;}
- .f-guest{font-family:"Raleway",sans-serif;font-size:12px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:rgba(237,227,218,0.6);margin-bottom:14px;}
- .f-blurb{font-size:16.5px;color:rgba(237,227,218,0.66);line-height:1.5;margin-bottom:20px;max-width:540px;}
- .rail-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(216,180,120,0.2);padding-bottom:11px;margin-bottom:18px;}
- .rail-head .t{font-family:"Raleway",sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(237,227,218,0.82);}
- .rail{display:flex;flex-direction:column;gap:18px;}
- .rail-row{display:grid;grid-template-columns:150px 1fr;gap:15px;align-items:start;color:inherit;}
- .rail-row .thumb{margin:0;}
- .r-no{font-family:"Raleway",sans-serif;font-size:9px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
- .rail-row h4{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:18px;color:#fff;line-height:1.13;margin-bottom:5px;}
- .rail-row:hover h4{color:var(--gold);}
- .r-guest{font-family:"Raleway",sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(237,227,218,0.55);}
-
- /* ---- more episodes grid ---- */
- .grid-sec{margin-top:68px;}
- .grid-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:28px;}
- .grid-head h2{font-size:clamp(24px,3vw,32px);}
- .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 30px;}
- .gcard{color:inherit;}
- .gcard .thumb{margin-bottom:14px;}
- .g-no{font-family:"Raleway",sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;}
- .gcard h3{font-size:22px;margin-bottom:6px;line-height:1.12;}
- .gcard:hover h3{color:var(--gold);}
- .g-guest{font-family:"Raleway",sans-serif;font-size:11px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:rgba(237,227,218,0.6);}
-
- @media (max-width:900px){nav{padding:16px 24px;}.nav-links{display:none;}.nav-cta{display:none !important;}.nav-toggle{display:block;}.mobile-menu.open{display:flex;}footer{padding:40px 24px;}.footer-inner{flex-direction:column;text-align:center;}.footer-right{text-align:center;}.footer-links{justify-content:center;}
-   .feat-row{grid-template-columns:1fr;gap:40px;}.rail{gap:16px;}.grid{grid-template-columns:1fr 1fr;}}
- @media (max-width:600px){.wrap{padding:0 22px;}.lede{padding-top:96px;}.grid{grid-template-columns:1fr;}}
+ /* ---- hero ---- */
+ .lede{padding:122px 0 40px;}
+ .lede h1{font-size:clamp(40px,5.2vw,64px);margin:12px 0 12px;}
+ .lede .lead{font-size:18px;color:rgba(237,227,218,0.68);max-width:660px;}
+ /* ---- two-column grid ---- */
+ .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:56px 40px;}
+ .card{color:inherit;display:block;}
+ .card .thumb{margin-bottom:17px;}
+ .c-no{font-family:"Raleway",sans-serif;font-size:10.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
+ .card h3{font-size:27px;line-height:1.09;margin-bottom:9px;}
+ .card:hover h3{color:var(--gold);}
+ .c-guest{font-family:"Raleway",sans-serif;font-size:11.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(237,227,218,0.62);}
+ @media (max-width:900px){nav{padding:16px 24px;}.nav-links{display:none;}.nav-cta{display:none !important;}.nav-toggle{display:block;}.mobile-menu.open{display:flex;}footer{padding:40px 24px;}.footer-inner{flex-direction:column;text-align:center;}.footer-right{text-align:center;}.footer-links{justify-content:center;}}
+ @media (max-width:640px){.wrap{padding:0 22px;}.lede{padding-top:96px;}.pgrid{grid-template-columns:1fr;gap:44px;}}
 </style></head><body><nav>
   <div class="nav-logo"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
   <div class="nav-right">
@@ -107,27 +81,7 @@
   <p class="lead">Honest conversations with founders and category-defining brands on identity, authenticity, and building something only you can.</p>
 </header>
 
-<section class="wrap">
-  <div class="feat-row">
-    <a class="feat-main" href="/podcast/dr-eric-roman/">
-      <div class="thumb"><img src="https://i.ytimg.com/vi/mkembOyyt7k/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Dr. Eric J. Roman"/><span class="play"></span></div>
-      <div class="f-no">Episode 011 &middot; Latest</div>
-      <h2>Building a Category of One Brand Through Systems, Identity &amp; Love</h2>
-      <div class="f-guest">Dr. Eric J. Roman &middot; CEO &amp; Systems Architect</div>
-      <p class="f-blurb">Why the strongest brands are built on a personal philosophy, not a marketing plan &mdash; and the systems that let identity scale.</p>
-      <span class="btn-primary">Watch Episode</span>
-    </a>
-    <div class="rail">
-      <div class="rail-head"><span class="t">Latest Episodes</span></div>
-      <a class="rail-row" href="/podcast/brent-weaver/"><div class="thumb"><img src="https://i.ytimg.com/vi/xAN6i7FLrPw/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Brent Weaver"/><span class="play sm"></span></div><div class="rr-txt"><div class="r-no">Episode 010</div><h4>Why Agencies Get Stuck &mdash; and How to Become the Obvious Choice</h4><p class="r-guest">Brent Weaver</p></div></a><a class="rail-row" href="/podcast/jeff-cayley/"><div class="thumb"><img src="https://i.ytimg.com/vi/Ds2-ecMGq0c/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Jeff Cayley"/><span class="play sm"></span></div><div class="rr-txt"><div class="r-no">Episode 009</div><h4>&ldquo;Profit Goals Are Side Effects&rdquo;: Real KPIs for Founder-Led Growth</h4><p class="r-guest">Jeff Cayley</p></div></a><a class="rail-row" href="/podcast/alon-ozery/"><div class="thumb"><img src="https://i.ytimg.com/vi/4hYB7VRVj2Y/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Alon Ozery"/><span class="play sm"></span></div><div class="rr-txt"><div class="r-no">Episode 008</div><h4>&ldquo;I Came Out at 42, Married, With Kids&rdquo; &mdash; A Founder&rsquo;s Journey Beyond Fear</h4><p class="r-guest">Alon Ozery</p></div></a><a class="rail-row" href="/podcast/angelique-rewers/"><div class="thumb"><img src="https://i.ytimg.com/vi/Dt81yWFfm4I/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Angelique Rewers"/><span class="play sm"></span></div><div class="rr-txt"><div class="r-no">Episode 007</div><h4>How Category of One Brands Are Built Through Conviction</h4><p class="r-guest">Angelique Rewers</p></div></a>
-    </div>
-  </div>
-
-  <div class="grid-sec">
-    <div class="grid-head"><h2>More Episodes</h2><p class="eyebrow">11 Conversations</p></div>
-    <div class="grid"><a class="gcard" href="/podcast/garrett-gunderson/"><div class="thumb"><img src="https://i.ytimg.com/vi/bETgXqaq3wo/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Garrett Gunderson"/><span class="play"></span></div><div class="g-no">Episode 006</div><h3>The Lie We Tell Ourselves About Money (and Why It Keeps Us Stuck)</h3><p class="g-guest">Garrett Gunderson &middot; Author &amp; Financial Educator</p></a><a class="gcard" href="/podcast/yanik-silver/"><div class="thumb"><img src="https://i.ytimg.com/vi/U_HBtX72LJ8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Yanik Silver"/><span class="play"></span></div><div class="g-no">Episode 005</div><h3>Playing Is the Ultimate Leadership Skill</h3><p class="g-guest">Yanik Silver &middot; Entrepreneur &amp; Author</p></a><a class="gcard" href="/podcast/warren-carlyle/"><div class="thumb"><img src="https://i.ytimg.com/vi/_yyaANBnF0w/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Warren K. Carlyle IV"/><span class="play"></span></div><div class="g-no">Episode 004</div><h3>The Octopus Expert: Build a Fanatical Community That Wants to Buy</h3><p class="g-guest">Warren K. Carlyle IV &middot; Founder, OctoNation</p></a><a class="gcard" href="/podcast/scott-harris/"><div class="thumb"><img src="https://i.ytimg.com/vi/YvLiN0wzh4g/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Scott Harris"/><span class="play"></span></div><div class="g-no">Episode 003</div><h3>Stop Chasing Perfection: Your Home Is Your Identity</h3><p class="g-guest">Scott Harris &middot; Founder, Magnetic</p></a><a class="gcard" href="/podcast/derek-coburn/"><div class="thumb"><img src="https://i.ytimg.com/vi/a98tBuwDUjE/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Derek Coburn"/><span class="play"></span></div><div class="g-no">Episode 002</div><h3>Let&rsquo;s Retire Retirement: Design a Life You Don&rsquo;t Escape From</h3><p class="g-guest">Derek Coburn &middot; Founder, CADRE</p></a><a class="gcard" href="/podcast/james-ure/"><div class="thumb"><img src="https://i.ytimg.com/vi/8QC_nqdb3Jc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="James Ure"/><span class="play"></span></div><div class="g-no">Episode 001</div><h3>How Authenticity &amp; Alignment Are the Real Mission in Business (and Life)</h3><p class="g-guest">James Ure &middot; Founder, Mojo Village</p></a></div>
-  </div>
-</section>
+<section class="wrap"><div class="pgrid"><a class="card" href="/podcast/dr-eric-roman/"><div class="thumb"><img src="https://i.ytimg.com/vi/mkembOyyt7k/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Dr. Eric J. Roman"/><span class="play"></span></div><div class="c-no">Episode 011 &middot; Latest</div><h3>Building a Category of One Brand Through Systems, Identity &amp; Love</h3><p class="c-guest">Dr. Eric J. Roman &middot; CEO &amp; Systems Architect</p></a><a class="card" href="/podcast/brent-weaver/"><div class="thumb"><img src="https://i.ytimg.com/vi/xAN6i7FLrPw/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Brent Weaver"/><span class="play"></span></div><div class="c-no">Episode 010</div><h3>Why Agencies Get Stuck &mdash; and How to Become the Obvious Choice</h3><p class="c-guest">Brent Weaver &middot; CEO, E2M Solutions</p></a><a class="card" href="/podcast/jeff-cayley/"><div class="thumb"><img src="https://i.ytimg.com/vi/Ds2-ecMGq0c/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Jeff Cayley"/><span class="play"></span></div><div class="c-no">Episode 009</div><h3>&ldquo;Profit Goals Are Side Effects&rdquo;: Real KPIs for Founder-Led Growth</h3><p class="c-guest">Jeff Cayley &middot; Founder, Worldwide Cyclery &amp; KETL</p></a><a class="card" href="/podcast/alon-ozery/"><div class="thumb"><img src="https://i.ytimg.com/vi/4hYB7VRVj2Y/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Alon Ozery"/><span class="play"></span></div><div class="c-no">Episode 008</div><h3>&ldquo;I Came Out at 42, Married, With Kids&rdquo; &mdash; A Founder&rsquo;s Journey Beyond Fear</h3><p class="c-guest">Alon Ozery &middot; Entrepreneur &amp; Author</p></a><a class="card" href="/podcast/angelique-rewers/"><div class="thumb"><img src="https://i.ytimg.com/vi/Dt81yWFfm4I/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Angelique Rewers"/><span class="play"></span></div><div class="c-no">Episode 007</div><h3>How Category of One Brands Are Built Through Conviction</h3><p class="c-guest">Angelique Rewers &middot; CEO &amp; Founder, BoldHaus</p></a><a class="card" href="/podcast/garrett-gunderson/"><div class="thumb"><img src="https://i.ytimg.com/vi/bETgXqaq3wo/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Garrett Gunderson"/><span class="play"></span></div><div class="c-no">Episode 006</div><h3>The Lie We Tell Ourselves About Money (and Why It Keeps Us Stuck)</h3><p class="c-guest">Garrett Gunderson &middot; Author &amp; Financial Educator</p></a><a class="card" href="/podcast/yanik-silver/"><div class="thumb"><img src="https://i.ytimg.com/vi/U_HBtX72LJ8/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Yanik Silver"/><span class="play"></span></div><div class="c-no">Episode 005</div><h3>Playing Is the Ultimate Leadership Skill</h3><p class="c-guest">Yanik Silver &middot; Entrepreneur &amp; Author</p></a><a class="card" href="/podcast/warren-carlyle/"><div class="thumb"><img src="https://i.ytimg.com/vi/_yyaANBnF0w/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Warren K. Carlyle IV"/><span class="play"></span></div><div class="c-no">Episode 004</div><h3>The Octopus Expert: Build a Fanatical Community That Wants to Buy</h3><p class="c-guest">Warren K. Carlyle IV &middot; Founder, OctoNation</p></a><a class="card" href="/podcast/scott-harris/"><div class="thumb"><img src="https://i.ytimg.com/vi/YvLiN0wzh4g/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Scott Harris"/><span class="play"></span></div><div class="c-no">Episode 003</div><h3>Stop Chasing Perfection: Your Home Is Your Identity</h3><p class="c-guest">Scott Harris &middot; Founder, Magnetic</p></a><a class="card" href="/podcast/derek-coburn/"><div class="thumb"><img src="https://i.ytimg.com/vi/a98tBuwDUjE/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="Derek Coburn"/><span class="play"></span></div><div class="c-no">Episode 002</div><h3>Let&rsquo;s Retire Retirement: Design a Life You Don&rsquo;t Escape From</h3><p class="c-guest">Derek Coburn &middot; Founder, CADRE</p></a><a class="card" href="/podcast/james-ure/"><div class="thumb"><img src="https://i.ytimg.com/vi/8QC_nqdb3Jc/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')" alt="James Ure"/><span class="play"></span></div><div class="c-no">Episode 001</div><h3>How Authenticity &amp; Alignment Are the Real Mission in Business (and Life)</h3><p class="c-guest">James Ure &middot; Founder, Mojo Village</p></a></div></section>
 
 <footer>
   <div class="footer-inner">
