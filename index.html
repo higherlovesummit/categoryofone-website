@@ -199,9 +199,9 @@
     .footer-logo img { height: 52px; width: auto; display: block; }
     .footer-right { display: flex; flex-direction: column; align-items: center; gap: 12px; order: 1; }
     .footer-links { display: flex; gap: 26px; }
-    .footer-links a { font-family: "Raleway", sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.06em; color: var(--white); text-decoration: none; transition: color 0.2s; }
+    .footer-links a { font-family: "Raleway", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(237,227,218,0.7); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
-    .footer-copy { font-family: "Raleway", sans-serif; font-size: 12px; letter-spacing: 0.04em; color: var(--white); text-align: center; }
+    .footer-copy { font-family: "Raleway", sans-serif; font-size: 11px; letter-spacing: 0.1em; color: rgba(237,227,218,0.5); text-align: center; }
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
@@ -332,9 +332,9 @@
     .manifesto .section-label { justify-content: center; }
     .manifesto .section-label::after { display: none; }
     .manifesto .section-headline em { color: var(--gold); font-style: italic; }
-    .manifesto .section-headline { font-size: clamp(32px, 5vw, 64px); line-height: 1.06; }
-    .mf-in { max-width: 680px; margin: 0 auto; }
-    .mf-body { font-family: "Cormorant Garamond", serif; font-size: clamp(24px, 2.9vw, 38px); line-height: 1.32; color: var(--white); margin: 0 auto 40px; max-width: 30ch; }
+    .manifesto .section-headline { font-size: clamp(28px, 4vw, 46px); line-height: 1.1; }
+    .mf-in { max-width: 760px; margin: 0 auto; }
+    .mf-body { font-family: "Cormorant Garamond", serif; font-size: clamp(19px, 1.9vw, 26px); line-height: 1.5; color: var(--white); margin: 0 auto 22px; max-width: 46ch; }
     .mf-body em { color: var(--gold); font-style: italic; }
     .mf-pull { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 27px; line-height: 1.3; color: var(--white); margin: 36px auto; max-width: 560px; }
     .mf-rule { width: 40px; height: 1px; background: var(--gold); margin: 34px auto; }
@@ -411,23 +411,26 @@
   <h1>Build a <em>Category of One</em> Brand.</h1>
   <p class="hero-sub">We help established founder-led B2B and B2C businesses build industry-defining brands.</p>
   <a href="#apply" class="btn-primary">Schedule a Consult</a>
-  <a href="#video" class="hero-learn">Learn More <span aria-hidden="true">&darr;</span></a>
+  <a href="#manifesto" class="hero-learn">Learn More <span aria-hidden="true">&darr;</span></a>
   <div class="hero-stats">
     <div class="hs-block"><span class="hs-num">25<em>+</em></span><span class="hs-label">Years of Branding Experience</span></div>
     <div class="hs-block"><span class="hs-num">1,000<em>+</em></span><span class="hs-label">Brand Transformations</span></div>
     <div class="hs-block"><span class="hs-num">1<em>M+</em></span><span class="hs-label">People Impacted</span></div>
   </div>
 </section>
-<section class="video-below" id="video">
-  <div class="video-below-inner">
-    <p class="section-label">A Message From Our Founder</p>
-    <div class="hero-video-frame">
-      <video controls playsinline preload="metadata" poster="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c4613cee8b968c6f27713.png">
-        <source src="https://assets.cdn.filesafe.space/FZWGpa5sOR7doBNxFoDB/media/695c67b2b7f1c7326ed2777b.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+<section class="manifesto" id="manifesto">
+  <div class="section-inner">
+    <p class="section-label">Why Branding</p>
+    <h2 class="section-headline" style="max-width: 20ch; margin: 0 auto 56px;">Now, more than ever, your brand is your <em>advantage</em>.</h2>
+    <div class="mf-in">
+      <p class="mf-body">We're living through the most significant shift in modern business history. AI has accelerated what's possible, and in the process, made everything start to look, sound, and feel the same.</p>
+      <p class="mf-body">Over five million new businesses launched last year. Content is created faster than anyone can consume it. And in the process, trust is dissolving.</p>
+      <p class="mf-body">People no longer ask, &ldquo;Is this good?&rdquo; They ask, <em>&ldquo;Is this real?&rdquo;</em></p>
+      <p class="mf-body">In a market this crowded, the answer isn't louder marketing. It's deeper resonance. AI may be the engine, but without a brand you're accelerating without direction.</p>
+      <p class="mf-body">No matter how advanced AI becomes, it can't replicate <em>human connection</em>.</p>
+      <p class="mf-body">Everyone's using the same tools, the same prompts, the same formulas. AI isn't just creating speed, it's multiplying sameness. Brands that are visible, but forgettable. Seen, but not felt.</p>
+      <p class="mf-body">Stop competing in a category of many. And become a <em>Category of One</em> brand.</p>
     </div>
-    <p class="hero-video-cap">A message from Re Perez of Category of One Branding</p>
   </div>
 </section>
 <section class="testimonials" id="testimonials">
@@ -446,33 +449,6 @@
       <div class="tw-card"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">After an acquisition, Re Perez and his team rebranded our HVAC and plumbing company into one modern brand that stands out from competitors and attracts top talent.</p><div class="tcard-rule"></div><p class="tcard-name">Brandon Sady</p><p class="tcard-title">Four Quarters Home Services</p></div>
       <div class="tw-card"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez and his team overhauled our brand, positioning, and strategy &mdash; a significant impact on our financial success. Smart, patient, committed, a slam dunk.</p><div class="tcard-rule"></div><p class="tcard-name">Dr. Al Spicer</p><p class="tcard-title">Extraordinary Life</p></div>
       <div class="tw-card"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">The 8-figure companies that grow every year has everything to do with branding. Re Perez and his team has helped many of my friends build powerhouse brands.</p><div class="tcard-rule"></div><p class="tcard-name">Michael Lovitch</p><p class="tcard-title">Co-Founder, Baby Bathwater Institute</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez and his team transformed us from HVAC Sellutions into Flow Odyssey &mdash; from a market-limiting brand into an inspirational, people-focused one. Worth every penny.</p><div class="tcard-rule"></div><p class="tcard-name">Drew Cameron</p><p class="tcard-title">CEO, Flow Odyssey</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">I hired Re Perez and his team as our Fractional Branding Officer. He keeps everything aligned to our brand strategy &mdash; I&rsquo;ll never operate again without a Brand Strategist.</p><div class="tcard-rule"></div><p class="tcard-name">Dr. Eric J. Roman</p><p class="tcard-title">CEO, Visionary, Entrepreneur</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">The understanding Re Perez and his team had of our business was incredible. Since rebranding, we&rsquo;ve tripled in size.</p><div class="tcard-rule"></div><p class="tcard-name">Adam Hailstone</p><p class="tcard-title">CMO, Williamsburg Learning</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Working with Re Perez and his team on my branding was arguably one of the most important things I did for my business.</p><div class="tcard-rule"></div><p class="tcard-name">Raj Jana</p><p class="tcard-title">CEO, Liber8</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Working with Re Perez and his team exceeded my expectations. It became a spiritual experience! I have a brand I&rsquo;m proud of.</p><div class="tcard-rule"></div><p class="tcard-name">Gina Worful</p><p class="tcard-title">CEO, Mastering Mindfulness Institute</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez and his team exceeded all my expectations. The thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="tcard-rule"></div><p class="tcard-name">Melanie Merkling</p><p class="tcard-title">CEO, SoulFire</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">We hired two other branding companies before meeting Re Perez. His approach was easier to understand. He had a better process and worked with the entire team to come up with a brand that got everyone excited. He will satisfy you and your team completely.</p><div class="tcard-rule"></div><p class="tcard-name">Craig Handley</p><p class="tcard-title">CEO, ListenTrust &middot; Author of Hired to Quit</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Before rebranding, I had brand shame. We were fortunate to have great digital marketing to do well. After the rebrand, everything changed. We started to attract our ideal clients. Our revenues tripled. Our web traffic increased by 4,000%. We made the Inc. 500/5000 list three years in a row.</p><div class="tcard-rule"></div><p class="tcard-name">Suzanne Evans</p><p class="tcard-title">CEO, Driven, Inc.</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">We&rsquo;ve witnessed hundreds of terrific presentations over the years, but there are very few that blew our socks off the way Re Perez did. Not only did Re deliver poignant and relevant information engagingly through his content session, but he also went above and beyond to speak individually with attendees, offering helpful advice on a more personal level. We received as much positive feedback about his character as we did his content. His brain, energy, and delivery are 10 out of 10!</p><div class="tcard-rule"></div><p class="tcard-name">Hollis Carter &amp; Michael Lovitch</p><p class="tcard-title">The Baby Bathwater Institute</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">Re Perez&rsquo;s keynote presentation on Personal Branding was a highlight of our conference. He showed why it is so important for all professionals to develop a Personal Brand and explained how to do so. His use of personal stories and real-life examples was a masterful display of his expertise. It was an extremely valuable experience for our team to have Re Perez introduce a thought-provoking concept that is simply not talked about enough!</p><div class="tcard-rule"></div><p class="tcard-name">Hitachi Energy</p><p class="tcard-title">Personal Branding Keynote</p></div>
-      <div class="tw-card is-hidden"><span class="tcard-quote">&ldquo;</span><p class="tcard-text">It was a pleasure having Re Perez as a speaker at ONTRApalooza. He is knowledgeable, personable, and commands authority when talking to business owners about creating their brand. He made himself available to our attendees throughout the event, and in doing so, increased the value of attendance. I highly recommend him as a speaker at any event that would benefit from a thought leader on business branding.</p><div class="tcard-rule"></div><p class="tcard-name">Lena Requist</p><p class="tcard-title">President, Ontraport</p></div>
-    </div>
-    <div class="t-more"><button type="button" id="tMoreBtn" aria-expanded="false">Read More Testimonials</button></div>
-  </div>
-</section>
-<section class="manifesto" id="manifesto">
-  <div class="section-inner">
-    <p class="section-label">Why Branding</p>
-    <h2 class="section-headline" style="max-width: 20ch; margin: 0 auto 56px;">Now, more than ever, your brand is your <em>advantage</em>.</h2>
-    <div class="mf-in">
-      <p class="mf-body">We're living through the most significant shift in modern business history. AI has accelerated what's possible &mdash; and in the process, made everything start to look, sound, and feel the same.</p>
-      <p class="mf-body">Over five million new businesses launched last year. Content is created faster than anyone can consume it. And in the process, trust is dissolving.</p>
-      <p class="mf-body">People no longer ask, &ldquo;Is this good?&rdquo; They ask, <em>&ldquo;Is this real?&rdquo;</em></p>
-      <p class="mf-body">In a market this crowded, the answer isn't louder marketing. It's deeper resonance. AI may be the engine &mdash; but without a brand you're accelerating without direction.</p>
-      <p class="mf-body">No matter how advanced AI becomes, it can't replicate <em>human connection</em>.</p>
-      <p class="mf-body">Everyone's using the same tools, the same prompts, the same formulas. AI isn't just creating speed &mdash; it's multiplying sameness. Brands that are visible, but forgettable. Seen, but not felt.</p>
-      <p class="mf-body">Stop competing in a category of many. And become a <em>Category of One</em> brand.</p>
     </div>
   </div>
 </section>
@@ -512,16 +488,6 @@
     </div>
   </div>
 </footer>
-<script>
-(function(){
-  var btn=document.getElementById('tMoreBtn'), grid=document.getElementById('tgrid');
-  if(btn&&grid){btn.addEventListener('click',function(){
-    var ex=grid.classList.toggle('expanded');
-    btn.setAttribute('aria-expanded', ex?'true':'false');
-    btn.textContent = ex ? 'Show Fewer Testimonials' : 'Read More Testimonials';
-  });}
-})();
-</script>
 <script>
 (function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();
 </script>
