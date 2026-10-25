@@ -85,14 +85,12 @@
     .tw .q{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:22px;line-height:1.46;color:#2a1d12;margin-bottom:22px;}
     .tw .nm{font-family:"Raleway",sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--russet);}
     .tw .ti{font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.06em;color:rgba(34,24,17,0.62);margin-top:5px;}
-    .founder{background:var(--sand2);color:var(--inkt);}
-    .founder-in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:0.82fr 1fr;align-items:stretch;}
-    .f-img{min-height:580px;background:radial-gradient(70% 60% at 42% 32%, rgba(216,180,120,0.35), rgba(0,0,0,0) 60%),linear-gradient(135deg,#1a110b,#915335 125%);position:relative;}
-    .f-img .cap{position:absolute;bottom:16px;left:18px;font-family:"Raleway",sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:rgba(237,227,218,0.6);}
-    .f-text{padding:100px 64px;}
-    .f-text .eyebrow{color:var(--russet);margin-bottom:22px;display:block;}
-    .f-text h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(34px,4vw,54px);color:var(--inkt);margin-bottom:24px;}
-    .f-text p{font-family:"Cormorant Garamond",serif;font-size:clamp(18px,1.5vw,22px);line-height:1.5;color:#2a2018;margin-bottom:18px;}
+    .founder{background:var(--sand2);color:var(--inkt);text-align:center;padding:124px 56px;}
+    .founder-in{max-width:900px;margin:0 auto;}
+    .founder-in .eyebrow{color:var(--russet);margin-bottom:22px;display:block;}
+    .f-name{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(34px,4.6vw,56px);line-height:1.05;color:var(--inkt);margin-bottom:10px;}
+    .f-role{font-family:"Raleway",sans-serif;font-size:12px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--russet);margin-bottom:40px;}
+    .f-bio{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,1.9vw,27px);line-height:1.5;color:#2a2018;max-width:52ch;margin:0 auto 22px;text-align:left;}
     .cta{position:relative;overflow:hidden;background:radial-gradient(55% 75% at 50% 4%, rgba(216,180,120,0.13), rgba(0,0,0,0) 55%),radial-gradient(130% 120% at 50% 110%, rgba(0,0,0,0.5), rgba(0,0,0,0) 58%),#0E0B08;padding:118px 56px;text-align:center;}
     .cta-in{position:relative;z-index:2;max-width:760px;margin:0 auto;}
     .cta .eyebrow{color:var(--gold);margin-bottom:22px;display:block;}
@@ -126,7 +124,7 @@
       .tw{padding:30px 0;border-top:1px solid rgba(34,24,17,0.2);}
       .tw:not(:nth-child(3n+1)){border-left:none;}
       .tw:first-child{border-top:none;}
-      .founder-in{grid-template-columns:1fr;}.f-img{min-height:340px;}.f-text{padding:64px 24px;}
+      .founder{padding:84px 24px;}
       footer{padding:40px 24px;}.foot-in{flex-direction:column;text-align:center;}.f-right{text-align:center;}.flinks{justify-content:center;}
       .sticky-cta-bar{display:block;}
     }
@@ -139,7 +137,7 @@
   <div class="nav-right">
     <div class="nav-links">
       <a href="#founder">About</a>
-      <a href="/case-studies/">Case Studies</a>
+      <a href="/case-studies/">Our Work</a>
       <a href="/podcast/">Podcast</a>
     </div>
     <a href="#apply" class="nav-cta">Schedule a Consult</a>
@@ -148,7 +146,7 @@
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#founder">About</a>
-  <a href="/case-studies/">Case Studies</a>
+  <a href="/case-studies/">Our Work</a>
   <a href="/podcast/">Podcast</a>
   <a href="#apply" class="mm-cta">Schedule a Consult</a>
 </div>
@@ -224,13 +222,11 @@
 </section>
 <section class="founder" id="founder">
   <div class="founder-in">
-    <div class="f-img"><span class="cap">Duotone editorial portrait &mdash; Re Perez</span></div>
-    <div class="f-text">
-      <span class="eyebrow">Our Founder</span>
-      <h2>Re Perez</h2>
-      <p>Re Perez is the Founder &amp; CEO of Category of One Branding and a well-respected brand strategist with 25+ years of experience. He doesn't just build brands; he helps successful brands become more successful.</p>
-      <p>Across more than 1,000 brand transformations, Re has developed a proven methodology that blends enterprise-level branding, A.I., and human optimization, honed advising Fortune 500 companies in New York City, and shared on stages from the Baby Bathwater Institute to Traffic &amp; Conversion Summit.</p>
-    </div>
+    <span class="eyebrow">Our Founder</span>
+    <h2 class="f-name">Re Perez</h2>
+    <p class="f-role">Founder &amp; CEO, Category of One Branding</p>
+    <p class="f-bio">Re Perez is the Founder &amp; CEO of Category of One Branding and a well-respected brand strategist with 25+ years of experience. He doesn't just build brands; he helps successful brands become more successful.</p>
+    <p class="f-bio">Across more than 1,000 brand transformations, Re has developed a proven methodology that blends enterprise-level branding, A.I., and human optimization, honed advising Fortune 500 companies in New York City, and shared on stages from the Baby Bathwater Institute to Traffic &amp; Conversion Summit.</p>
   </div>
 </section>
 <section class="cta" id="apply">
@@ -246,7 +242,7 @@
     <div><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
     <div class="f-right">
       <div class="flinks">
-        <a href="/case-studies/">Case Studies</a>
+        <a href="/case-studies/">Our Work</a>
         <a href="/podcast/">Podcast</a>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms &amp; Conditions</a>
