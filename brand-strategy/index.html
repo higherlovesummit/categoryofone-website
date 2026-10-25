@@ -129,6 +129,16 @@ footer .fcopy{font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.1
 @media(max-width:900px){footer{padding:40px 24px;}footer .foot-in{flex-direction:column;text-align:center;}footer .f-right{text-align:center;}footer .flinks{justify-content:center;}}
 </style>
 <style id="hcaps">h1,h2{font-family:"Cormorant Garamond",serif !important;text-transform:uppercase !important;letter-spacing:0.03em !important;}.eyebrow{font-size:13.5px !important;letter-spacing:0.2em !important;}</style>
+<style id="mmenu">
+.mobile-menu{display:none;position:fixed;inset:0;z-index:95;background:#0E0B08;flex-direction:column;align-items:stretch;justify-content:space-between;gap:0;padding:112px 24px calc(28px + env(safe-area-inset-bottom,0px));text-align:left;overflow-y:auto;}
+.mobile-menu.open{display:flex;}
+.mobile-menu .mm-list{display:flex;flex-direction:column;}
+.mobile-menu .mm-list a{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:46px;line-height:1;letter-spacing:.03em;text-transform:uppercase;color:#fff;padding:14px 0;text-align:left;}
+.mobile-menu .mm-list a span{display:block;font-family:"Raleway",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(216,180,120,.75);margin-bottom:8px;}
+.mobile-menu .mm-cta{display:block;text-align:center;background:#D8B478;color:#14100b;font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:18px 20px;margin-bottom:18px;}
+.mobile-menu .mm-meta{display:flex;justify-content:space-between;gap:12px;font-family:"Raleway",sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(237,227,218,.45);}
+.mobile-menu .mm-meta a{color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;}
+</style>
 </head>
 <body>
 <nav id="nav">
@@ -139,15 +149,20 @@ footer .fcopy{font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.1
       <a href="/case-studies/">Our Work</a>
       <a href="/podcast/">Podcast</a>
     </div>
-    <a href="/#apply" class="nav-cta">Schedule a Consult</a>
+    <a href="/#apply" class="nav-cta">Talk With A Human</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/#founder">About</a>
-  <a href="/case-studies/">Our Work</a>
-  <a href="/podcast/">Podcast</a>
-  <a href="/#apply" class="mm-cta">Schedule a Consult</a>
+  <div class="mm-list">
+    <a href="/#founder"><span>Who we are</span>About</a>
+    <a href="/case-studies/"><span>Case studies</span>Our Work</a>
+    <a href="/podcast/"><span>Conversations</span>Podcast</a>
+  </div>
+  <div class="mm-bottom">
+    <a href="/#apply" class="mm-cta">Talk With A Human</a>
+    <div class="mm-meta"><span>Austin, TX</span><a href="mailto:re@reperez.com">re@reperez.com</a></div>
+  </div>
 </div>
 
 <header class="hero">
@@ -323,8 +338,8 @@ footer .fcopy{font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.1
     </div>
     <div class="questions-block">
       <div class="form-box-embed">
-        <h3 class="form-heading">Schedule a Consult Below</h3>
-        <div class="cal-embed-card"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" style="border:0;width:100%;display:block;" height="600" frameborder="0" title="Schedule a Consult"></iframe></div>
+        <h3 class="form-heading">Talk With A Human Below</h3>
+        <div class="cal-embed-card"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" style="border:0;width:100%;display:block;" height="600" frameborder="0" title="Talk With A Human"></iframe></div>
         <p class="secondary-cta">Not ready to book? <a href="/case-studies/">See the work first &rarr;</a></p>
       </div>
     </div>

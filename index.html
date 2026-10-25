@@ -141,6 +141,24 @@
     @media (max-width:560px){.pf-track .card{flex:0 0 auto;width:100%;}}
   </style>
 <style id="hcaps">h1,h2{font-family:"Cormorant Garamond",serif !important;text-transform:uppercase !important;letter-spacing:0.03em !important;}.eyebrow{font-size:13.5px !important;letter-spacing:0.2em !important;}</style>
+<style id="mmenu">
+.mobile-menu{display:none;position:fixed;inset:0;z-index:95;background:#0E0B08;flex-direction:column;align-items:stretch;justify-content:space-between;gap:0;padding:112px 24px calc(28px + env(safe-area-inset-bottom,0px));text-align:left;overflow-y:auto;}
+.mobile-menu.open{display:flex;}
+.mobile-menu .mm-list{display:flex;flex-direction:column;}
+.mobile-menu .mm-list a{display:block;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:46px;line-height:1;letter-spacing:.03em;text-transform:uppercase;color:#fff;padding:14px 0;text-align:left;}
+.mobile-menu .mm-list a span{display:block;font-family:"Raleway",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(216,180,120,.75);margin-bottom:8px;}
+.mobile-menu .mm-cta{display:block;text-align:center;background:#D8B478;color:#14100b;font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:18px 20px;margin-bottom:18px;}
+.mobile-menu .mm-meta{display:flex;justify-content:space-between;gap:12px;font-family:"Raleway",sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(237,227,218,.45);}
+.mobile-menu .mm-meta a{color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;}
+</style>
+<style id="stickyfix">
+@media (max-width:900px){
+.sticky-cta-bar{display:block !important;position:fixed;left:16px;right:16px;top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:90;background:transparent !important;border:0 !important;padding:0 !important;transform:translateY(calc(100% + 40px));opacity:0;transition:transform .35s ease,opacity .3s ease;pointer-events:none;}
+.sticky-cta-bar.show{transform:none;opacity:1;pointer-events:auto;}
+.sticky-cta-bar a{display:block;width:100%;background:#D8B478;color:#14100b;font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;text-align:center;padding:17px 16px;box-shadow:0 10px 30px rgba(0,0,0,.45);}
+}
+@media (min-width:901px){.sticky-cta-bar{display:none !important;}}
+</style>
 </head>
 <body>
 <nav id="nav">
@@ -151,23 +169,28 @@
       <a href="/case-studies/">Our Work</a>
       <a href="/podcast/">Podcast</a>
     </div>
-    <a href="#apply" class="nav-cta">Schedule a Consult</a>
+    <a href="#apply" class="nav-cta">Talk With A Human</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#founder">About</a>
-  <a href="/case-studies/">Our Work</a>
-  <a href="/podcast/">Podcast</a>
-  <a href="#apply" class="mm-cta">Schedule a Consult</a>
+  <div class="mm-list">
+    <a href="#founder"><span>Who we are</span>About</a>
+    <a href="/case-studies/"><span>Case studies</span>Our Work</a>
+    <a href="/podcast/"><span>Conversations</span>Podcast</a>
+  </div>
+  <div class="mm-bottom">
+    <a href="#apply" class="mm-cta">Talk With A Human</a>
+    <div class="mm-meta"><span>Austin, TX</span><a href="mailto:re@reperez.com">re@reperez.com</a></div>
+  </div>
 </div>
-<div class="sticky-cta-bar"><a href="#apply">Schedule a Consult</a></div>
+<div class="sticky-cta-bar"><a href="#apply">Talk With A Human</a></div>
 <section class="hero" id="hero">
   <div class="photo"></div><div class="scrim"></div>
   <div class="hcap">
     <h1>Build a <em>Category of One</em> Brand.</h1>
     <p class="sub">We turn founder-led B2B companies into a category of one.</p>
-    <div class="ctas"><a href="#apply" class="btn-gold">Schedule a Consult</a><a href="/case-studies/" class="link">See the Work</a></div>
+    <div class="ctas"><a href="#apply" class="btn-gold">Talk With A Human</a><a href="/case-studies/" class="link">See the Work</a></div>
   </div>
 </section>
 <section class="stats">
@@ -274,7 +297,7 @@
     <span class="eyebrow">Work With Us</span>
     <h2>Talk With A Human</h2>
     <p class="sub">If you're looking for a strategic branding partner to elevate your growing B2B business, let's talk.</p>
-    <div class="cal-card"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" height="600" frameborder="0" title="Schedule a Consult"></iframe></div>
+    <div class="cal-card"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" height="600" frameborder="0" title="Talk With A Human"></iframe></div>
   </div>
 </section>
 <footer>
@@ -301,5 +324,6 @@
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 })();
 </script>
+<script id="stickyjs">(function(){var b=document.querySelector('.sticky-cta-bar'),h=document.querySelector('.hero,.cs-hero');if(!b||!h)return;function f(){b.classList.toggle('show',h.getBoundingClientRect().bottom<60);}window.addEventListener('scroll',f,{passive:true});window.addEventListener('resize',f);f();})();</script>
 </body>
 </html>
