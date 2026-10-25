@@ -29,10 +29,10 @@
     .nav-toggle.open span:nth-child(1){top:9px;transform:rotate(45deg);}.nav-toggle.open span:nth-child(2){opacity:0;}.nav-toggle.open span:nth-child(3){top:9px;transform:rotate(-45deg);}
     .mobile-menu{display:none;position:fixed;inset:0;z-index:95;background:var(--ink);flex-direction:column;align-items:center;justify-content:center;gap:38px;}
     .mobile-menu a{font-family:"Cormorant Garamond",serif;font-size:40px;font-weight:600;color:#fff;}.mobile-menu .mm-cta{color:var(--gold);}
-    .hero{position:relative;min-height:50vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:128px 56px 56px;background:radial-gradient(58% 70% at 50% 12%, rgba(216,180,120,0.12), rgba(0,0,0,0) 55%),radial-gradient(130% 120% at 50% 104%, rgba(0,0,0,0.6), rgba(0,0,0,0) 58%),var(--ink);}
-    .hcap{position:relative;z-index:2;max-width:860px;}
+    .hero{position:relative;min-height:72vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;overflow:hidden;padding:20vh 56px 0;background:radial-gradient(58% 70% at 50% 12%, rgba(216,180,120,0.12), rgba(0,0,0,0) 55%),radial-gradient(130% 120% at 50% 104%, rgba(0,0,0,0.6), rgba(0,0,0,0) 58%),var(--ink);}
+    .hcap{position:relative;z-index:2;max-width:1100px;margin:0 auto;}
     .hcap .eyebrow{color:var(--gold);margin-bottom:24px;display:block;}
-    .hcap h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(46px,7vw,92px);line-height:0.99;color:#fff;}
+    .hcap h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(40px,5.5vw,88px);line-height:1.04;color:#fff;}
     .hcap .sub{font-size:clamp(18px,1.6vw,22px);color:rgba(237,227,218,0.82);margin:24px auto 0;max-width:50ch;}
     .work{background:var(--ink);padding:96px 56px 116px;}
     .work-in{max-width:1240px;margin:0 auto;}
@@ -59,7 +59,7 @@
     .fcopy{font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#fff;}
     @media(max-width:900px){
       nav{padding:16px 24px;}nav.nav-solid{padding:14px 24px;}.nav-links,.nav-cta{display:none;}.nav-toggle{display:block;}.mobile-menu.open{display:flex;}
-      .hero{padding:120px 24px 60px;}.work{padding:72px 24px 90px;}.cards{grid-template-columns:1fr 1fr;gap:40px 22px;}
+      .hero{padding:15vh 24px 0;min-height:60vh;}.work{padding:72px 24px 90px;}.cards{grid-template-columns:1fr 1fr;gap:40px 22px;}
       .cta{padding:84px 24px;}footer{padding:40px 24px;}.foot-in{flex-direction:column;text-align:center;}.f-right{text-align:center;}.flinks{justify-content:center;}
     }
     @media(max-width:560px){.cards{grid-template-columns:1fr;}}
@@ -80,7 +80,6 @@
 </div>
 <section class="hero">
   <div class="hcap">
-    <span class="eyebrow">Our Work</span>
     <h1>Case Studies</h1>
     <p class="sub">Select success stories from the founder-led brands we've helped become a Category of One.</p>
   </div>
