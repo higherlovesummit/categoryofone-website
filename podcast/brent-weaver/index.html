@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>EP 010 — Brent Weaver | Category of One</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet"/><style>
- :root{--jet:#000;--gold:#D8B478;--linen:#EDE3DA;--white:#fff;}
+ :root{--jet:#0E0B08;--gold:#D8B478;--linen:#EDE3DA;--white:#fff;--inkt:#1A1510;}
  *{box-sizing:border-box;margin:0;padding:0;}
- body{background:var(--jet);color:var(--linen);font-family:"EB Garamond",Georgia,serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+ body{background:radial-gradient(62% 38% at 50% 0%, rgba(216,180,120,0.10), rgba(0,0,0,0) 62%),var(--jet);background-repeat:no-repeat;color:var(--linen);font-family:"EB Garamond",Georgia,serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;}
  a{color:var(--gold);text-decoration:none;}
  .wrap{max-width:1160px;margin:0 auto;padding:0 44px;}
  nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 44px;background:rgba(0,0,0,0.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(216,180,120,0.16);}
@@ -46,7 +46,10 @@
  .side .g-links,.side .r-links{display:flex;flex-wrap:wrap;gap:14px;font-family:"Raleway",sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;}
  @media(max-width:900px){.body-grid{grid-template-columns:1fr;gap:38px;}}    .r-icons{display:flex;gap:20px;align-items:center;}.ricon{color:#fff;display:inline-flex;}.ricon:hover{color:var(--gold);}.ricon svg{width:23px;height:23px;display:block;}
     /* ---- site chrome ---- */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;background:#000;border-bottom:1px solid rgba(216,180,120,0.2);backdrop-filter:blur(8px);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 60px;background:transparent;border-bottom:1px solid transparent;transition:background .3s,padding .3s,border-color .3s;}
+    nav.nav-solid{background:rgba(14,11,8,0.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(216,180,120,0.18);padding:16px 60px;}
+    .nav-cta{border:1px solid rgba(216,180,120,0.7);color:var(--gold);padding:11px 22px;font-family:"Raleway",sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;transition:background .2s,color .2s;text-decoration:none;}
+    .nav-cta:hover{background:var(--gold);color:#14100b;}
     .nav-logo img{height:52px;width:auto;display:block;}
     .nav-right{display:flex;align-items:center;gap:36px;}
     .nav-links{display:flex;gap:28px;}
@@ -58,7 +61,7 @@
     .nav-toggle.open span:nth-child(1){top:9px;transform:rotate(45deg);}
     .nav-toggle.open span:nth-child(2){opacity:0;}
     .nav-toggle.open span:nth-child(3){top:9px;transform:rotate(-45deg);}
-    .mobile-menu{display:none;position:fixed;inset:0;z-index:95;background:#000;flex-direction:column;align-items:center;justify-content:center;gap:40px;padding:0 24px;}
+    .mobile-menu{display:none;position:fixed;inset:0;z-index:95;background:#0E0B08;flex-direction:column;align-items:center;justify-content:center;gap:40px;padding:0 24px;}
     .mobile-menu a{font-family:"Cormorant Garamond",serif;font-size:40px;font-weight:600;letter-spacing:normal;text-transform:none;color:#fff;text-decoration:none;text-align:center;}
     .mobile-menu .mm-cta{color:var(--gold);}
     .btn-primary{display:inline-block;font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:#111;background:var(--gold);padding:13px 32px;text-decoration:none;border:none;cursor:pointer;transition:background .2s,color .2s,transform .15s;}
@@ -83,7 +86,7 @@
     .me-track{display:flex;gap:26px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none;padding-bottom:4px;}
     .me-track::-webkit-scrollbar{display:none;}
     .me-card{flex:0 0 340px;max-width:340px;min-width:0;scroll-snap-align:start;text-decoration:none;color:inherit;}
-    .me-art{position:relative;aspect-ratio:16/9;background:#000;border:1px solid rgba(216,180,120,0.2);overflow:hidden;margin-bottom:14px;}
+    .me-art{position:relative;aspect-ratio:16/9;background:#17100A;border:1px solid rgba(216,180,120,0.2);overflow:hidden;margin-bottom:14px;}
     .me-art img{width:100%;height:100%;object-fit:cover;display:block;}
     .me-art .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;border:1.5px solid var(--gold);background:rgba(0,0,0,0.35);}
     .me-art .play::after{content:"";position:absolute;top:13px;left:19px;border-left:13px solid var(--gold);border-top:8px solid transparent;border-bottom:8px solid transparent;}
@@ -110,18 +113,20 @@
  .side .connect-card{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 26px;margin-top:16px;}
  .side .connect-card .eyebrow{margin-bottom:0;}
  @media(max-width:600px){.side .guest-card{display:block;}.side .guest-card .guest-photo{width:100%;height:auto;aspect-ratio:16/9;margin:12px 0;}.side .connect-card{flex-wrap:wrap;gap:14px;}}
-</style></head><body><nav>
+</style></head><body><nav id="nav">
   <div class="nav-logo"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
   <div class="nav-right">
     <div class="nav-links">
+      <a href="/#founder">About</a>
       <a href="/case-studies/">Case Studies</a>
       <a href="/podcast/" class="active">Podcast</a>
     </div>
-    <a href="/#apply" class="btn-primary nav-cta">Schedule a Consult</a>
+    <a href="/#apply" class="nav-cta">Schedule a Consult</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
+  <a href="/#founder">About</a>
   <a href="/case-studies/">Case Studies</a>
   <a href="/podcast/">Podcast</a>
   <a href="/#apply" class="mm-cta">Schedule a Consult</a>
@@ -152,5 +157,7 @@
       <p class="footer-copy">&copy; 2026 Category of One Branding, LLC. All Rights Reserved.</p>
     </div>
   </div>
-</footer><script>(function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();</script>
+</footer><script>(function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();
+(function(){var nav=document.getElementById('nav');if(!nav)return;function s(){if(window.scrollY>40)nav.classList.add('nav-solid');else nav.classList.remove('nav-solid');}window.addEventListener('scroll',s,{passive:true});s();})();
+</script>
 </body></html>
