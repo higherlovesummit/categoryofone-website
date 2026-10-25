@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0E0B08;font-family:"Raleway",sans-serif;padding:26px 30px 60px}
+.lab{color:#D8B478;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin:30px 0 14px}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1120px}
+.cover{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:13% 15%;border:1px solid rgba(216,180,120,0.14);overflow:hidden}
+.cover img{max-width:100%;max-height:100%;width:auto;object-fit:contain}
+/* flat */
+.flat.e{background:#1638fb}.flat.o{background:#32D2BE}.flat.b{background:#AA1E32}
+/* A: diagonal sheen */
+.a.e{background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(0,0,0,0) 42%,rgba(0,0,0,.24)),#1638fb}
+.a.o{background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(0,0,0,0) 42%,rgba(0,0,0,.24)),#32D2BE}
+.a.b{background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(0,0,0,0) 42%,rgba(0,0,0,.24)),#AA1E32}
+/* B: spotlight + vignette (matches hero) */
+.b2.e{background:radial-gradient(72% 72% at 50% 28%,rgba(255,255,255,.17),rgba(255,255,255,0) 60%),radial-gradient(125% 120% at 50% 112%,rgba(0,0,0,.34),rgba(0,0,0,0) 55%),#1638fb}
+.b2.o{background:radial-gradient(72% 72% at 50% 28%,rgba(255,255,255,.17),rgba(255,255,255,0) 60%),radial-gradient(125% 120% at 50% 112%,rgba(0,0,0,.34),rgba(0,0,0,0) 55%),#32D2BE}
+.b2.b{background:radial-gradient(72% 72% at 50% 28%,rgba(255,255,255,.17),rgba(255,255,255,0) 60%),radial-gradient(125% 120% at 50% 112%,rgba(0,0,0,.34),rgba(0,0,0,0) 55%),#AA1E32}
+</style></head><body>
+<div class="lab">Current — flat brand color</div>
+<div class="row">
+  <div class="cover flat e"><img src="/case-studies/img/logos/e2m-solutions.svg"></div>
+  <div class="cover flat o"><img src="/case-studies/img/logos/odyssey-test-prep.png"></div>
+  <div class="cover flat b"><img src="/case-studies/img/logos/bendt-distilling.png"></div>
+</div>
+<div class="lab">Option A — diagonal sheen (light top-left, shadow bottom-right)</div>
+<div class="row">
+  <div class="cover a e"><img src="/case-studies/img/logos/e2m-solutions.svg"></div>
+  <div class="cover a o"><img src="/case-studies/img/logos/odyssey-test-prep.png"></div>
+  <div class="cover a b"><img src="/case-studies/img/logos/bendt-distilling.png"></div>
+</div>
+<div class="lab">Option B — center spotlight + bottom vignette (matches hero gradient)</div>
+<div class="row">
+  <div class="cover b2 e"><img src="/case-studies/img/logos/e2m-solutions.svg"></div>
+  <div class="cover b2 o"><img src="/case-studies/img/logos/odyssey-test-prep.png"></div>
+  <div class="cover b2 b"><img src="/case-studies/img/logos/bendt-distilling.png"></div>
+</div>
+</body></html>
