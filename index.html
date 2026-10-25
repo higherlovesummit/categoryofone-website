@@ -86,12 +86,13 @@
     .tst-in{position:relative;z-index:2;max-width:1240px;margin:0 auto;}
     .tst .eyebrow{color:var(--russet);text-align:center;display:block;margin-bottom:18px;}
     .tst h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(30px,3.6vw,50px);color:#221811;text-align:center;margin-bottom:62px;}
-    .twall{display:grid;grid-template-columns:repeat(3,1fr);row-gap:50px;}
-    .tw{padding:0 38px;}
-    .tw:not(:nth-child(3n+1)){border-left:1px solid rgba(34,24,17,0.2);}
-    .tw .q{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:22px;line-height:1.46;color:#2a1d12;margin-bottom:22px;}
-    .tw .nm{font-family:"Raleway",sans-serif;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--russet);}
-    .tw .ti{font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.06em;color:rgba(34,24,17,0.62);margin-top:5px;}
+    .twall{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+    .tw{background:#F3ECE1;border:1px solid rgba(145,83,53,0.18);padding:40px 34px 32px;display:flex;flex-direction:column;}
+    .tw .q{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:24px;line-height:1.5;color:#221811;margin-bottom:28px;flex:1;}
+    .tw .who{display:flex;align-items:center;gap:15px;margin-top:auto;}
+    .tw .av{flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:#1A1510;color:var(--gold);font-family:"Raleway",sans-serif;font-size:14px;font-weight:700;letter-spacing:0.03em;display:flex;align-items:center;justify-content:center;}
+    .tw .nm{font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1a120c;}
+    .tw .ti{font-family:"Raleway",sans-serif;font-size:11.5px;letter-spacing:0.04em;color:rgba(34,24,17,0.6);margin-top:4px;}
     .founder{background:var(--sand2);color:var(--inkt);text-align:center;padding:124px 56px;}
     .founder-in{max-width:900px;margin:0 auto;}
     .founder-in .eyebrow{color:var(--russet);margin-bottom:22px;display:block;}
@@ -127,17 +128,15 @@
       .cta{padding:88px 24px;}
       .manifesto,.work,.tst,.cta{padding-left:24px;padding-right:24px;} .hcap .sub{white-space:normal;}
       .pf-track .card{flex:0 0 78%;}
-      .twall{grid-template-columns:1fr;row-gap:0;}
-      .tw{padding:30px 0;border-top:1px solid rgba(34,24,17,0.2);}
-      .tw:not(:nth-child(3n+1)){border-left:none;}
-      .tw:first-child{border-top:none;}
+      .twall{grid-template-columns:1fr;gap:18px;}
+      .tw{padding:32px 26px;}
       .founder{padding:84px 24px;}
       footer{padding:40px 24px;}.foot-in{flex-direction:column;text-align:center;}.f-right{text-align:center;}.flinks{justify-content:center;}
       .sticky-cta-bar{display:block;}
     }
     @media (max-width:560px){.pf-track .card{flex:0 0 86%;}}
   </style>
-<style id="hcaps">h1,h2{font-family:"Cormorant Garamond",serif !important;text-transform:uppercase !important;letter-spacing:0.03em !important;}</style>
+<style id="hcaps">h1,h2{font-family:"Cormorant Garamond",serif !important;text-transform:uppercase !important;letter-spacing:0.03em !important;}.eyebrow{font-size:13.5px !important;letter-spacing:0.2em !important;}</style>
 </head>
 <body>
 <nav id="nav">
@@ -184,7 +183,7 @@
 <section class="work" id="work">
   <div class="work-in">
     <div class="whead">
-      <div><span class="eyebrow">Selected Work</span><h2>Category-defining brands.</h2></div>
+      <div><span class="eyebrow">Selected Work</span><h2>Our Work</h2></div>
       <div class="pf-arrows">
         <button class="pf-arrow" type="button" aria-label="Previous" onclick="var t=this.closest('.work-in').querySelector('.pf-track');t.scrollBy({left:-(t.querySelector('.card').offsetWidth+28)*2,behavior:'smooth'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg></button>
         <button class="pf-arrow" type="button" aria-label="Next" onclick="var t=this.closest('.work-in').querySelector('.pf-track');t.scrollBy({left:(t.querySelector('.card').offsetWidth+28)*2,behavior:'smooth'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -225,12 +224,12 @@
     <span class="eyebrow">Testimonials</span>
     <h2>What People Are Saying</h2>
     <div class="twall">
-      <div class="tw"><p class="q">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez and his team.</p><div class="nm">Justin Berg</div><div class="ti">CEO, Purple Care</div></div>
-      <div class="tw"><p class="q">In just a month after rebranding, we grew 399%. Fast forward to today, we've nearly 10x'd our business.</p><div class="nm">Jon McCarty</div><div class="ti">CEO, Odyssey Test Prep</div></div>
-      <div class="tw"><p class="q">The leadership of Re Perez and his team helped us stand out. Immediately after rebranding, we landed a $1M contract.</p><div class="nm">Chris Koomey</div><div class="ti">COO, Thorben</div></div>
-      <div class="tw"><p class="q">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez and his team.</p><div class="nm">Ryan Deiss</div><div class="ti">Co-Founder, Digital Marketer</div></div>
-      <div class="tw"><p class="q">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision Re Perez and his team delivers.</p><div class="nm">Angelique Rewers</div><div class="ti">CEO, BoldHaus</div></div>
-      <div class="tw"><p class="q">Re Perez and his team is my go-to oracle for branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="nm">Brent Weaver</div><div class="ti">CEO, E2M Solutions</div></div>
+      <div class="tw"><p class="q">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez and his team.</p><div class="who"><span class="av">JB</span><div><div class="nm">Justin Berg</div><div class="ti">CEO, Purple Care</div></div></div></div>
+      <div class="tw"><p class="q">In just a month after rebranding, we grew 399%. Fast forward to today, we've nearly 10x'd our business.</p><div class="who"><span class="av">JM</span><div><div class="nm">Jon McCarty</div><div class="ti">CEO, Odyssey Test Prep</div></div></div></div>
+      <div class="tw"><p class="q">The leadership of Re Perez and his team helped us stand out. Immediately after rebranding, we landed a $1M contract.</p><div class="who"><span class="av">CK</span><div><div class="nm">Chris Koomey</div><div class="ti">COO, Thorben</div></div></div></div>
+      <div class="tw"><p class="q">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez and his team.</p><div class="who"><span class="av">RD</span><div><div class="nm">Ryan Deiss</div><div class="ti">Co-Founder, Digital Marketer</div></div></div></div>
+      <div class="tw"><p class="q">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision Re Perez and his team delivers.</p><div class="who"><span class="av">AR</span><div><div class="nm">Angelique Rewers</div><div class="ti">CEO, BoldHaus</div></div></div></div>
+      <div class="tw"><p class="q">Re Perez and his team is my go-to oracle for branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="who"><span class="av">BW</span><div><div class="nm">Brent Weaver</div><div class="ti">CEO, E2M Solutions</div></div></div></div>
     </div>
   </div>
 </section>
