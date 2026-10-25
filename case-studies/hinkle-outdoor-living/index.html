@@ -23,10 +23,13 @@
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --jet:#000000; --gold:#D8B478; --russet:#915335; --linen:#EDE3DA; --gray:#595959; --white:#FFFFFF; }
+    :root { --jet:#0E0B08; --gold:#D8B478; --russet:#915335; --linen:#EDE3DA; --gray:#595959; --white:#FFFFFF; --inkt:#1A1510; }
     html { scroll-behavior: smooth; }
     body { background: var(--jet); color: var(--white); font-family: "EB Garamond", Georgia, serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
-    nav { position: fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:20px 60px; background:#000; border-bottom:1px solid rgba(216, 180, 120,0.2); backdrop-filter: blur(8px); }
+    nav { position: fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:22px 60px; transition:background .3s,padding .3s,border-color .3s; border-bottom:1px solid transparent; }
+    nav.nav-solid { background:rgba(14,11,8,0.92); backdrop-filter:blur(10px); border-bottom:1px solid rgba(216,180,120,0.18); padding:16px 60px; }
+    .nav-cta { border:1px solid rgba(216,180,120,0.7); color:var(--gold); padding:11px 22px; font-family:"Raleway",sans-serif; font-size:11.5px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; transition:background .2s,color .2s; text-decoration:none; }
+    .nav-cta:hover { background:var(--gold); color:#14100b; }
     .nav-logo img { height:56px; width:auto; display:block; }
     .nav-right { display:flex; align-items:center; gap:36px; }
     .nav-links { display:flex; gap:32px; }
@@ -40,7 +43,7 @@
     .section-label { font-family:"Raleway",sans-serif; font-size:12px; font-weight:700; letter-spacing:0.26em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; display:flex; align-items:center; gap:12px; }
     .section-label::after { content:""; flex:1; max-width:48px; height:1px; background:var(--gold); }
     .section-headline { font-family:"Cormorant Garamond",serif; font-weight:600; font-size:clamp(28px,4vw,46px); line-height:1.1; color:var(--white); margin-bottom:20px; }
-    .cs-hero { padding:170px 60px 60px; text-align:center; }
+    .cs-hero { padding:170px 60px 60px; text-align:center; background:radial-gradient(58% 70% at 50% 12%, rgba(216,180,120,0.12), rgba(0,0,0,0) 55%),radial-gradient(130% 120% at 50% 104%, rgba(0,0,0,0.55), rgba(0,0,0,0) 58%),var(--jet); }
     .cs-hero-inner { max-width:900px; margin:0 auto; }
     .cs-hero h1 { font-family:"Cormorant Garamond",serif; font-weight:600; font-size:clamp(40px,6.4vw,80px); line-height:1.04; letter-spacing:normal; text-transform:none; margin-bottom:18px; }
     .cs-tagline { font-size:clamp(17px,2vw,21px); color:rgba(237,227,218,0.72); max-width:640px; margin:0 auto 40px; }
@@ -50,7 +53,7 @@
     .cs-metric-label { font-family:"Raleway",sans-serif; font-size:10px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:rgba(237,227,218,0.55); }
     .cs-hero-img { max-width:1100px; margin:48px auto 0; }
     .cs-hero-img img { width:100%; display:block; border:1px solid rgba(216, 180, 120,0.2); }
-    .cs-body { background:#111111; border-top:1px solid rgba(216, 180, 120,0.12); }
+    .cs-body { background:#17100A; border-top:1px solid rgba(216, 180, 120,0.12); }
     .cs-grid { display:grid; grid-template-columns:1fr 300px; gap:64px; align-items:start; }
     .cs-narrative h2 { font-family:"Cormorant Garamond",serif; font-weight:600; font-size:30px; color:var(--gold); margin:36px 0 14px; }
     .cs-narrative h2:first-child { margin-top:0; }
@@ -66,7 +69,7 @@
     .ba-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:36px; }
     .ba-item figcaption { font-family:"Raleway",sans-serif; font-size:11px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
     .ba-item img { width:100%; display:block; border:1px solid rgba(216, 180, 120,0.2); }
-    .gallery { background:#111111; border-top:1px solid rgba(216, 180, 120,0.12); }
+    .gallery { background:#17100A; border-top:1px solid rgba(216, 180, 120,0.12); }
     .g-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:36px; }
     .g-grid img { width:100%; display:block; border:1px solid rgba(216, 180, 120,0.14); }
     .cs-quote { background:var(--jet); text-align:center; }
@@ -81,7 +84,7 @@
     .cs-nav-row a { font-family:"Raleway",sans-serif; font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); text-decoration:none; }
     .cs-nav-row a:hover { color:var(--white); }
     .hub-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:48px; }
-    .hub-card { display:block; text-decoration:none; color:inherit; background:#111111; border:1px solid rgba(216, 180, 120,0.14); transition:border-color .2s, transform .15s; }
+    .hub-card { display:block; text-decoration:none; color:inherit; background:#17100A; border:1px solid rgba(216, 180, 120,0.14); transition:border-color .2s, transform .15s; }
     .hub-card:hover { border-color:rgba(216, 180, 120,0.5); transform:translateY(-2px); }
     .hub-card img { width:100%; display:block; aspect-ratio:16/10; object-fit:cover; border-bottom:1px solid rgba(216, 180, 120,0.14); }
     .hub-card-body { padding:26px 26px 30px; }
@@ -108,7 +111,7 @@
     .nav-toggle.open span:nth-child(1) { top: 9px; transform: rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
-    .mobile-menu { display: none; position: fixed; inset: 0; z-index: 95; background: #000; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 0 24px; }
+    .mobile-menu { display: none; position: fixed; inset: 0; z-index: 95; background: #0E0B08; flex-direction: column; align-items: center; justify-content: center; gap: 40px; padding: 0 24px; }
     .mobile-menu a { font-family: "Cormorant Garamond", serif; font-size: 40px; font-weight: 600; letter-spacing: normal; text-transform: none; color: #fff; text-decoration: none; padding: 0; border: none; text-align: center; }
     
     .mobile-menu .mm-cta { color: var(--gold); }
@@ -118,7 +121,7 @@
       .nav-cta { display: none; }
       .nav-toggle { display: block; }
       .mobile-menu.open { display: flex; }
-      .sticky-cta-bar { display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: #000; border-top: 1px solid rgba(216, 180, 120,0.25); padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); }
+      .sticky-cta-bar { display: block; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: #0E0B08; border-top: 1px solid rgba(216, 180, 120,0.25); padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); }
       .sticky-cta { display: block; background: var(--gold); color: var(--jet); font-family: "Raleway", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; text-align: center; padding: 16px; text-decoration: none; }
       section { padding:72px 24px; } .cs-hero { padding:140px 24px 48px; }
       .cs-grid { grid-template-columns:1fr; gap:40px; } .cs-side { position:static; }
@@ -172,7 +175,7 @@
 .mc-track{display:flex;gap:26px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none;padding-bottom:4px;}
 .mc-track::-webkit-scrollbar{display:none;}
 .mc-card{flex:0 0 320px;max-width:320px;min-width:0;scroll-snap-align:start;text-decoration:none;color:inherit;}
-.mc-art{position:relative;aspect-ratio:16/9;background:#111;border:1px solid rgba(216,180,120,0.2);overflow:hidden;margin-bottom:14px;}
+.mc-art{position:relative;aspect-ratio:16/9;background:#17100A;border:1px solid rgba(216,180,120,0.2);overflow:hidden;margin-bottom:14px;}
 .mc-art img{width:100%;height:100%;object-fit:cover;display:block;}
 .mc-ind{font-family:"Raleway",sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
 .mc-card h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:23px;color:#fff;line-height:1.1;margin:0;}
@@ -181,18 +184,20 @@
 </style>
 </head>
 <body>
-<nav>
+<nav id="nav">
   <div class="nav-logo"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
   <div class="nav-right">
     <div class="nav-links">
+      <a href="/#founder">About</a>
       <a href="/case-studies/" class="active">Case Studies</a>
       <a href="/podcast/">Podcast</a>
     </div>
-    <a href="/#apply" class="btn-primary nav-cta">Schedule a Consult</a>
+    <a href="/#apply" class="nav-cta">Schedule a Consult</a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
+  <a href="/#founder">About</a>
   <a href="/case-studies/">Case Studies</a>
   <a href="/podcast/">Podcast</a>
   <a href="/#apply" class="mm-cta">Schedule a Consult</a>
@@ -277,6 +282,7 @@
     <div class="footer-right">
       <div class="footer-links">
         <a href="/case-studies/">Case Studies</a>
+        <a href="/podcast/">Podcast</a>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms &amp; Conditions</a>
       </div>
@@ -286,6 +292,7 @@
 </footer>
 <script>
 (function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobileMenu');if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.classList.remove('open');t.setAttribute('aria-expanded','false');});});}})();
+(function(){var nav=document.getElementById('nav');if(!nav)return;function s(){if(window.scrollY>40)nav.classList.add('nav-solid');else nav.classList.remove('nav-solid');}window.addEventListener('scroll',s,{passive:true});s();})();
 </script>
 </body>
 </html>
