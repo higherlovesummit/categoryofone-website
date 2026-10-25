@@ -38,7 +38,7 @@
     .work-in{max-width:1240px;margin:0 auto;}
     .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:50px 28px;}
     .card{color:inherit;display:block;}
-    .card .cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--cbg,#000);border:1px solid rgba(216,180,120,0.14);display:flex;align-items:center;justify-content:center;padding:13% 15%;}
+    .card .cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:radial-gradient(72% 72% at 50% 28%,rgba(255,255,255,0.17),rgba(255,255,255,0) 60%),radial-gradient(125% 120% at 50% 112%,rgba(0,0,0,0.34),rgba(0,0,0,0) 55%),var(--cbg,#000);border:1px solid rgba(216,180,120,0.14);display:flex;align-items:center;justify-content:center;padding:13% 15%;}
     .card .cover .logo{max-width:100%;max-height:100%;width:auto;object-fit:contain;position:relative;z-index:2;transition:opacity .4s;}
     .card .cover .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;z-index:1;transition:opacity .4s;}
     .card:hover .cover .photo{opacity:1;}.card:hover .cover .logo{opacity:0;}
