@@ -59,12 +59,19 @@
     .mf-body b{font-weight:600;color:var(--russet);}
     .work{background:var(--ink);padding:112px 56px;}
     .work-in{max-width:1240px;margin:0 auto;}
-    .whead{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:46px;flex-wrap:wrap;gap:16px;}
-    .whead .eyebrow{color:var(--gold);}
+    .whead{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px;}
+    .whead .eyebrow{color:var(--gold);display:block;margin-bottom:12px;}
     .whead h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(30px,3.6vw,50px);color:#fff;}
     .whead .all{font-family:"Raleway",sans-serif;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
     .whead .all:hover{color:#fff;}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:46px 28px;}
+    .pf-arrows{display:flex;gap:12px;flex-shrink:0;}
+    .pf-arrow{width:48px;height:48px;border-radius:50%;border:1px solid rgba(216,180,120,0.5);background:transparent;color:var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s;}
+    .pf-arrow svg{width:20px;height:20px;}
+    .pf-arrow:hover{background:var(--gold);color:#14100b;border-color:var(--gold);}
+    .pf-track{display:flex;gap:28px;overflow-x:auto;scroll-behavior:smooth;-ms-overflow-style:none;scrollbar-width:none;padding-bottom:4px;}
+    .pf-track::-webkit-scrollbar{display:none;}
+    .pf-track .card{flex:0 0 calc((100% - 56px)/3);min-width:0;}
+    .pf-cta{text-align:center;margin-top:54px;}
     .card{color:inherit;display:block;}
     .card .cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--cbg,#000);border:1px solid rgba(216,180,120,0.14);display:flex;align-items:center;justify-content:center;padding:13% 15%;}
     .card .cover .logo{max-width:100%;max-height:100%;width:auto;object-fit:contain;position:relative;z-index:2;transition:opacity .4s;}
@@ -119,7 +126,7 @@
       .tst{padding:80px 24px 84px;}
       .cta{padding:88px 24px;}
       .manifesto,.work,.tst,.cta{padding-left:24px;padding-right:24px;} .hcap .sub{white-space:normal;}
-      .cards{grid-template-columns:1fr 1fr;}
+      .pf-track .card{flex:0 0 78%;}
       .twall{grid-template-columns:1fr;row-gap:0;}
       .tw{padding:30px 0;border-top:1px solid rgba(34,24,17,0.2);}
       .tw:not(:nth-child(3n+1)){border-left:none;}
@@ -128,7 +135,7 @@
       footer{padding:40px 24px;}.foot-in{flex-direction:column;text-align:center;}.f-right{text-align:center;}.flinks{justify-content:center;}
       .sticky-cta-bar{display:block;}
     }
-    @media (max-width:560px){.cards{grid-template-columns:1fr;}}
+    @media (max-width:560px){.pf-track .card{flex:0 0 86%;}}
   </style>
 </head>
 <body>
@@ -176,8 +183,14 @@
 </section>
 <section class="work" id="work">
   <div class="work-in">
-    <div class="whead"><span class="eyebrow">Selected Work</span><h2>Category-defining brands.</h2><a href="/case-studies/" class="all">All Case Studies &rarr;</a></div>
-    <div class="cards">
+    <div class="whead">
+      <div><span class="eyebrow">Selected Work</span><h2>Category-defining brands.</h2></div>
+      <div class="pf-arrows">
+        <button class="pf-arrow" type="button" aria-label="Previous" onclick="var t=this.closest('.work-in').querySelector('.pf-track');t.scrollBy({left:-(t.querySelector('.card').offsetWidth+28)*2,behavior:'smooth'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="pf-arrow" type="button" aria-label="Next" onclick="var t=this.closest('.work-in').querySelector('.pf-track');t.scrollBy({left:(t.querySelector('.card').offsetWidth+28)*2,behavior:'smooth'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="pf-track">
       <a class="card" href="/case-studies/e2m-solutions/" style="--cbg:#1638fb">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/e2m-solutions.svg" alt="E2M Solutions" loading="lazy"/><img class="photo" src="/case-studies/img/e2m-solutions/e2m-solutions-website-category-of-one-branding.jpg" alt="" loading="lazy"/></div>
         <span class="cat">White Label Agency Services</span><h3>E2M Solutions</h3><span class="rd">Read Case Study &rarr;</span>
@@ -203,6 +216,7 @@
         <span class="cat">Coaching &amp; Professional Development</span><h3>Quantum Orange</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
     </div>
+    <div class="pf-cta"><a href="/case-studies/" class="btn-gold">View All Case Studies</a></div>
   </div>
 </section>
 <section class="tst" id="testimonials">
@@ -258,6 +272,8 @@
   var nav=document.getElementById('nav');
   function onScroll(){if(window.scrollY>40){nav.classList.add('nav-solid');}else{nav.classList.remove('nav-solid');}}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var pf=document.querySelector('.pf-track');
+  if(pf){var c0=pf.querySelector('.card');if(c0){requestAnimationFrame(function(){pf.scrollLeft=(c0.offsetWidth+28)/2;});}}
 })();
 </script>
 </body>
