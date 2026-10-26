@@ -238,6 +238,31 @@ footer,.cs-body,.gallery,.cs-cta,.subscribe,.more-eps,.stats,.application,.cta.h
 .play,.me-art .play,.ring{border-color:#A07F56 !important;}
 .play::after,.me-art .play::after{border-left-color:#A07F56 !important;}
 </style>
+<style id="footv2">
+footer{background:#0E0B08;border-top:1px solid rgba(160,127,86,.32);padding:0 56px;}
+footer .ft-in{max-width:1180px;margin:0 auto;}
+footer .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding:64px 0 48px;}
+footer .ft-brand img{height:46px;width:auto;margin-bottom:22px;display:block;}
+footer .ft-brand p{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.3;color:rgba(237,227,218,.8);max-width:30ch;margin:0;}
+footer .ft-col a,footer .ft-col span{display:block;margin-bottom:12px;font-family:"Raleway",sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(237,227,218,.88);text-decoration:none;}
+footer .ft-col a:hover{color:#A07F56;}
+footer .ft-col .ft-loc{color:#A07F56;font-weight:700;}
+footer .ft-rule{border-top:1px solid rgba(160,127,86,.32);}
+footer .ft-bot{display:flex;justify-content:space-between;align-items:center;padding:22px 0 44px;flex-wrap:wrap;gap:12px;}
+footer .ft-bot span,footer .ft-bot a{font-family:"Raleway",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(237,227,218,.45);text-decoration:none;}
+footer .ft-bot a:hover{color:#A07F56;}
+footer .ft-legal a{margin-left:26px;}
+footer .ft-copy .br{display:inline;}
+@media(max-width:900px){
+footer{padding:0 24px;}
+footer .ft-top{grid-template-columns:1fr;gap:34px;padding:48px 0 36px;}
+footer .ft-col a,footer .ft-col span{white-space:nowrap;}
+footer .ft-col a[href^="mailto"]{letter-spacing:.1em;}
+footer .ft-bot{flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:calc(44px + 72px);}
+footer .ft-copy .br{display:block;margin-top:4px;}
+footer .ft-legal a{margin:0 26px 0 0;}
+}
+</style>
 </head>
 <body>
 <nav id="nav">
@@ -340,16 +365,16 @@ footer,.cs-body,.gallery,.cs-cta,.subscribe,.more-eps,.stats,.application,.cta.h
   </div>
 </section>
 <footer>
-  <div class="footer-inner">
-    <div class="footer-logo"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
-    <div class="footer-right">
-      <div class="footer-links">
-        <a href="/case-studies/">Our Work</a>
-        <a href="/podcast/">Podcast</a>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms &amp; Conditions</a>
-      </div>
-      <p class="footer-copy">&copy; 2026 Category of One Branding, LLC. All Rights Reserved.</p>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div class="ft-brand"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a><p>We turn founder-led B2B companies into category of one brands.</p></div>
+      <div class="ft-col"><a href="/#founder">About</a><a href="/case-studies/">Our Work</a><a href="/podcast/">Podcast</a><a href="/#apply">Talk With A Human</a></div>
+      <div class="ft-col"><span class="ft-loc">Austin, Texas</span><a href="mailto:hello@categoryofonebranding.com">hello@categoryofonebranding.com</a></div>
+    </div>
+    <div class="ft-rule"></div>
+    <div class="ft-bot">
+      <span class="ft-copy">&copy; 2026 Category of One Branding, LLC.<span class="br"> All Rights Reserved.</span></span>
+      <span class="ft-legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms &amp; Conditions</a></span>
     </div>
   </div>
 </footer>
