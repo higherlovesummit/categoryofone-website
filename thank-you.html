@@ -129,6 +129,7 @@ footer .ft-brand p{font-family:"Cormorant Garamond",serif;font-size:22px;line-he
 footer .ft-col a,footer .ft-col span{display:block;margin-bottom:12px;font-family:"Raleway",sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(237,227,218,.88);text-decoration:none;}
 footer .ft-col a:hover{color:#A07F56;}
 footer .ft-col .ft-loc{color:#A07F56;font-weight:700;}
+footer .ft-nav{text-align:right;}
 footer .ft-rule{border-top:1px solid rgba(160,127,86,.32);}
 footer .ft-bot{display:flex;justify-content:space-between;align-items:center;padding:22px 0 44px;flex-wrap:wrap;gap:12px;}
 footer .ft-bot span,footer .ft-bot a{font-family:"Raleway",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(237,227,218,.45);text-decoration:none;}
@@ -138,6 +139,8 @@ footer .ft-copy .br{display:inline;}
 @media(max-width:900px){
 footer{padding:0 24px;}
 footer .ft-top{grid-template-columns:1fr;gap:34px;padding:48px 0 36px;}
+footer .ft-spacer{display:none;}
+footer .ft-nav{text-align:left;}
 footer .ft-col a,footer .ft-col span{white-space:nowrap;}
 footer .ft-col a[href^="mailto"]{letter-spacing:.1em;}
 footer .ft-bot{flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:calc(44px + 72px);}
@@ -185,8 +188,8 @@ footer .ft-legal a{margin:0 26px 0 0;}
   <div class="ft-in">
     <div class="ft-top">
       <div class="ft-brand"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a><p>We turn founder-led B2B companies into category of one brands.</p></div>
-      <div class="ft-col"><a href="/#founder">About</a><a href="/case-studies/">Our Work</a><a href="/podcast/">Podcast</a><a href="/#apply">Talk With A Human</a></div>
-      <div class="ft-col"><span class="ft-loc">Austin, Texas</span></div>
+      <div class="ft-spacer"></div>
+      <div class="ft-col ft-nav"><a href="/#founder">About</a><a href="/case-studies/">Our Work</a><a href="/podcast/">Podcast</a><a href="/#apply">Talk With A Human</a></div>
     </div>
     <div class="ft-rule"></div>
     <div class="ft-bot">
