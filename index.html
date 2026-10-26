@@ -55,7 +55,7 @@
     .manifesto{background:var(--sand);color:var(--inkt);text-align:center;padding:124px 56px;}
     .manifesto .eyebrow{color:var(--russet);margin-bottom:26px;display:block;}
     .manifesto h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(34px,4.6vw,62px);line-height:1.07;color:var(--inkt);max-width:26ch;margin:0 auto 44px;}
-    .manifesto h2 em{font-style:italic;color:var(--russet);}
+    .manifesto h2 em{font-style:normal;color:var(--russet);}
     .mf-body{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,1.9vw,27px);line-height:1.5;color:#2a2018;max-width:46ch;margin:0 auto 22px;text-align:left;}
     .mf-body b{font-weight:600;color:var(--russet);}
     .work{background:var(--ink);padding:112px 56px;}
@@ -75,6 +75,7 @@
     .pf-cta{text-align:center;margin-top:54px;}
     .card{color:inherit;display:block;}
     .card .cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:radial-gradient(72% 72% at 50% 28%,rgba(255,255,255,0.17),rgba(255,255,255,0) 60%),radial-gradient(125% 120% at 50% 112%,rgba(0,0,0,0.34),rgba(0,0,0,0) 55%),var(--cbg,#000);border:1px solid rgba(216,180,120,0.14);display:flex;align-items:center;justify-content:center;padding:13% 15%;}
+    .card[href*="e2m-solutions"] .logo{max-height:62% !important;max-width:62% !important;}
     .card .cover .logo{max-width:100%;max-height:100%;width:auto;object-fit:contain;position:relative;z-index:2;transition:opacity .4s;}
     .card .cover .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;z-index:1;transition:opacity .4s;}
     .card:hover .cover .photo{opacity:1;}.card:hover .cover .logo{opacity:0;}
@@ -89,7 +90,7 @@
     .tst h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(30px,3.6vw,50px);color:#221811;text-align:center;margin-bottom:62px;}
     .twall{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
     .tw{background:#F3ECE1;border:1px solid rgba(145,83,53,0.18);padding:40px 34px 32px;display:flex;flex-direction:column;}
-    .tw .q{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:24px;line-height:1.5;color:#221811;margin-bottom:28px;flex:1;}
+    .tw .q{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:24px;line-height:1.3;color:#221811;margin-bottom:28px;flex:1;}
     .tw .who{display:flex;align-items:center;gap:15px;margin-top:auto;}
     .tw .av{flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:#1A1510;color:var(--gold);font-family:"Raleway",sans-serif;font-size:14px;font-weight:700;letter-spacing:0.03em;display:flex;align-items:center;justify-content:center;}
     .tw .nm{font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#1a120c;}
@@ -140,7 +141,7 @@
     }
     @media (max-width:560px){.pf-track .card{flex:0 0 auto;width:100%;}}
   </style>
-<style id="hcaps">h1,h2{font-family:"Cormorant Garamond",serif !important;text-transform:uppercase !important;letter-spacing:0.03em !important;}.eyebrow{font-size:13.5px !important;letter-spacing:0.2em !important;}</style>
+<style id="hcaps">h1,h2{font-family:"Cormorant Garamond",serif !important;text-transform:uppercase !important;letter-spacing:0.03em !important;line-height:1 !important;}h1 em,h2 em{font-style:normal !important;}@media(max-width:900px){h1,h2{line-height:.95 !important;}}.eyebrow{font-size:13.5px !important;letter-spacing:0.2em !important;}</style>
 <style id="mmenu">
 .mobile-menu{display:none;position:fixed;inset:0;z-index:95;background:#0E0B08;flex-direction:column;align-items:stretch;justify-content:space-between;gap:0;padding:112px 24px calc(28px + env(safe-area-inset-bottom,0px));text-align:left;overflow-y:auto;}
 .mobile-menu.open{display:flex;}
@@ -216,7 +217,7 @@ footer,.cs-body,.gallery,.cs-cta,.subscribe,.more-eps,.stats,.application,.cta.h
   <div class="photo"></div><div class="scrim"></div>
   <div class="hcap">
     <h1>Build a <em>Category of One</em> Brand.</h1>
-    <p class="sub">We turn founder-led B2B companies into a category of one.</p>
+    <p class="sub">We turn founder-led B2B companies into category of one brands.</p>
     <div class="ctas"><a href="#apply" class="btn-gold">Talk With A Human</a><a href="/case-studies/" class="link">See the Work</a></div>
   </div>
 </section>
@@ -237,7 +238,7 @@ footer,.cs-body,.gallery,.cs-cta,.subscribe,.more-eps,.stats,.application,.cta.h
 <section class="work" id="work">
   <div class="work-in">
     <div class="whead">
-      <div><span class="eyebrow">Selected Work</span><h2>Category of One Brands</h2></div>
+      <div><span class="eyebrow">Our Work</span><h2>Select Case Studies</h2></div>
       <div class="pf-arrows">
         <button class="pf-arrow" type="button" aria-label="Previous" onclick="var t=this.closest('.work-in').querySelector('.pf-track');t.scrollBy({left:-(t.querySelector('.card').offsetWidth+28)*3,behavior:'smooth'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg></button>
         <button class="pf-arrow" type="button" aria-label="Next" onclick="var t=this.closest('.work-in').querySelector('.pf-track');t.scrollBy({left:(t.querySelector('.card').offsetWidth+28)*3,behavior:'smooth'});"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg></button>
