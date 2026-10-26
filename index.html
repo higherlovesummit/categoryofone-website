@@ -215,6 +215,18 @@ footer .ft-copy .br{display:block;margin-top:4px;}
 footer .ft-legal a{margin:0 26px 0 0;}
 }
 </style>
+<style id="marquee">
+.marq{background:#17100A;border-bottom:1px solid rgba(160,127,86,.32);overflow:hidden;padding:34px 0;position:relative;}
+.marq::before,.marq::after{content:"";position:absolute;top:0;bottom:0;width:140px;z-index:2;pointer-events:none;}
+.marq::before{left:0;background:linear-gradient(90deg,#17100A,rgba(23,16,10,0));}.marq::after{right:0;background:linear-gradient(270deg,#17100A,rgba(23,16,10,0));}
+.marq-track{display:flex;align-items:center;gap:120px;width:max-content;animation:marq 45s linear infinite;}
+.marq:hover .marq-track{animation-play-state:paused;}
+.marq-track img{height:32px;width:auto;max-width:180px;opacity:.92;filter:brightness(0) invert(1);}
+.marq-track img.h42{height:42px;}.marq-track img.h44{height:44px;}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq-track{animation:none;}}
+@media (max-width:900px){.marq{padding:26px 0;border-top:1px solid rgba(160,127,86,.32);}.marq::before,.marq::after{width:60px;}.marq-track{gap:64px;animation-duration:30s;}.marq-track img{height:26px;max-width:130px;}.marq-track img.h42{height:34px;}.marq-track img.h44{height:36px;}}
+</style>
 </head>
 <body>
 <nav id="nav">
@@ -256,6 +268,7 @@ footer .ft-legal a{margin:0 26px 0 0;}
     <div class="stat"><span class="n">1M+</span><span class="l">People<br>Impacted</span></div>
   </div>
 </section>
+<section class="marq" aria-label="Selected B2B clients"><div class="marq-track"><img class="" src="/case-studies/img/logos/thorben.png" alt="Thorben" loading="lazy"><img class="" src="/case-studies/img/logos/esencia.png" alt="Esencia" loading="lazy"><img class="h42" src="/case-studies/img/logos/boldhaus.png" alt="Boldhaus" loading="lazy"><img class="" src="/case-studies/img/logos/xchange.png" alt="Xchange" loading="lazy"><img class="h44" src="/case-studies/img/logos/e2m-solutions.svg" alt="E2M Solutions" loading="lazy"><img class="" src="/case-studies/img/logos/thorben.png" alt="Thorben" loading="lazy"><img class="" src="/case-studies/img/logos/esencia.png" alt="Esencia" loading="lazy"><img class="h42" src="/case-studies/img/logos/boldhaus.png" alt="Boldhaus" loading="lazy"><img class="" src="/case-studies/img/logos/xchange.png" alt="Xchange" loading="lazy"><img class="h44" src="/case-studies/img/logos/e2m-solutions.svg" alt="E2M Solutions" loading="lazy"><img class="" src="/case-studies/img/logos/thorben.png" alt="Thorben" loading="lazy"><img class="" src="/case-studies/img/logos/esencia.png" alt="Esencia" loading="lazy"><img class="h42" src="/case-studies/img/logos/boldhaus.png" alt="Boldhaus" loading="lazy"><img class="" src="/case-studies/img/logos/xchange.png" alt="Xchange" loading="lazy"><img class="h44" src="/case-studies/img/logos/e2m-solutions.svg" alt="E2M Solutions" loading="lazy"><img class="" src="/case-studies/img/logos/thorben.png" alt="Thorben" loading="lazy"><img class="" src="/case-studies/img/logos/esencia.png" alt="Esencia" loading="lazy"><img class="h42" src="/case-studies/img/logos/boldhaus.png" alt="Boldhaus" loading="lazy"><img class="" src="/case-studies/img/logos/xchange.png" alt="Xchange" loading="lazy"><img class="h44" src="/case-studies/img/logos/e2m-solutions.svg" alt="E2M Solutions" loading="lazy"></div></section>
 <section class="manifesto" id="manifesto">
   <span class="eyebrow">Why Branding</span>
   <h2>Now, more than ever, your brand is your <em>advantage</em>.</h2>
