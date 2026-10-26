@@ -49,9 +49,9 @@
  .book{max-width:760px;margin:44px auto;padding:34px 32px;background:rgba(216,180,120,0.06);border:1px solid rgba(216,180,120,0.2);text-align:center;}
  .book p{font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--linen);}
  .book em{color:var(--gold);}
- .cta{max-width:900px;margin:70px auto 0;padding:80px 32px;text-align:center;border-top:1px solid rgba(216,180,120,0.25);}
+ 
  .cta h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(30px,4.6vw,52px);color:var(--white);margin-bottom:18px;}
- .cta p{max-width:560px;margin:0 auto 32px;color:rgba(237,227,218,0.75);}
+ 
  .btn{display:inline-block;font-family:"Raleway",sans-serif;font-size:13px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--jet);background:var(--gold);padding:16px 40px;text-decoration:none;transition:background .2s,color .2s;}
  .btn:hover{background:#1A1510;color:var(--white);}
  footer{text-align:center;padding:50px 32px 70px;color:rgba(237,227,218,0.4);font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;}
@@ -193,6 +193,25 @@ footer .ft-bot{flex-direction:column;align-items:flex-start;gap:14px;padding-bot
 footer .ft-copy .br{display:block;margin-top:4px;}
 footer .ft-legal a{margin:0 26px 0 0;}
 }
+</style>
+<style id="ctamatch">
+.cta{position:relative;overflow:hidden;background:radial-gradient(55% 75% at 50% 4%, rgba(216,180,120,0.13), rgba(0,0,0,0) 55%),radial-gradient(130% 120% at 50% 110%, rgba(0,0,0,0.5), rgba(0,0,0,0) 58%),#0E0B08;padding:118px 56px;text-align:center;}
+.cta-in{position:relative;z-index:2;max-width:760px;margin:0 auto;}
+.cta .eyebrow{color:#D8B478;margin-bottom:22px;display:block;}
+.cta h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(34px,4.4vw,60px);color:#fff;margin-bottom:18px;}
+.cta .sub{font-family:"EB Garamond",serif;font-size:19px;color:rgba(237,227,218,0.82);margin:0 auto 40px;max-width:52ch;line-height:1.6;}
+.cal-card{background:#fff;border-radius:4px;padding:16px;}
+.cal-card iframe{border:0;width:100%;display:block;}
+@media (max-width:900px){.cta{padding:88px 24px;}}
+</style>
+<style id="bsfix">
+.cta{max-width:none !important;margin:0 !important;border-top:1px solid rgba(160,127,86,.32);}
+nav a,nav a:hover{text-decoration:none !important;}
+.nav-cta{font-family:"Raleway",sans-serif !important;font-size:12px !important;font-weight:600 !important;letter-spacing:0.22em !important;text-transform:uppercase !important;padding:12px 22px !important;line-height:1 !important;display:inline-block !important;}
+footer .ft-brand p,footer .ft-col a,footer .ft-bot span,footer .ft-bot a{text-align:left;}
+footer .ft-brand p{text-transform:none !important;letter-spacing:0 !important;font-family:"Cormorant Garamond",serif !important;font-size:22px !important;line-height:1.3 !important;}
+footer .ft-nav{text-align:right;}
+@media (max-width:900px){footer .ft-nav{text-align:left;}}
 </style>
 </head>
 <body>
@@ -375,29 +394,12 @@ footer .ft-legal a{margin:0 26px 0 0;}
 <div class="divider" style="margin-top:70px;"></div>
 <div class="callout"><div class="box">Thank you for reading this guide to Brand Strategy. We hope it&rsquo;s given you a strong overview of what goes into creating one. Of course, this is just the beginning &mdash; once your Strategy is complete, you&rsquo;ll have everything you need to step into your Brand Identity, both visual and verbal.</div></div>
 
-<section class="application" id="apply">
-  <div class="section-inner">
-    <div class="apply-head">
-      <p class="criteria-label">Work With Us</p>
-      <h2 class="section-headline" style="color:var(--white);">Let&rsquo;s See What Your Brand Could Become.</h2>
-      <p class="apply-sub">A focused, no-pitch conversation about whether your brand is keeping pace with your vision, and you&rsquo;ll leave with clarity either way.</p>
-    </div>
-    <div class="book-steps">
-      <div class="flow-grid">
-        <div class="flow-card"><div class="flow-num">01</div><div class="flow-title">Schedule a Complimentary Consultation</div><p class="flow-text">An exploratory discovery call to talk through your business, where you want to take it, and whether we&rsquo;re the right fit to help. You&rsquo;ll walk away with clarity either way.</p></div>
-        <div class="flow-connector" aria-hidden="true"></div>
-        <div class="flow-card"><div class="flow-num">02</div><div class="flow-title">Build a Custom Brand Engagement</div><p class="flow-text">If it&rsquo;s a fit, we put together a plan built around your goals, your timeline, and your budget, so you get exactly what your brand needs and nothing you don&rsquo;t.</p></div>
-        <div class="flow-connector" aria-hidden="true"></div>
-        <div class="flow-card"><div class="flow-num">03</div><div class="flow-title">Kick Off the Branding Initiative</div><p class="flow-text">We set a start date and get to work, with a clear plan and timeline so you always know what&rsquo;s happening now and what comes next.</p></div>
-      </div>
-    </div>
-    <div class="questions-block">
-      <div class="form-box-embed">
-        <h3 class="form-heading">Talk With A Human Below</h3>
-        <div class="cal-embed-card"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" style="border:0;width:100%;display:block;" height="600" frameborder="0" title="Talk With A Human"></iframe></div>
-        <p class="secondary-cta">Not ready to book? <a href="/case-studies/">See the work first &rarr;</a></p>
-      </div>
-    </div>
+<section class="cta" id="apply">
+  <div class="cta-in">
+    <span class="eyebrow">Work With Us</span>
+    <h2>Talk With A Human</h2>
+    <p class="sub">If you're looking for a strategic branding partner to elevate your growing B2B business, let's talk.</p>
+    <div class="cal-card"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2-yerGEpaIHMthKMw7eSFMZG5ovJ_je-ow2xnaCDe6ZXjh9s7-JdBkDElvGri_OphhdREU2NZx?gv=true" height="600" frameborder="0" title="Talk With A Human"></iframe></div>
   </div>
 </section>
 
