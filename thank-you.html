@@ -313,6 +313,14 @@ h3:not(.how-step h3):not(.cs-side-title){font-family:"EB Garamond",Georgia,serif
 .csx li{counter-increment:s;font-family:"Schibsted Grotesk",sans-serif !important;font-size:18px;line-height:1.4;color:#fff !important;padding:12px 0;border-top:1px solid rgba(255,255,255,.16) !important;display:flex;gap:16px;}
 .csx li::before{content:counter(s,decimal-leading-zero);color:#C9A15E;font-weight:700;font-size:13px;letter-spacing:.1em;padding-top:4px;}
 @media(max-width:700px){.csx{grid-template-columns:1fr;padding:32px 24px;gap:28px}.csx .val{font-size:26px}}
+/* footer: sitemap bottom-aligned with the descriptor's last line */
+@media(min-width:901px){
+footer .ft-top{align-items:end !important;}
+footer .ft-nav{align-self:end !important;}
+footer .ft-nav a:last-child{margin-bottom:0 !important;}
+footer .ft-nav a{line-height:24px !important;margin-bottom:6px !important;}
+footer .ft-brand p{margin-bottom:0 !important;line-height:24px !important;}
+}
 </style>
 </head>
 <body>
@@ -353,7 +361,7 @@ h3:not(.how-step h3):not(.cs-side-title){font-family:"EB Garamond",Georgia,serif
 <footer>
   <div class="ft-in">
     <div class="ft-top">
-      <div class="ft-brand"><a href="/"><img src="/SVG/COB_EBG_Reverse.svg" alt="Category of One Branding" /></a><p>We turn founder-led B2B companies into human-first, AI-powered category of one brands.</p></div>
+      <div class="ft-brand"><a href="/"><img src="/SVG/COB_EBG_Reverse.svg" alt="Category of One Branding" /></a><p>We help founder-led B2B companies build human-first, AI-powered category-defining brands.</p></div>
       <div class="ft-spacer"></div>
       <div class="ft-col ft-nav"><a href="/#founder">About</a><a href="/case-studies/">Our Work</a><a href="/podcast/">Podcast</a><a href="/#apply">Book a Consult</a></div>
     </div>
