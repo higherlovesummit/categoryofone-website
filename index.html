@@ -257,10 +257,119 @@ footer .ft-legal a{margin:0 26px 0 0;}
 .marq-eyebrow{margin-bottom:44px !important;}
 @media (max-width:900px){.fold .hero{justify-content:center;padding:104px 24px 48px;}.fold .marq{padding:30px 0 34px;}.marq-eyebrow{margin-bottom:30px !important;}}
 </style>
+<style id="linen">
+/* Direction A: Linen Editorial. Palette: Jet #000 · Chamoisee #a07f56 · Khaki #bcb2a6 · White · Linen #ede3da · Sage #a4a082 · Russet #915335 */
+:root{--lx-linen:#ede3da;--lx-khaki:#bcb2a6;--lx-sage:#a4a082;--lx-russet:#915335;--lx-cham:#a07f56;--lx-ink:#000;--lx-body:#2b2520;--lx-mute:rgba(43,37,32,.68);--lx-line:rgba(0,0,0,.14);}
+html,body{background:var(--lx-linen) !important;color:var(--lx-body) !important;}
+body{background-image:none !important;}
+
+/* ---------- type: bigger, bolder ---------- */
+h1{font-weight:700 !important;}
+h2{font-weight:700 !important;}
+.hcap h1{font-size:clamp(58px,8.6vw,150px) !important;line-height:.9 !important;letter-spacing:.005em !important;}
+.hcap{max-width:1300px !important;}
+.hcap .sub{font-size:clamp(19px,1.6vw,24px) !important;}
+.manifesto h2{font-size:clamp(46px,6.4vw,104px) !important;line-height:.92 !important;max-width:20ch !important;}
+.manifesto .mf-body{font-size:clamp(21px,1.8vw,27px) !important;max-width:40ch !important;text-align:center !important;}
+.how-head h2,.whead h2,.tst h2,.cta h2{font-size:clamp(42px,5.4vw,88px) !important;line-height:.94 !important;}
+.founder h2{font-size:clamp(48px,6vw,96px) !important;}
+.f-bio{font-size:clamp(22px,2vw,30px) !important;text-align:center !important;max-width:34ch !important;}
+.how-step p{font-size:21px !important;}
+.how-num{font-size:72px !important;font-weight:700 !important;}
+.cs-hero h1,.ep-hero h1,.hero h1,.contact h1,.ty h1,.legal h1{font-size:clamp(46px,6.2vw,96px) !important;line-height:.94 !important;}
+.cs-narrative h2{font-size:clamp(30px,3.4vw,46px) !important;}
+
+/* ---------- light zones: text colors (excludes booking section, footer, menu, sticky bar) ---------- */
+:where(h1,h2,h3,h4,h5,h6):where(:not(.cta *, footer *, .mobile-menu *)){color:var(--lx-ink) !important;}
+:where(p,li,blockquote,figcaption,dd,dt,td,th,label,small,span,strong,b,em,i,div.box):where(:not(.cta *, footer *, .mobile-menu *, .sticky-cta-bar *, a *, button *, .cob-fig *)){color:var(--lx-body) !important;}
+:where(strong,b):where(:not(.cta *, footer *, .cob-fig *)){color:var(--lx-ink) !important;}
+.hcap h1 em,.manifesto h2 em,h1 em:not(.cta *),h2 em:not(.cta *){color:var(--lx-russet) !important;}
+.mf-body b,.hl-brown,.h1-tail{color:var(--lx-russet) !important;}
+/* accent labels */
+:is(.eyebrow,.section-label,.cs-side-title,.cat,.mc-ind,.ep-no,.me-no,.criteria-label,.c-eyebrow,.ty-eyebrow,.ty-next,.cs-quote-title,.chapters .ts,.marq-eyebrow,.hub-card-metric,.cs-metric,.p-num,.flow-num,.whead .eyebrow,.intro .tag,.contents .lbl,.pillar h4,.book em,.cs-result span:last-child,.legal .updated,.legal h3,.ep-sub .sep,.pullquote .by):not(.cta *):not(footer *){color:var(--lx-russet) !important;}
+.cs-result .k{color:var(--lx-mute) !important;}
+.cs-result .k::after{background:var(--lx-line) !important;}
+:is(.ep-guest,.cs-tagline,.tw .ti,.ep-sub):not(.cta *){color:var(--lx-mute) !important;}
+/* in-text links */
+:is(.cs-crumb a,.crumb a,.legal a,.card .rd,.hub-card-more,.whead .all,.secondary-cta a,.cs-nav-row a,.ty-next a,.toc a span):not(.cta *){color:var(--lx-russet) !important;}
+.card .rd{color:var(--lx-russet) !important;}
+
+/* ---------- surfaces ---------- */
+.hero,.hero .photo,.cs-hero,.cs-body,.before-after,.gallery,.work,.episodes,.more-eps,.contact,.ty,.ep-hero,header.hero{background:var(--lx-linen) !important;}
+.hero .scrim{display:none !important;}
+.manifesto,.cs-quote{background:#fff !important;}
+.marq{background:var(--lx-khaki) !important;border-color:rgba(0,0,0,.1) !important;}
+.marq::before{background:linear-gradient(90deg,var(--lx-khaki),rgba(188,178,166,0)) !important;}
+.marq::after{background:linear-gradient(270deg,var(--lx-khaki),rgba(188,178,166,0)) !important;}
+.marq-track img{filter:brightness(0) !important;opacity:.85 !important;}
+.how{background:var(--lx-sage) !important;}
+.how-num{color:#fff !important;}
+.how-steps,.how-step{border-color:rgba(0,0,0,.18) !important;}
+.how-step p{color:#1c1a14 !important;}
+.tst{background:var(--lx-linen) !important;}
+.tst::before,.tst .qmark,.tst-mark{opacity:.25 !important;}
+.tw{background:#fff !important;border:1px solid rgba(0,0,0,.06) !important;}
+.tw .av{display:none !important;}
+.founder{background:var(--lx-khaki) !important;}
+section[style*="padding:84px 0 24px"]{background:var(--lx-linen) !important;}
+/* panels and cards on light */
+:is(.cs-side-block,.cs-metric-block,.flow-card,.book,.toc,.side .card,.callout .box,.cal-panel,.ph,.img-ph):not(.cta *){background:rgba(255,255,255,.55) !important;border-color:var(--lx-line) !important;}
+:is(.cs-side-block li,.takeaways li,.chapters li,.q-list li){border-color:var(--lx-line) !important;}
+:is(.card .cover,.ep-art,.cs-hero-img img,.ba-item img,.g-grid img,.g-tile,.hub-card,.mc-art,.me-art,.cal-wrap,.cal-embed-card){border-color:rgba(0,0,0,.08) !important;}
+:is(.ep-head,.work-head,.cs-body,.gallery,.subscribe,.more-eps,.cs-cta,nav.nav-solid,.application,.stats){border-color:var(--lx-line) !important;}
+.pullquote,.callout .box{border-left-color:var(--lx-russet) !important;}
+:is(.divider,.takeaways li::before,.dash li::before,.flow-connector){background:var(--lx-russet) !important;}
+.cs-quote-mark{color:var(--lx-cham) !important;}
+.cs-quote blockquote{color:var(--lx-ink) !important;}
+
+/* ---------- nav ---------- */
+nav{background:transparent !important;}
+nav.nav-solid{background:rgba(237,227,218,.96) !important;border-bottom:1px solid var(--lx-line) !important;}
+.nav-links a{color:var(--lx-ink) !important;}
+.nav-links a:hover,.nav-links a.active{color:var(--lx-russet) !important;}
+.nav-toggle span{background:var(--lx-ink) !important;}
+.nav-cta{color:var(--lx-russet) !important;border-color:var(--lx-russet) !important;background:transparent !important;}
+.nav-cta:hover{background:var(--lx-russet) !important;color:#fff !important;}
+
+/* ---------- mobile menu ---------- */
+.mobile-menu{background:var(--lx-linen) !important;}
+.mobile-menu .mm-list a{color:var(--lx-ink) !important;}
+.mobile-menu .mm-list a span{color:var(--lx-russet) !important;}
+.mobile-menu .mm-meta,.mobile-menu .mm-meta *{color:var(--lx-mute) !important;}
+
+/* ---------- buttons ---------- */
+:is(.btn-gold,.btn-primary,.btn,.sticky-cta-bar a,.sticky-cta,.mobile-menu .mm-cta,.ty-amzn){background:var(--lx-russet) !important;color:#fff !important;border:1px solid var(--lx-russet) !important;box-shadow:none !important;}
+:is(.btn-gold,.btn-primary,.btn,.sticky-cta-bar a,.sticky-cta,.mobile-menu .mm-cta,.ty-amzn):hover{background:#7a432a !important;border-color:#7a432a !important;color:#fff !important;}
+.sticky-cta-bar a{box-shadow:0 10px 26px rgba(0,0,0,.18) !important;}
+:is(.link,.ep-btn,.plat,.cs-inline-cta a,.cal-tab):not(.cta *){color:var(--lx-ink) !important;border-color:var(--lx-ink) !important;background:transparent !important;}
+:is(.link,.ep-btn,.plat,.cs-inline-cta a,.cal-tab):not(.cta *):hover,.ep-card:hover .ep-btn,.cal-tab.active{background:var(--lx-ink) !important;border-color:var(--lx-ink) !important;color:var(--lx-linen) !important;}
+.plat .dot{background:var(--lx-russet) !important;}
+:is(.pf-arrow,.mc-arrow,.me-arrow){color:var(--lx-ink) !important;border-color:rgba(0,0,0,.4) !important;background:transparent !important;}
+:is(.pf-arrow,.mc-arrow,.me-arrow):hover{background:var(--lx-ink) !important;color:var(--lx-linen) !important;border-color:var(--lx-ink) !important;}
+.cs-filter{color:var(--lx-ink) !important;border-color:rgba(0,0,0,.3) !important;background:transparent !important;}
+.cs-filter:hover{color:var(--lx-russet) !important;border-color:var(--lx-russet) !important;}
+.cs-filter.on{background:var(--lx-russet) !important;border-color:var(--lx-russet) !important;color:#fff !important;}
+.cs-inline-cta{border-color:var(--lx-line) !important;}
+.play,.me-art .play{border-color:#fff !important;}
+
+/* ---------- booking section and footer stay Jet Black ---------- */
+.cta{background:#000 !important;}
+.cta h2{color:var(--lx-linen) !important;}
+.cta .sub,.cta p{color:rgba(237,227,218,.82) !important;}
+.cta .eyebrow{color:var(--lx-khaki) !important;}
+footer{background:#000 !important;}
+
+/* fixes */
+.tst .glyph{color:rgba(145,83,53,.16) !important;}
+.toc{background:var(--lx-line) !important;}
+.toc a{background:#fff !important;color:var(--lx-ink) !important;}
+.toc a:hover{background:var(--lx-linen) !important;color:var(--lx-russet) !important;}
+.callout .box{background:transparent !important;color:var(--lx-ink) !important;}
+</style>
 </head>
 <body>
 <nav id="nav">
-  <div class="nav-logo"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
+  <div class="nav-logo"><a href="/"><img src="/SVG/COB_Full-Color.svg" alt="Category of One Branding" /></a></div>
   <div class="nav-right">
     <div class="nav-links">
       <a href="#founder">About</a>
@@ -296,10 +405,8 @@ footer .ft-legal a{margin:0 26px 0 0;}
 </div>
 <section class="manifesto" id="manifesto">
   <span class="eyebrow">Why Branding</span>
-  <h2>Now, more than ever, your brand is your <em>advantage</em>.</h2>
-  <p class="mf-body">We're living through the most significant shift in modern business history. AI has accelerated what's possible, and in the process, made everything start to look, sound, and feel the same.</p>
-  <p class="mf-body">Over five million new businesses launched last year. Content is created faster than anyone can consume it. And in the process, trust is dissolving. People no longer ask, "Is this good?" They ask, <b>"Is this real?"</b></p>
-  <p class="mf-body">In a market this crowded, the answer isn't louder marketing. It's deeper resonance. No matter how advanced AI becomes, it can't replicate human connection. Stop competing in a category of many, and become a <b>Category of One</b> brand.</p>
+  <h2>Your brand is your <em>advantage</em>.</h2>
+  <p class="mf-body">AI made everything look, sound and feel the same. People no longer ask, &ldquo;Is this good?&rdquo; They ask, <b>&ldquo;Is this real?&rdquo;</b> Stop competing in a category of many.</p>
 </section>
 <section class="work" id="work">
   <div class="work-in">
@@ -361,11 +468,11 @@ footer .ft-legal a{margin:0 26px 0 0;}
 </section>
 <section class="how" id="how">
   <div class="how-in">
-    <div class="how-head"><span class="eyebrow">How We Work</span><h2>From clarity to category of one</h2><p>A fractional brand partnership built around you and your leadership team.</p></div>
+    <div class="how-head"><span class="eyebrow">How We Work</span><h2>From clarity to category of one</h2></div>
     <div class="how-steps">
-      <div class="how-step"><span class="how-num">01</span><h3>Organize</h3><p>We audit your brand, interview your team and customers, and map the competitive landscape into one source of truth.</p></div>
-      <div class="how-step"><span class="how-num">02</span><h3>Simplify</h3><p>We distill it into a sharp strategy: audience, positioning, promise and messaging your whole team can repeat.</p></div>
-      <div class="how-step"><span class="how-num">03</span><h3>Amplify</h3><p>We bring it to life across identity, website and launch, with human-first, AI-powered systems that keep it consistent as you grow.</p></div>
+      <div class="how-step"><span class="how-num">01</span><h3>Organize</h3><p>Audit, interviews and the competitive landscape, in one source of truth.</p></div>
+      <div class="how-step"><span class="how-num">02</span><h3>Simplify</h3><p>A sharp strategy your whole team can repeat.</p></div>
+      <div class="how-step"><span class="how-num">03</span><h3>Amplify</h3><p>Identity, website and launch, built to stay consistent.</p></div>
     </div>
     <div class="how-cta"><a href="#apply" class="link">Book a Consult</a></div>
   </div>
@@ -376,12 +483,9 @@ footer .ft-legal a{margin:0 26px 0 0;}
     <span class="eyebrow">Testimonials</span>
     <h2>What People Are Saying</h2>
     <div class="twall">
-      <div class="tw"><p class="q">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez and his team.</p><div class="who"><span class="av">JB</span><div><div class="nm">Justin Berg</div><div class="ti">CEO, Purple Care</div></div></div></div>
-      <div class="tw"><p class="q">In just a month after rebranding, we grew 399%. Fast forward to today, we've nearly 10x'd our business.</p><div class="who"><span class="av">JM</span><div><div class="nm">Jon McCarty</div><div class="ti">CEO, Odyssey Test Prep</div></div></div></div>
-      <div class="tw"><p class="q">The leadership of Re Perez and his team helped us stand out. Immediately after rebranding, we landed a $1M contract.</p><div class="who"><span class="av">CK</span><div><div class="nm">Chris Koomey</div><div class="ti">COO, Thorben</div></div></div></div>
-      <div class="tw"><p class="q">When it comes to branding and authenticity, there is no one I know who exudes more brilliance in both than Re Perez and his team.</p><div class="who"><span class="av">RD</span><div><div class="nm">Ryan Deiss</div><div class="ti">Co-Founder, Digital Marketer</div></div></div></div>
-      <div class="tw"><p class="q">I've worked with top NYC branding firms and they don't hold a torch to the beautiful, stunning precision Re Perez and his team delivers.</p><div class="who"><span class="av">AR</span><div><div class="nm">Angelique Rewers</div><div class="ti">CEO, BoldHaus</div></div></div></div>
-      <div class="tw"><p class="q">Re Perez of Category of One Branding is my go-to oracle for branding, communications, and business strategy. Fundamental in transforming multiple companies I've owned.</p><div class="who"><span class="av">BW</span><div><div class="nm">Brent Weaver</div><div class="ti">CEO, E2M Solutions</div></div></div></div>
+      <div class="tw"><p class="q">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez and his team.</p><div class="who"><div><div class="nm">Justin Berg</div><div class="ti">CEO, Purple Care</div></div></div></div>
+      <div class="tw"><p class="q">In just a month after rebranding, we grew 399%. Fast forward to today, we've nearly 10x'd our business.</p><div class="who"><div><div class="nm">Jon McCarty</div><div class="ti">CEO, Odyssey Test Prep</div></div></div></div>
+      <div class="tw"><p class="q">The leadership of Re Perez and his team helped us stand out. Immediately after rebranding, we landed a $1M contract.</p><div class="who"><div><div class="nm">Chris Koomey</div><div class="ti">COO, Thorben</div></div></div></div></div></div></div>
     </div>
   </div>
 </section>
@@ -389,8 +493,8 @@ footer .ft-legal a{margin:0 26px 0 0;}
   <div class="founder-in">
     <span class="eyebrow">Our Founder</span>
     <h2 class="f-name">Re Perez</h2>
-    <p class="f-bio">Re Perez is the Founder &amp; CEO of Category of One Branding and a well-respected brand strategist with 25+ years of experience. He doesn't just build brands; he helps successful brands become more successful. Across more than 1,000 brand transformations for impact-driven CEOs and founder-led B2B companies, Re has developed a proven methodology for elevating brands by blending enterprise-level branding, A.I., and human optimization.</p>
-    <p class="f-bio">Before stepping into entrepreneurship in 2010, he cut his teeth at some of the top global brand consultancies in New York City, advising Fortune 500 companies including Abbott Nutrition, GE Money, Lilly, Novo Nordisk, TD Ameritrade, and Xerox. Today he is also a sought-after speaker, sharing forward-thinking insights and actionable strategies at events such as the Baby Bathwater Institute, CADRECon, EO's Global Leadership Conference, SellerCon, Traffic &amp; Conversion Summit, and Ontrapalooza.</p>
+    <p class="f-bio">Brand strategist, author and speaker. 25+ years, from Fortune 500 consultancies in New York to more than 1,000 brand transformations for founder-led companies.</p>
+    
   </div>
 </section>
 <section class="cta" id="apply">
