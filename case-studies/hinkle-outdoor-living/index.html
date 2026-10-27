@@ -433,6 +433,14 @@ h3:not(.how-step h3):not(.cs-side-title){font-family:"EB Garamond",Georgia,serif
 /* Connect with Re Perez icons */
 .ricon{color:#000 !important;transition:color .2s !important;}
 .ricon:hover{color:#A8781C !important;}
+/* case study facts: black panel (B) */
+.csx{background:#000 !important;margin-top:56px;padding:44px 48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.csx .lb{display:block;font-family:"Schibsted Grotesk",sans-serif !important;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C9A15E !important;margin-bottom:16px;}
+.csx .val{font-family:"EB Garamond",serif !important;font-weight:700;font-size:30px;line-height:1.15;color:#fff !important;}
+.csx ol{list-style:none;margin:0;padding:0;counter-reset:s;}
+.csx li{counter-increment:s;font-family:"Schibsted Grotesk",sans-serif !important;font-size:18px;line-height:1.4;color:#fff !important;padding:12px 0;border-top:1px solid rgba(255,255,255,.16) !important;display:flex;gap:16px;}
+.csx li::before{content:counter(s,decimal-leading-zero);color:#C9A15E;font-weight:700;font-size:13px;letter-spacing:.1em;padding-top:4px;}
+@media(max-width:700px){.csx{grid-template-columns:1fr;padding:32px 24px;gap:28px}.csx .val{font-size:26px}}
 </style>
 </head>
 <body>
@@ -481,22 +489,9 @@ h3:not(.how-step h3):not(.cs-side-title){font-family:"EB Garamond",Georgia,serif
         <h2>The Result</h2>
         <p>A brand that looks like the premium it charges, from business card to job-site apron, and a promise competitors can&rsquo;t answer: <em>Life Is Better Outdoors</em>.</p>
       </div>
-      <aside class="cs-side">
-        <div class="cs-side-block">
-          <p class="cs-side-title">Scope of Work</p>
-          <ul>
-        <li>Brand Strategy</li>
-        <li>Brand Identity</li>
-        <li>Brand Guidelines</li>
-        <li>Visual System</li>
-        <li>Website Design</li>
-        <li>Marketing Collateral</li>
-          </ul>
-        </div>
-        <div class="cs-side-block">
-          <p class="cs-side-title">Industry</p>
-          <p>Outdoor Living &amp; Home Construction</p>
-        </div>
+      <aside class="csx" aria-label="Project details">
+        <div><span class="lb">Industry</span><div class="val">Outdoor Living &amp; Home Construction</div></div>
+        <div><span class="lb">Scope of Work</span><ol><li>Brand Strategy</li><li>Brand Identity</li><li>Brand Guidelines</li><li>Visual System</li><li>Website Design</li><li>Marketing Collateral</li></ol></div>
       </aside>
     </div>
   </div>

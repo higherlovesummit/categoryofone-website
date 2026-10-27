@@ -290,6 +290,14 @@ h3:not(.how-step h3):not(.cs-side-title){font-family:"EB Garamond",Georgia,serif
 /* Connect with Re Perez icons */
 .ricon{color:#000 !important;transition:color .2s !important;}
 .ricon:hover{color:#A8781C !important;}
+/* case study facts: black panel (B) */
+.csx{background:#000 !important;margin-top:56px;padding:44px 48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.csx .lb{display:block;font-family:"Schibsted Grotesk",sans-serif !important;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C9A15E !important;margin-bottom:16px;}
+.csx .val{font-family:"EB Garamond",serif !important;font-weight:700;font-size:30px;line-height:1.15;color:#fff !important;}
+.csx ol{list-style:none;margin:0;padding:0;counter-reset:s;}
+.csx li{counter-increment:s;font-family:"Schibsted Grotesk",sans-serif !important;font-size:18px;line-height:1.4;color:#fff !important;padding:12px 0;border-top:1px solid rgba(255,255,255,.16) !important;display:flex;gap:16px;}
+.csx li::before{content:counter(s,decimal-leading-zero);color:#C9A15E;font-weight:700;font-size:13px;letter-spacing:.1em;padding-top:4px;}
+@media(max-width:700px){.csx{grid-template-columns:1fr;padding:32px 24px;gap:28px}.csx .val{font-size:26px}}
 </style>
 </head>
 <body>
