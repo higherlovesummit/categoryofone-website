@@ -295,6 +295,16 @@ h2,.manifesto h2,.how-head h2,.whead h2,.tst h2,.cta h2,.founder h2,.mc-head h2,
 /* H3: EB Garamond Bold, title case (client names, episode titles on cards) */
 h3:not(.how-step h3):not(.cs-side-title){font-family:"EB Garamond",Georgia,serif !important;font-weight:700 !important;text-transform:none !important;letter-spacing:-.005em !important;}
 .card h3,.csC-meta h3,.mc-card h3,.me-card h3,.ep-card h3,.hub-card h3{font-size:clamp(22px,2vw,28px) !important;line-height:1.15 !important;}
+/* Our Work tiles: logo fades out when the photo shows */
+.work-in .cards .card:hover .cover .logo{opacity:0 !important;}
+/* podcast episode: guest image as a wide 16:9 thumbnail */
+.guest-card{grid-template-columns:minmax(0,340px) 1fr !important;gap:32px !important;}
+.guest-card .guest-photo{width:100% !important;height:auto !important;aspect-ratio:16/9 !important;border:0 !important;background:#000 !important;}
+.guest-card .guest-photo img{width:100% !important;height:100% !important;object-fit:cover !important;display:block;}
+@media(max-width:700px){.guest-card{display:block !important;}.guest-card .guest-photo{margin:0 0 18px !important;}}
+/* Connect with Re Perez icons */
+.ricon{color:#000 !important;transition:color .2s !important;}
+.ricon:hover{color:#A8781C !important;}
 </style>
 </head>
 <body>
