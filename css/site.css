@@ -272,3 +272,7 @@ html body .toc a:not(.x) span{font-family:"Schibsted Grotesk",sans-serif !import
 .g-grid div,.g-grid > *{border-color:var(--line) !important;}
 .ty .ring{border-color:#C9A15E !important;}
 @media(max-width:900px){#nav .nav-cta{display:none !important;}}
+/* mobile: one 24px side gutter everywhere */
+@media(max-width:900px){
+  :is(.ep-hero,body > .wrap,.contact,.ty,header.hero,.pillar,.legal,.nf){padding-left:24px !important;padding-right:24px !important;}
+}
