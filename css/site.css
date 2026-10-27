@@ -278,3 +278,13 @@ html body .toc a:not(.x) span{font-family:"Schibsted Grotesk",sans-serif !import
 }
 /* booking section matches the founder section width (900px) */
 .cta .cta-in{max-width:900px !important;}
+/* booking section: two columns on desktop, same height as Our Founder (~640px) */
+@media(min-width:901px){
+  .cta{padding-top:90px !important;padding-bottom:90px !important;}
+  .cta .cta-in{max-width:1080px !important;display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);grid-template-rows:1fr auto auto auto 1fr;column-gap:64px;text-align:left !important;}
+  .cta .cta-in > .eyebrow{grid-column:1;grid-row:2;text-align:left !important;margin:0 0 18px !important;}
+  .cta .cta-in > h2{grid-column:1;grid-row:3;text-align:left !important;margin:0 0 18px !important;}
+  .cta .cta-in > .sub{grid-column:1;grid-row:4;text-align:left !important;margin:0 !important;}
+  .cta .cta-in > .cal-card{grid-column:2;grid-row:1 / span 5;margin:0 !important;padding-top:40px !important;}
+  .cta .cal-card iframe{min-height:380px !important;}
+}
