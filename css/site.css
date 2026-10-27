@@ -276,3 +276,5 @@ html body .toc a:not(.x) span{font-family:"Schibsted Grotesk",sans-serif !import
 @media(max-width:900px){
   :is(.ep-hero,body > .wrap,.contact,.ty,header.hero,.pillar,.legal,.nf){padding-left:24px !important;padding-right:24px !important;}
 }
+/* booking section matches the founder section width (900px) */
+.cta .cta-in{max-width:900px !important;}
