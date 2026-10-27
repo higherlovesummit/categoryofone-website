@@ -139,6 +139,14 @@ footer .ft-legal a{margin:0 26px 0 0;}
 .cal-card iframe{display:block;min-height:520px;overflow:hidden;}
 @media (max-width:900px){.cal-card iframe{min-height:560px;}}
 </style>
+<style id="csfilters">
+.cs-filters{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 44px;}
+.cs-filter{font-family:"Raleway",sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(237,227,218,.75);background:transparent;border:1px solid rgba(160,127,86,.45);padding:11px 18px;cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.cs-filter:hover{border-color:#A07F56;color:#A07F56;}
+.cs-filter.on{background:#A07F56;border-color:#A07F56;color:#14100b;}
+.card.is-hidden{display:none !important;}
+@media(max-width:900px){.cs-filters{flex-wrap:nowrap;overflow-x:auto;margin:0 -24px 32px;padding:0 24px 6px;scrollbar-width:none;}.cs-filters::-webkit-scrollbar{display:none;}.cs-filter{flex:0 0 auto;}}
+</style>
 </head>
 <body>
 <nav id="nav">
@@ -169,84 +177,81 @@ footer .ft-legal a{margin:0 26px 0 0;}
 <section class="work">
   <div class="work-in">
     <div class="work-head"></div>
+    <div class="cs-filters" role="tablist" aria-label="Filter case studies"><button type="button" class="cs-filter on" data-f="all" aria-pressed="true">All</button><button type="button" class="cs-filter" data-f="consulting" aria-pressed="false">Consulting &amp; Professional Services</button><button type="button" class="cs-filter" data-f="tech" aria-pressed="false">Technology &amp; Agency Services</button><button type="button" class="cs-filter" data-f="education" aria-pressed="false">Education &amp; Learning</button><button type="button" class="cs-filter" data-f="consumer" aria-pressed="false">Consumer &amp; Lifestyle</button></div>
     <div class="cards">
-      <a class="card" href="/case-studies/odyssey-test-prep/" style="--cbg:#32D2BE">
+      <a class="card" data-cat="education" href="/case-studies/odyssey-test-prep/" style="--cbg:#32D2BE">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/odyssey-test-prep.png" alt="Odyssey Test Prep" loading="lazy"/><img class="photo" src="/case-studies/img/odyssey-test-prep/odyssey-test-prep-ipad.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Nearly 10x revenue growth</span><h3>Odyssey Test Prep</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/e2m-solutions/" style="--cbg:#1638fb">
+      <a class="card" data-cat="tech" href="/case-studies/e2m-solutions/" style="--cbg:#1638fb">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/e2m-solutions.svg" alt="E2M Solutions" loading="lazy"/><img class="photo" src="/case-studies/img/e2m-solutions/e2m-solutions-website-category-of-one-branding.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Now sells on quality, not price</span><h3>E2M Solutions</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/boldhaus/" style="--cbg:#E43C24">
+      <a class="card" data-cat="consulting" href="/case-studies/boldhaus/" style="--cbg:#E43C24">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/boldhaus.png" alt="BoldHaus" loading="lazy"/><img class="photo" src="/case-studies/img/boldhaus/boldhaus-laptop-after-mockup-1.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Category authority reclaimed</span><h3>BoldHaus</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/cheeky-scientist/" style="--cbg:#0C2454">
+      <a class="card" data-cat="education" href="/case-studies/cheeky-scientist/" style="--cbg:#0C2454">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/cheeky-scientist.png" alt="Cheeky Scientist" loading="lazy"/><img class="photo" src="/case-studies/img/cheeky-scientist/cheeky-scientist-laptop.jpg" alt="" loading="lazy"/></div>
         <span class="cat">The definitive leader in PhD careers</span><h3>Cheeky Scientist</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/thorben/" style="--cbg:#0ABE82">
+      <a class="card" data-cat="consulting" href="/case-studies/thorben/" style="--cbg:#0ABE82">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/thorben.png" alt="Thorben" loading="lazy"/><img class="photo" src="/case-studies/img/thorben/thorben-laptop-1.jpg" alt="" loading="lazy"/></div>
         <span class="cat">$1M contract within weeks of launch</span><h3>Thorben</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/purple-care/" style="--cbg:#84249C">
+      <a class="card" data-cat="consumer" href="/case-studies/purple-care/" style="--cbg:#84249C">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/purple-care.png" alt="Purple Care" loading="lazy"/><img class="photo" src="/case-studies/img/purple-care/purple-care-billboard.jpg" alt="" loading="lazy"/></div>
         <span class="cat">1,900% customer growth</span><h3>Purple Care</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/optx/" style="--cbg:#FA960A">
+      <a class="card" data-cat="tech" href="/case-studies/optx/" style="--cbg:#FA960A">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/optx.png" alt="OPTX" loading="lazy"/><img class="photo" src="/case-studies/img/optx/optx-billboard.jpg" alt="" loading="lazy"/></div>
         <span class="cat">One promise across every product line</span><h3>OPTX</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/esencia/" style="--cbg:#0A3282">
+      <a class="card" data-cat="tech" href="/case-studies/esencia/" style="--cbg:#0A3282">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/esencia.png" alt="Esencia" loading="lazy"/><img class="photo" src="/case-studies/img/esencia/esencia-billboard.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Inc. 5000 fastest-growing honoree</span><h3>Esencia</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/changing-habits/" style="--cbg:#0CB4B4">
+      <a class="card" data-cat="consumer" href="/case-studies/changing-habits/" style="--cbg:#0CB4B4">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/changing-habits.png" alt="Changing Habits" loading="lazy"/><img class="photo" src="/case-studies/img/changing-habits/changing-habits-packaging.jpg" alt="" loading="lazy"/></div>
         <span class="cat">One brand across every product line</span><h3>Changing Habits</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/mirasee/" style="--cbg:#0C3C9C">
+      <a class="card" data-cat="education" href="/case-studies/mirasee/" style="--cbg:#0C3C9C">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/mirasee.png" alt="Mirasee" loading="lazy"/><img class="photo" src="/case-studies/img/mirasee/mirasee-visual-system.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A fragmented portfolio, unified</span><h3>Mirasee</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/organize-and-flow/" style="--cbg:#0AD2BE">
+      <a class="card" data-cat="consumer" href="/case-studies/organize-and-flow/" style="--cbg:#0AD2BE">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/organize-and-flow.png" alt="Organize &amp; Flow" loading="lazy"/><img class="photo" src="/case-studies/img/organize-and-flow/o-f-1.jpg" alt="" loading="lazy"/></div>
         <span class="cat">From personality brand to movement</span><h3>Organize &amp; Flow</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/hinkle-outdoor-living/" style="--cbg:#966E5A">
+      <a class="card" data-cat="consumer" href="/case-studies/hinkle-outdoor-living/" style="--cbg:#966E5A">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/hinkle-outdoor-living.png" alt="Hinkle Outdoor Living" loading="lazy"/><img class="photo" src="/case-studies/img/hinkle-outdoor-living/hinkle-website.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A brand that matches its premium pricing</span><h3>Hinkle Outdoor Living</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/quantum-orange/" style="--cbg:#FC6C0C">
-        <div class="cover"><img class="logo" src="/case-studies/img/logos/quantum-orange.png" alt="Quantum Orange" loading="lazy"/><img class="photo" src="/case-studies/img/quantum-orange/quantum-orange-website.jpg" alt="" loading="lazy"/></div>
-        <span class="cat">Coaching &amp; Professional Development</span><h3>Quantum Orange</h3><span class="rd">Read Case Study &rarr;</span>
-      </a>
-      <a class="card" href="/case-studies/xchange/" style="--cbg:#08BCBC">
+      <a class="card" data-cat="consulting" href="/case-studies/xchange/" style="--cbg:#08BCBC">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/xchange.png" alt="xchange" loading="lazy"/><img class="photo" src="/case-studies/img/xchange/xchange-visual-system.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A brand engineered for scale</span><h3>xchange</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/triumpha/" style="--cbg:#3296BE">
+      <a class="card" data-cat="consulting" href="/case-studies/triumpha/" style="--cbg:#3296BE">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/triumpha.png" alt="Triumpha" loading="lazy"/><img class="photo" src="/case-studies/img/triumpha/triumpha-02.jpg" alt="" loading="lazy"/></div>
         <span class="cat">50% newsletter open rate</span><h3>Triumpha</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/future-flow-media/" style="--cbg:#0A46E6">
+      <a class="card" data-cat="tech" href="/case-studies/future-flow-media/" style="--cbg:#0A46E6">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/future-flow-media.png" alt="Future Flow Media" loading="lazy"/><img class="photo" src="/case-studies/img/future-flow-media/future-flow-media-billboard.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A one-line position agencies get</span><h3>Future Flow Media</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/bendt-distilling/" style="--cbg:#AA1E32">
+      <a class="card" data-cat="consumer" href="/case-studies/bendt-distilling/" style="--cbg:#AA1E32">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/bendt-distilling.png" alt="BENDT Distilling Co." loading="lazy"/><img class="photo" src="/case-studies/img/bendt-distilling/bendt-cans.jpg" alt="" loading="lazy"/></div>
         <span class="cat">House of brands, bottle to can</span><h3>BENDT Distilling Co.</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/hawkins-laakso/" style="--cbg:#0C2454">
+      <a class="card" data-cat="consulting" href="/case-studies/hawkins-laakso/" style="--cbg:#0C2454">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/hawkins-laakso.png" alt="Hawkins Laakso" loading="lazy"/><img class="photo" src="/case-studies/img/hawkins-laakso/hl-site.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A premium brand for high-net-worth clients</span><h3>Hawkins Laakso</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/williamsburg-learning/" style="--cbg:#3282BE">
+      <a class="card" data-cat="education" href="/case-studies/williamsburg-learning/" style="--cbg:#3282BE">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/williamsburg-learning.png" alt="Williamsburg Learning" loading="lazy"/><img class="photo" src="/case-studies/img/williamsburg-learning/williamsburg-apparel.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Reframed alternative education</span><h3>Williamsburg Learning</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" href="/case-studies/extraordinary-life/" style="--cbg:#80441C">
+      <a class="card" data-cat="consulting" href="/case-studies/extraordinary-life/" style="--cbg:#80441C">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/extraordinary-life.png" alt="Extraordinary Life" loading="lazy"/><img class="photo" src="/case-studies/img/extraordinary-life/extraordinary-life-website.jpg" alt="" loading="lazy"/></div>
         <span class="cat">New name, identity &amp; website</span><h3>Extraordinary Life</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
@@ -283,5 +288,6 @@ var nav=document.getElementById('nav');function s(){if(window.scrollY>40)nav.cla
 window.addEventListener('scroll',s,{passive:true});s();})();
 </script>
 <script src="https://link.categoryofonebranding.com/js/form_embed.js"></script>
+<script id="csfiltersjs">(function(){var b=document.querySelectorAll('.cs-filter'),c=document.querySelectorAll('.cards .card');b.forEach(function(x){x.addEventListener('click',function(){var f=x.getAttribute('data-f');b.forEach(function(y){var on=y===x;y.classList.toggle('on',on);y.setAttribute('aria-pressed',on?'true':'false');});c.forEach(function(k){k.classList.toggle('is-hidden',f!=='all'&&k.getAttribute('data-cat')!==f);});});});})();</script>
 </body>
 </html>
