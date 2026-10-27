@@ -281,8 +281,7 @@ footer .ft-legal a{margin:0 26px 0 0;}
 .cs-inline-cta a:hover{background:#A07F56;color:#14100b;}
 @media(max-width:700px){.cs-result{flex-direction:column;gap:8px;}.cs-result .k::after{display:none;}.cs-inline-cta span{font-size:21px;}}
 </style>
-<style id="bwg">
-/* Black · White · Gold — EB Garamond Bold headlines, Schibsted Grotesk body */
+<style id="bwg">/* Black · White · Gold — EB Garamond Bold headlines, Schibsted Grotesk body */
 :root{--k:#000;--w:#fff;--egg:#FAF7F1;--tile:#F4F1EB;--gold:#C9A15E;--goldtxt:#A8781C;--goldsm:#8F6A1F;--body:#1f1b16;--mute:rgba(31,27,22,.66);--line:rgba(0,0,0,.12);}
 html,body{background:var(--w) !important;color:var(--body) !important;background-image:none !important;}
 
@@ -449,6 +448,11 @@ footer .ft-nav a:last-child{margin-bottom:0 !important;}
 footer .ft-nav a{line-height:24px !important;margin-bottom:6px !important;}
 footer .ft-brand p{margin-bottom:0 !important;line-height:24px !important;}
 }
+/* before/after: identical 4:3 frames */
+.ba-grid{align-items:start !important;}
+.ba-item img{aspect-ratio:4/3 !important;height:auto !important;object-fit:cover !important;object-position:center !important;}
+.ba-item:first-child img{object-fit:contain !important;background:#F4F1EB !important;padding:5% !important;}
+.ba-item img.ba-fit{object-fit:contain !important;background:#00233A !important;}
 </style>
 </head>
 <body>
@@ -510,7 +514,7 @@ footer .ft-brand p{margin-bottom:0 !important;line-height:24px !important;}
     <h2 class="section-headline">Before &amp; After</h2>
     <div class="ba-grid">
       <figure class="ba-item"><figcaption>Before</figcaption><img src="/case-studies/img/bendt-distilling/bendt-before.jpg" alt="BENDT Distilling Co. brand before the rebrand" loading="lazy" /></figure>
-      <figure class="ba-item"><figcaption>After</figcaption><img src="/case-studies/img/bendt-distilling/bendt-bottle-barrels.jpg" alt="BENDT Distilling Co. brand after the rebrand by Category of One Branding" loading="lazy" /></figure>
+      <figure class="ba-item"><figcaption>After</figcaption><img class="ba-fit" src="/case-studies/img/bendt-distilling/bendt-bottle-barrels.jpg" alt="BENDT Distilling Co. brand after the rebrand by Category of One Branding" loading="lazy" /></figure>
     </div>
   </div>
 </section>
