@@ -301,3 +301,9 @@ html body :is(.csx .val,.manifesto .mf-close,.manifesto .mf-close b):not(#x){fon
 html body :is(.btn-gold,.btn-primary,.btn,.sticky-cta-bar a,.sticky-cta,.mobile-menu .mm-cta,.ty-amzn,.nf-gold):not(#x){background:#7E6243 !important;border-color:#7E6243 !important;color:#fff !important;}
 html body :is(.btn-gold,.btn-primary,.btn,.sticky-cta-bar a,.sticky-cta,.mobile-menu .mm-cta,.ty-amzn,.nf-gold):not(#x):hover{background:#000 !important;border-color:#000 !important;color:#fff !important;}
 html body .cta :is(.btn-gold,.btn-primary,.btn):not(#x):hover{background:#fff !important;border-color:#fff !important;color:#000 !important;}
+/* descriptor: one sentence per line (footer always; hero on phones, sized to fit) */
+footer .ft-brand p .ln{display:block;}
+@media(max-width:600px){
+  .hero .sub .ln{display:block;white-space:nowrap;}
+  .hero .sub{font-size:min(17px,4.1vw) !important;}
+}
