@@ -307,3 +307,13 @@ footer .ft-brand p .ln{display:block;}
   .hero .sub .ln{display:block;white-space:nowrap;}
   .hero .sub{font-size:min(17px,4.1vw) !important;}
 }
+/* Black nav bar sitewide (2026-10-28): reverse logo, white links, white-outline CTA */
+html body nav#nav:not(#x),html body nav#nav.nav-solid:not(#x){background:#000 !important;border-bottom:1px solid rgba(255,255,255,.12) !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+html body #nav:not(#x) .nav-links a{color:#fff !important;}
+html body #nav:not(#x) .nav-links a:hover,html body #nav:not(#x) .nav-links a.active{color:#A07F56 !important;}
+html body #nav:not(#x) .nav-cta{background:#000 !important;color:#fff !important;border:1px solid #fff !important;}
+html body #nav:not(#x) .nav-cta:hover{background:#fff !important;color:#000 !important;}
+html body #nav:not(#x) .nav-toggle span{background:#fff !important;}
+/* breathing room under the black nav for back links */
+html body .cs-hero:not(#x) .cs-crumb,html body .ep-hero:not(#x) .crumb{padding-top:34px !important;}
+@media(max-width:900px){html body .cs-hero:not(#x) .cs-crumb,html body .ep-hero:not(#x) .crumb{padding-top:14px !important;}}
