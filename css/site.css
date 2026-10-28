@@ -297,3 +297,7 @@ html body :is(h1 em,h2 em,h1 b,h2 b):not(#x){font-weight:600 !important;}
 .nav-logo img{height:54px !important;width:auto !important;}
 footer .ft-brand img{height:54px !important;width:auto !important;}
 html body :is(.csx .val,.manifesto .mf-close,.manifesto .mf-close b):not(#x){font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600 !important;}
+/* ==== 2026-10-28: CTA buttons = deeper brown, white text ==== */
+html body :is(.btn-gold,.btn-primary,.btn,.sticky-cta-bar a,.sticky-cta,.mobile-menu .mm-cta,.ty-amzn,.nf-gold):not(#x){background:#7E6243 !important;border-color:#7E6243 !important;color:#fff !important;}
+html body :is(.btn-gold,.btn-primary,.btn,.sticky-cta-bar a,.sticky-cta,.mobile-menu .mm-cta,.ty-amzn,.nf-gold):not(#x):hover{background:#000 !important;border-color:#000 !important;color:#fff !important;}
+html body .cta :is(.btn-gold,.btn-primary,.btn):not(#x):hover{background:#fff !important;border-color:#fff !important;color:#000 !important;}
