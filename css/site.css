@@ -71,12 +71,12 @@ footer .ft-legal a{margin:0 26px 0 0;}
 
 /* ==== bwg ==== */
 /* Black · White · Gold — EB Garamond Bold headlines, Schibsted Grotesk body */
-:root{--k:#000;--w:#fff;--egg:#FAF7F1;--tile:#F4F1EB;--gold:#C9A15E;--goldtxt:#A8781C;--goldsm:#8F6A1F;--body:#1f1b16;--mute:rgba(31,27,22,.66);--line:rgba(0,0,0,.12);}
+:root{--k:#000;--w:#fff;--egg:#FAF7F1;--tile:#F4F1EB;--gold:#A07F56;--goldtxt:#A07F56;--goldsm:#7E6243;--body:#1f1b16;--mute:rgba(31,27,22,.66);--line:rgba(0,0,0,.12);}
 html,body{background:var(--w) !important;color:var(--body) !important;background-image:none !important;}
 
 /* ---------- type system ---------- */
 *{font-family:"Schibsted Grotesk",system-ui,-apple-system,sans-serif !important;}
-:is(h1,h2,h3,h1 *,h2 *,h3 *,.how-num,.toc a,.mm-list a,.csC-meta h3,.cs-quote blockquote,.callout .box,.pullquote,.tw .q-serif){font-family:"EB Garamond",Georgia,serif !important;}
+:is(h1,h2,h3,h1 *,h2 *,h3 *,.how-num,.toc a,.mm-list a,.csC-meta h3,.cs-quote blockquote,.callout .box,.pullquote,.tw .q-serif){font-family:"Cormorant Garamond",Georgia,serif !important;}
 .mobile-menu .mm-list a span{font-family:"Schibsted Grotesk",sans-serif !important;}
 h1,h2{font-weight:700 !important;}
 h3{font-weight:600 !important;}
@@ -122,7 +122,7 @@ section[style*="padding:84px 0 24px"]{background:var(--w) !important;}
 .how h2,.how-step h3{color:#fff !important;} .how .eyebrow{color:var(--gold) !important;}
 .how-step p{color:rgba(255,255,255,.8) !important;} .how-num{color:var(--gold) !important;}
 .how-steps,.how-step{border-color:rgba(255,255,255,.18) !important;}
-.tst .glyph{color:rgba(201,161,94,.2) !important;}
+.tst .glyph{color:rgba(160,127,86,.2) !important;}
 .tw{background:#fff !important;border:1px solid var(--line) !important;box-shadow:none !important;}
 .tw .av{display:none !important;}
 :is(.cs-side-block,.cs-metric-block,.flow-card,.book,.side .card,.callout .box,.cal-panel,.ph,.img-ph):not(.cta *){background:var(--egg) !important;border-color:var(--line) !important;}
@@ -202,14 +202,14 @@ h2,.manifesto h2,.how-head h2,.whead h2,.tst h2,.cta h2,.founder h2,.mc-head h2,
 .manifesto h2{max-width:18ch !important;}
 .ep-hero h1{text-transform:none !important;letter-spacing:-.01em !important;font-size:clamp(32px,3.4vw,50px) !important;line-height:1.08 !important;max-width:26ch !important;}
 /* hamburger menu labels: match headline type */
-.mobile-menu .mm-list a{font-family:"EB Garamond",Georgia,serif !important;font-weight:700 !important;text-transform:uppercase !important;letter-spacing:.005em !important;font-size:44px !important;line-height:1 !important;color:#000 !important;}
+.mobile-menu .mm-list a{font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:700 !important;text-transform:uppercase !important;letter-spacing:.005em !important;font-size:44px !important;line-height:1 !important;color:#000 !important;}
 .mobile-menu .mm-list a span{font-family:"Schibsted Grotesk",sans-serif !important;font-weight:700 !important;font-size:11px !important;letter-spacing:.2em !important;}
 /* Our Work tiles: larger logos */
 .work-in .cards .card .cover{padding:9% 11% !important;}
 .work-in .cards .card .cover .logo{max-width:70% !important;max-height:48% !important;}
 .work-in .cards .card[href*="e2m-solutions"] .cover .logo{max-height:56% !important;}
 /* H3: EB Garamond Bold, title case (client names, episode titles on cards) */
-h3:not(.how-step h3):not(.cs-side-title){font-family:"EB Garamond",Georgia,serif !important;font-weight:700 !important;text-transform:none !important;letter-spacing:-.005em !important;}
+h3:not(.how-step h3):not(.cs-side-title){font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:700 !important;text-transform:none !important;letter-spacing:-.005em !important;}
 .card h3,.csC-meta h3,.mc-card h3,.me-card h3,.ep-card h3,.hub-card h3{font-size:clamp(22px,2vw,28px) !important;line-height:1.15 !important;}
 /* Our Work tiles: logo fades out when the photo shows */
 .work-in .cards .card:hover .cover .logo{opacity:0 !important;}
@@ -220,14 +220,14 @@ h3:not(.how-step h3):not(.cs-side-title){font-family:"EB Garamond",Georgia,serif
 @media(max-width:700px){.guest-card{display:block !important;}.guest-card .guest-photo{margin:0 0 18px !important;}}
 /* Connect with Re Perez icons */
 .ricon{color:#000 !important;transition:color .2s !important;}
-.ricon:hover{color:#A8781C !important;}
+.ricon:hover{color:#A07F56 !important;}
 /* case study facts: black panel (B) */
 .csx{background:#000 !important;margin-top:56px;padding:44px 48px;display:grid;grid-template-columns:1fr 1fr;gap:40px;}
-.csx .lb{display:block;font-family:"Schibsted Grotesk",sans-serif !important;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C9A15E !important;margin-bottom:16px;}
-.csx .val{font-family:"EB Garamond",serif !important;font-weight:700;font-size:30px;line-height:1.15;color:#fff !important;}
+.csx .lb{display:block;font-family:"Schibsted Grotesk",sans-serif !important;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#A07F56 !important;margin-bottom:16px;}
+.csx .val{font-family:"Cormorant Garamond",serif !important;font-weight:700;font-size:30px;line-height:1.15;color:#fff !important;}
 .csx ol{list-style:none;margin:0;padding:0;counter-reset:s;}
 .csx li{counter-increment:s;font-family:"Schibsted Grotesk",sans-serif !important;font-size:18px;line-height:1.4;color:#fff !important;padding:12px 0;border-top:1px solid rgba(255,255,255,.16) !important;display:flex;gap:16px;}
-.csx li::before{content:counter(s,decimal-leading-zero);color:#C9A15E;font-weight:700;font-size:13px;letter-spacing:.1em;padding-top:4px;}
+.csx li::before{content:counter(s,decimal-leading-zero);color:#A07F56;font-weight:700;font-size:13px;letter-spacing:.1em;padding-top:4px;}
 @media(max-width:700px){.csx{grid-template-columns:1fr;padding:32px 24px;gap:28px}.csx .val{font-size:26px}}
 /* footer: sitemap bottom-aligned with the descriptor's last line */
 @media(min-width:901px){
@@ -248,7 +248,7 @@ footer .ft-brand p{margin-bottom:0 !important;line-height:24px !important;}
 /* 1. legacy linen/bronze colors -> tokens */
 footer :is(a,span,p,.ft-copy,.ft-legal){color:rgba(255,255,255,.8) !important;}
 footer .ft-bot :is(span,a){color:rgba(255,255,255,.55) !important;}
-footer a:hover{color:#C9A15E !important;}
+footer a:hover{color:#A07F56 !important;}
 footer,footer .ft-rule,footer .ft-top,footer .ft-bot{border-color:rgba(255,255,255,.16) !important;}
 footer .ft-rule{background:rgba(255,255,255,.16) !important;}
 .cta,.cta .cal-card{border-color:rgba(255,255,255,.16) !important;}
@@ -265,12 +265,12 @@ footer .ft-rule{background:rgba(255,255,255,.16) !important;}
 /* 5. standard primary size */
 .ty-amzn{padding:17px 40px !important;font-size:13px !important;letter-spacing:.22em !important;}
 /* 6. legal headings = standard H3 */
-html body .legal h3:not(.x){font-family:"EB Garamond",serif !important;font-weight:700 !important;font-size:28px !important;line-height:1.15 !important;color:#000 !important;letter-spacing:-.005em !important;text-transform:none !important;margin:48px 0 14px !important;}
+html body .legal h3:not(.x){font-family:"Cormorant Garamond",serif !important;font-weight:700 !important;font-size:28px !important;line-height:1.15 !important;color:#000 !important;letter-spacing:-.005em !important;text-transform:none !important;margin:48px 0 14px !important;}
 /* 7. guide contents list in the body face */
 html body .toc a:not(.x){font-family:"Schibsted Grotesk",sans-serif !important;font-weight:500 !important;font-size:17px !important;}
-html body .toc a:not(.x) span{font-family:"Schibsted Grotesk",sans-serif !important;color:#8F6A1F !important;}
+html body .toc a:not(.x) span{font-family:"Schibsted Grotesk",sans-serif !important;color:#7E6243 !important;}
 .g-grid div,.g-grid > *{border-color:var(--line) !important;}
-.ty .ring{border-color:#C9A15E !important;}
+.ty .ring{border-color:#A07F56 !important;}
 @media(max-width:900px){#nav .nav-cta{display:none !important;}}
 /* mobile: one 24px side gutter everywhere */
 @media(max-width:900px){
@@ -288,3 +288,12 @@ html body .toc a:not(.x) span{font-family:"Schibsted Grotesk",sans-serif !import
   .cta .cta-in > .cal-card{grid-column:2;grid-row:1 / span 5;margin:0 !important;padding-top:40px !important;}
   .cta .cal-card iframe{min-height:380px !important;}
 }
+
+/* ==== 2026-10-28: original type + brown accent ==== */
+/* Headlines: Cormorant Garamond 600, all caps for H1/H2; everything else Schibsted Grotesk */
+html body :is(h1,h2,h3,h1 *,h2 *,h3 *,.mm-list a,.how-num,.cs-quote blockquote,.pullquote,.callout .box):not(#x){font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600 !important;}
+html body :is(h1,h2):not(#x){letter-spacing:.02em !important;}
+html body :is(h1 em,h2 em,h1 b,h2 b):not(#x){font-weight:600 !important;}
+.nav-logo img{height:54px !important;width:auto !important;}
+footer .ft-brand img{height:54px !important;width:auto !important;}
+html body :is(.csx .val,.manifesto .mf-close,.manifesto .mf-close b):not(#x){font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600 !important;}
