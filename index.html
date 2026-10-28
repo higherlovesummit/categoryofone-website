@@ -171,20 +171,25 @@
 @media (max-width:900px){.cal-card iframe{min-height:560px;}}
 </style>
 <style id="howwework">
-.how{background:#F2ECE3;color:#1A1510;padding:110px 56px;}
-.how-in{max-width:1180px;margin:0 auto;}
-.how-head{text-align:center;max-width:760px;margin:0 auto 64px;}
-.how-head .eyebrow{color:#915335;display:block;margin-bottom:22px;}
-.how-head h2{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(34px,4.4vw,58px);color:#1A1510;margin-bottom:18px;}
-.how-head p{font-family:"EB Garamond",serif;font-size:21px;color:#3a2e24;line-height:1.5;}
-.how-steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(145,83,53,.35);}
-.how-step{padding:40px 32px 8px 0;border-right:1px solid rgba(145,83,53,.2);margin-right:32px;}
-.how-step:last-child{border-right:0;margin-right:0;}
-.how-num{font-family:"Cormorant Garamond",serif;font-size:56px;font-weight:600;color:#A07F56;line-height:1;display:block;margin-bottom:18px;}
-.how-step h3{font-family:"Raleway",sans-serif;font-size:14px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#1A1510;margin-bottom:14px;}
-.how-step p{font-family:"EB Garamond",serif;font-size:19px;line-height:1.5;color:#3a2e24;}
-.how-cta{text-align:center;margin-top:56px;}
-@media(max-width:900px){.how{padding:80px 24px;}.how-steps{grid-template-columns:1fr;}.how-step{border-right:0;margin-right:0;padding:30px 0 26px;border-bottom:1px solid rgba(145,83,53,.2);}.how-num{font-size:44px;margin-bottom:10px;}.how-step p{font-size:21px;}}
+html body .osa:not(#x) *{box-sizing:border-box;}
+html body .osa:not(#x) h2{color:#000 !important;font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600 !important;text-transform:uppercase;letter-spacing:.02em !important;line-height:1.05;margin:0;}
+html body .osa:not(#x) .osa-ey{font-family:"Schibsted Grotesk",sans-serif !important;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#7E6243 !important;display:block;background:none !important;padding:0 !important;}
+html body .osa:not(#x) .osa-ph{font-family:"Schibsted Grotesk",sans-serif !important;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#7E6243 !important;display:block;margin-bottom:10px;background:none !important;padding:0 !important;}
+html body .osa:not(#x) h3{color:#000 !important;font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600 !important;font-size:34px;line-height:1.1;margin:0 0 14px;text-transform:none;letter-spacing:0 !important;}
+html body .osa:not(#x) p{font-family:"Schibsted Grotesk",sans-serif !important;font-size:17px;line-height:1.65;margin:0;}
+html body .osa:not(#x) .cta-l{display:inline-block;font-family:"Schibsted Grotesk",sans-serif !important;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:#7E6243;color:#fff !important;padding:17px 34px;text-decoration:none;}
+html body .osa.a:not(#x){background:#FAF7F1;color:#1A1510;padding:110px 56px;}
+.osa.a .in{max-width:1180px;margin:0 auto;}
+.osa.a .hd{text-align:center;margin-bottom:56px;}
+.osa.a h2{font-size:clamp(34px,4.6vw,62px);margin-top:20px !important;}
+.osa.a .bt{display:block;width:100%;height:auto;margin:0 auto 56px;}
+.osa.a .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;border-top:1px solid rgba(0,0,0,.14);padding-top:40px;}
+html body .osa.a:not(#x) p{color:#3a2e24 !important;}
+.osa.a .ft{text-align:center;margin-top:64px;}
+@media(max-width:900px){html body .osa.a:not(#x){padding:80px 24px;}.osa.a .cols{grid-template-columns:1fr;gap:36px;}.osa.a .bt{margin-bottom:40px;}.osa.a .bt text{font-size:26px;letter-spacing:3px;}}
+html body .osa.a:not(#x) .bt text.lb{font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600 !important;font-size:40px;letter-spacing:.5px;}
+html body .osa.a:not(#x) .bt text.lc{font-size:23px;}
+@media(max-width:900px){html body .osa.a:not(#x) .bt text.lb{font-size:54px;letter-spacing:0;}html body .osa.a:not(#x) .bt text.lc{font-size:28px;}.osa.a .bt{margin-left:-8px;width:calc(100% + 16px);}}
 </style>
 <style id="foldfix">
 .fold{display:flex;flex-direction:column;min-height:100vh;min-height:100svh;}
@@ -258,17 +263,18 @@
     <div class="pf-cta"><a href="/case-studies/" class="btn-gold">View All Case Studies</a></div>
   </div>
 </section>
-<section class="how" id="how">
-  <div class="how-in">
-    <div class="how-head"><span class="eyebrow">How We Work</span><h2>From clarity to category of one</h2></div>
-    <div class="how-steps">
-      <div class="how-step"><span class="how-num">01</span><h3>Organize</h3><p>Audit, interviews and the competitive landscape, in one source of truth.</p></div>
-      <div class="how-step"><span class="how-num">02</span><h3>Simplify</h3><p>A sharp strategy your whole team can repeat.</p></div>
-      <div class="how-step"><span class="how-num">03</span><h3>Amplify</h3><p>Identity, website and launch, built to stay consistent.</p></div>
-    </div>
-    <div class="how-cta"><a href="#apply" class="link">Book a Consult</a></div>
-  </div>
-</section>
+<section class="osa a" id="how"><div class="in"><div class="hd"><span class="osa-ey">How We Work</span><h2>Our Methodology</h2></div>
+<svg class="bt" viewBox="0 0 1000 400" role="img" aria-label="Organize, Simplify, Amplify: everything we gather narrows to one strategy, then expands across every touchpoint">
+<defs><linearGradient id="gL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#FAF7F1"/><stop offset="1" stop-color="#A88F6E"/></linearGradient>
+<linearGradient id="gR" x1="1" x2="0" y1="0" y2="0"><stop offset="0" stop-color="#FAF7F1"/><stop offset="1" stop-color="#A88F6E"/></linearGradient></defs>
+<polygon points="0,45 440,180 440,220 0,355" fill="url(#gL)"/>
+<polygon points="1000,45 560,180 560,220 1000,355" fill="url(#gR)"/>
+<circle cx="500" cy="200" r="76" fill="#000"/>
+<text class="lb" x="22" y="213" text-anchor="start" fill="#000">ORGANIZE</text>
+<text class="lb lc" x="500" y="209" text-anchor="middle" fill="#fff">SIMPLIFY</text>
+<text class="lb" x="978" y="213" text-anchor="end" fill="#000">AMPLIFY</text></svg>
+<div class="cols"><div><span class="osa-ph">Phase 01</span><h3>Organize</h3><p>We gather the whole picture. We interview your leaders, stakeholders, and customers. We evaluate your competitors and study your market. Then we run it all through our proprietary frameworks so we know exactly what we are working with.</p></div><div><span class="osa-ph">Phase 02</span><h3>Simplify</h3><p>We separate the signal from the noise. We analyze everything we gathered and distill it into one clear, compelling, defensible brand strategy: who you are, what you stand for, and what makes you a Category of One. Then we give it language, a voice, and a point of view.</p></div><div><span class="osa-ph">Phase 03</span><h3>Amplify</h3><p>We bring your brand to life everywhere. Every touchpoint looks, sounds, and feels like your strategy, from marketing and sales to customer service and your own internal culture. Your brand becomes one consistent experience, inside and out.</p></div></div>
+<div class="ft"><a class="cta-l" href="#apply">Book a Consult</a></div></div></section>
 <section class="tst" id="testimonials">
   <span class="glyph" aria-hidden="true">&ldquo;</span>
   <div class="tst-in">
