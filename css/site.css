@@ -325,3 +325,51 @@ html body .mobile-menu .mm-list a:not(#x){font-size:clamp(34px,10vw,42px) !impor
 html body .mobile-menu .mm-list a span:not(#x){margin-bottom:8px;}
 html body .mobile-menu .mm-list a.active:not(#x){color:#7E6243 !important;}
 html body .mobile-menu .mm-bottom:not(#x){padding-top:28px;}
+
+/* ===== SECONDARY PALETTE · ACCENT SYSTEM (approved 2026-10-29) =====
+   Secondary colors are accents only: never backgrounds, emphasis text or buttons.
+   1 Sequence (ordered stages): Payne's Gray -> Ebony -> Russet
+   2 Text-card edges: Ebony / Payne's Gray / Sage
+   3 Sage hairline: closers, dividers, quote marks
+   Image/logo cards (client work) get no accents. */
+:root{--ebony:#5D685B;--paynes:#607077;--cadet:#789094;--sage:#A4A082;--russet:#915335;}
+/* 1 · SEQUENCE ACCENT — ordered stages: Payne's Gray → Ebony → Russet */
+html body .osa.a:not(#q1):not(#q2) .cols{border-top:none !important;padding-top:0 !important}
+html body .osa.a:not(#q1):not(#q2) .cols>div{border-top:3px solid var(--paynes);padding-top:28px}
+html body .osa.a:not(#q1):not(#q2) .cols>div:nth-child(2){border-top-color:var(--ebony)}
+html body .osa.a:not(#q1):not(#q2) .cols>div:nth-child(3){border-top-color:var(--russet)}
+html body .osa.a:not(#q1):not(#q2) .cols>div:nth-child(1) .osa-ph{color:var(--paynes) !important}
+html body .osa.a:not(#q1):not(#q2) .cols>div:nth-child(2) .osa-ph{color:var(--ebony) !important}
+html body .osa.a:not(#q1):not(#q2) .cols>div:nth-child(3) .osa-ph{color:var(--russet) !important}
+html body #gL stop:last-child{stop-color:var(--paynes) !important}
+html body #gR stop:last-child{stop-color:var(--russet) !important}
+/* Services: three business stages */
+html body .svc-card:not(#q1):not(#q2){border-top:3px solid var(--paynes) !important}
+html body .svc-card:nth-child(2):not(#q1):not(#q2){border-top-color:var(--ebony) !important}
+html body .svc-card:nth-child(3):not(#q1):not(#q2){border-top-color:var(--russet) !important}
+html body .svc-card:nth-child(1):not(#q1):not(#q2) .eyebrow{color:var(--paynes) !important}
+html body .svc-card:nth-child(2):not(#q1):not(#q2) .eyebrow{color:var(--ebony) !important}
+html body .svc-card:nth-child(3):not(#q1):not(#q2) .eyebrow{color:var(--russet) !important}
+/* Case study narrative: Challenge → Transformation → Result */
+html body .cs-narrative:not(#q1):not(#q2) h2::before{content:"";display:block;width:44px;height:3px;background:var(--paynes);margin-bottom:18px}
+html body .cs-narrative:not(#q1):not(#q2) h2:nth-of-type(2)::before{background:var(--ebony)}
+html body .cs-narrative:not(#q1):not(#q2) h2:nth-of-type(3)::before{background:var(--russet)}
+/* Brand Strategy: nine pillars cycle in threes */
+html body section.pillar:nth-of-type(3n+1):not(#q1):not(#q2) .p-num{color:var(--paynes) !important}
+html body section.pillar:nth-of-type(3n+2):not(#q1):not(#q2) .p-num{color:var(--ebony) !important}
+html body section.pillar:nth-of-type(3n):not(#q1):not(#q2) .p-num{color:var(--russet) !important}
+html body section.pillar:not(#q1):not(#q2) .p-num::after{content:"";display:block;width:44px;height:3px;background:currentColor;margin-top:12px}
+html body .toc:not(#q1):not(#q2) a:nth-child(3n+1) span{color:var(--paynes) !important}
+html body .toc:not(#q1):not(#q2) a:nth-child(3n+2) span{color:var(--ebony) !important}
+html body .toc:not(#q1):not(#q2) a:nth-child(3n) span{color:var(--russet) !important}
+/* 2 · TEXT-CARD EDGE — testimonial cards cycle Ebony / Payne's Gray / Sage */
+html body .tst:not(#q1):not(#q2) .tw{border-top:3px solid var(--ebony) !important}
+html body .tst:not(#q1):not(#q2) .tw:nth-child(3n+2){border-top-color:var(--paynes) !important}
+html body .tst:not(#q1):not(#q2) .tw:nth-child(3n){border-top-color:var(--sage) !important}
+/* 3 · SAGE HAIRLINE — closers, dividers, quote marks */
+html body .tst:not(#q1):not(#q2) .glyph{color:rgba(164,160,130,.35) !important}
+html body .cs-quote-mark:not(#q1):not(#q2){color:var(--sage) !important}
+html body .manifesto:not(#q1):not(#q2) .mf-close{border-top:2px solid var(--sage) !important}
+html body .founder:not(#q1):not(#q2) .f-name::after{content:"";display:block;width:56px;height:2px;background:var(--sage);margin:26px auto 0}
+html body .divider:not(#q1):not(#q2){background:var(--sage) !important;opacity:1 !important;height:2px !important}
+html body .guest-card:not(#q1):not(#q2){border-top:3px solid var(--sage) !important}
