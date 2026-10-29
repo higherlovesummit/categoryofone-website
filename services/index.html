@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services &mdash; Category of One Branding</title>
+  <meta name="description" content="Brand Build, Rebrand, and Exit-Ready Brand. Brand strategy, positioning, naming, messaging, and identity for founder-led B2B companies building a Category of One brand." />
+  <link rel="canonical" href="https://categoryofonebranding.com/services/" />
+  <meta property="og:title" content="Services &mdash; Category of One Branding" />
+  <meta property="og:description" content="Brand Build, Rebrand, and Exit-Ready Brand for founder-led B2B companies." />
+  <meta property="og:url" content="https://categoryofonebranding.com/services/" />
+  <meta property="og:image" content="https://categoryofonebranding.com/og-home.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--ink:#0E0B08;--gold:#D8B478;--sand:#F2ECE3;}
+    *{box-sizing:border-box;margin:0;padding:0;} html{scroll-behavior:smooth;}
+    body{background:var(--ink);color:var(--sand);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    a{color:inherit;text-decoration:none;}
+    .eyebrow{font-size:12px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;}
+    .btn-gold{display:inline-block;font-size:13px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;padding:17px 40px;transition:background .2s,transform .15s;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:22px 56px;transition:background .3s,padding .3s,border-color .3s;border-bottom:1px solid transparent;}
+    .nav-logo img{height:48px;width:auto;display:block;}
+    .nav-right{display:flex;align-items:center;gap:34px;}
+    .nav-links{display:flex;gap:30px;}
+    .nav-links a{font-size:11.5px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;transition:color .2s;}
+    .nav-cta{padding:11px 22px;font-size:11.5px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;transition:background .2s,color .2s;}
+    .nav-toggle{display:none;width:28px;height:20px;position:relative;background:transparent;border:none;cursor:pointer;}
+    .nav-toggle span{position:absolute;left:0;right:0;height:2px;transition:top .25s,transform .25s,opacity .2s;}
+    .nav-toggle span:nth-child(1){top:0;}.nav-toggle span:nth-child(2){top:9px;}.nav-toggle span:nth-child(3){top:18px;}
+    .nav-toggle.open span:nth-child(1){top:9px;transform:rotate(45deg);}.nav-toggle.open span:nth-child(2){opacity:0;}.nav-toggle.open span:nth-child(3){top:9px;transform:rotate(-45deg);}
+
+    /* hero */
+    .hero{padding:200px 56px 110px;text-align:center;}
+    .hcap{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;}
+    .hcap .eyebrow{display:block;margin-bottom:26px;}
+    .hcap .sub{margin:28px auto 0;max-width:40ch;}
+    html body .svc-hero .hcap h1:not(#x){font-size:clamp(46px,6.6vw,104px) !important;line-height:.95 !important;}
+
+    /* services */
+    .svc{background:#FAF7F1;padding:110px 56px;}
+    .svc-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;}
+    .svc-card{background:#fff;border:1px solid rgba(0,0,0,.12);padding:44px 34px 38px;display:flex;flex-direction:column;}
+    .svc-card .eyebrow{display:block;font-size:12px !important;letter-spacing:.2em !important;margin-bottom:16px;}
+    html body .svc-card h2:not(#x){font-size:clamp(32px,2.6vw,40px) !important;line-height:1.02 !important;letter-spacing:.02em !important;text-transform:uppercase !important;color:#000 !important;margin-bottom:18px;}
+    .svc-card p{flex-grow:1;font-size:17px;line-height:1.65;margin-bottom:30px;}
+    .svc-card .btn-gold{align-self:flex-start;font-size:12px;padding:15px 28px;}
+
+    /* methodology strip */
+    .svc-method{background:#fff;padding:72px 56px;}
+    .svc-method-in{max-width:1180px;margin:0 auto;border-top:1px solid rgba(0,0,0,.12);padding-top:36px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:20px;}
+    .svc-phases{display:flex;flex-wrap:wrap;align-items:baseline;gap:18px;}
+    html body .svc-phases span:not(#x){font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600;font-size:34px;letter-spacing:.02em;text-transform:uppercase;line-height:1;color:#000 !important;}
+    html body .svc-phases .dot:not(#x){color:#A07F56 !important;}
+
+    /* booking + footer (shared look comes from site.css) */
+    .cta{padding:116px 56px;text-align:center;}
+    .cta-in{max-width:760px;margin:0 auto;}
+    .cta .eyebrow{margin-bottom:22px;display:block;}
+    .cta h2{font-size:clamp(34px,4.4vw,56px);margin-bottom:18px;}
+    .cta .sub{font-size:19px;margin:0 auto 40px;max-width:52ch;}
+    .sticky-cta-bar{display:none;}
+
+    @media(max-width:1080px){.svc-grid{grid-template-columns:1fr;max-width:640px;}}
+    @media(max-width:900px){
+      nav{padding:16px 24px;}.nav-links,.nav-cta{display:none;}.nav-toggle{display:block;}
+      .hero{padding:140px 24px 64px;}
+      html body .svc-hero .hcap h1:not(#x){font-size:clamp(40px,11.5vw,64px) !important;}
+      .hcap .sub{font-size:18px;margin-top:22px;}
+      .svc{padding:56px 24px 64px;}
+      .svc-grid{gap:18px;}
+      .svc-card{padding:34px 24px 28px;}
+      .svc-card p{font-size:16.5px;margin-bottom:24px;}
+      .svc-card .btn-gold{align-self:stretch;text-align:center;padding:17px 20px;}
+      .svc-method{padding:48px 24px 56px;}
+      .svc-method-in{flex-direction:column;align-items:flex-start;gap:14px;padding-top:28px;}
+      html body .svc-phases span:not(#x){font-size:min(21px,5.3vw);}
+      .svc-phases{gap:7px;flex-wrap:nowrap;}
+      .cta{padding:84px 24px;}
+    }
+  </style>
+<style id="ghlcard">
+.cal-card{background:transparent !important;border:1px solid rgba(160,127,86,.45) !important;border-radius:0 !important;padding:0 !important;box-shadow:none !important;}
+.cal-card iframe{display:block;min-height:520px;overflow:hidden;border:0;width:100%;}
+@media (max-width:900px){.cal-card iframe{min-height:560px;}}
+</style>
+<style id="stickyfix">
+@media (max-width:900px){
+.sticky-cta-bar{display:block !important;position:fixed;left:16px;right:16px;top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:90;background:transparent !important;border:0 !important;padding:0 !important;transform:translateY(calc(100% + 40px));opacity:0;transition:transform .35s ease,opacity .3s ease;pointer-events:none;}
+.sticky-cta-bar.show{transform:none;opacity:1;pointer-events:auto;}
+.sticky-cta-bar a{display:block;width:100%;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;text-align:center;padding:17px 16px;}
+}
+</style>
+<link rel="stylesheet" href="/css/site.css?v=20261028f">
+</head>
+<body>
+<nav id="nav">
+  <div class="nav-logo"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a></div>
+  <div class="nav-right">
+    <div class="nav-links"><a href="/#founder">About</a><a href="/services/" class="active">Services</a><a href="/case-studies/">Our Work</a><a href="/podcast/">Podcast</a></div>
+    <a href="#apply" class="nav-cta">Book a Consult</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-list">
+    <a href="/#founder"><span>Who we are</span>About</a>
+    <a href="/services/" class="active"><span>What we do</span>Services</a>
+    <a href="/case-studies/"><span>Case studies</span>Our Work</a>
+    <a href="/podcast/"><span>Conversations</span>Podcast</a>
+  </div>
+  <div class="mm-bottom">
+    <a href="#apply" class="mm-cta">Book a Consult</a>
+    <div class="mm-meta"><span>Austin, TX</span></div>
+  </div>
+</div>
+<div class="sticky-cta-bar"><a href="#apply">Book a Consult</a></div>
+
+<section class="hero svc-hero">
+  <div class="hcap">
+    <span class="eyebrow">Our Services</span>
+    <h1>Where is your business <em>right now?</em></h1>
+    <p class="sub">Every founder-led company reaches a moment when the brand has to catch up, change, or carry more weight. Find yours.</p>
+  </div>
+</section>
+
+<section class="svc" aria-label="Services">
+  <div class="svc-grid">
+    <article class="svc-card" id="brand-build">
+      <span class="eyebrow">You&rsquo;ve never built a real brand</span>
+      <h2>Brand Build</h2>
+      <p>You built the business on founder-led sales and grit. Now growth needs a brand that sells without you in the room. We define your positioning, sharpen your messaging, and build a cohesive brand identity your team and market can carry, built for scale.</p>
+      <a href="#apply" class="btn-gold">Start your brand</a>
+    </article>
+    <article class="svc-card" id="rebrand">
+      <span class="eyebrow">Your brand no longer fits</span>
+      <h2>Rebrand</h2>
+      <p>Your market shifted, your offer evolved, or your ambition outgrew the brand that built your reputation. Now it limits your growth. We lead a complete rebrand, from positioning and naming to messaging and identity, that signals a new stance to the market.</p>
+      <a href="#apply" class="btn-gold">Start your rebrand</a>
+    </article>
+    <article class="svc-card" id="exit-ready-brand">
+      <span class="eyebrow">You&rsquo;re preparing to sell</span>
+      <h2>Exit-Ready Brand</h2>
+      <p>Buyers pay for reputation, market position, and a growth story that does not depend on the founder. We elevate and tighten your brand ahead of a sale, so you read as a category leader. A stronger brand at the deal table supports a stronger valuation.</p>
+      <a href="#apply" class="btn-gold">Prepare for exit</a>
+    </article>
+  </div>
+</section>
+
+<section class="svc-method" aria-label="Methodology">
+  <div class="svc-method-in">
+    <span class="eyebrow">Every path runs through</span>
+    <div class="svc-phases"><span>Organize</span><span class="dot">&middot;</span><span>Simplify</span><span class="dot">&middot;</span><span>Amplify</span></div>
+  </div>
+</section>
+
+<section class="cta" id="apply">
+  <div class="cta-in">
+    <span class="eyebrow">Work With Us</span>
+    <h2>Book a Consult</h2>
+    <p class="sub">Let&rsquo;s find the right path for your brand.</p>
+    <div class="cal-card"><iframe src="https://link.categoryofonebranding.com/widget/survey/rJI9n2v6PomG6f3FOlWd" style="border:none;width:100%;" scrolling="no" id="rJI9n2v6PomG6f3FOlWd" title="Book a Consult" data-cookie-consent="true" data-cookie-consent-provider="auto"></iframe></div>
+  </div>
+</section>
+<footer>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div class="ft-brand"><a href="/"><img src="/SVG/COB_Reverse.svg" alt="Category of One Branding" /></a><p><span class="ln">Most brands compete for attention.</span> <span class="ln">We work with those that own the category.</span></p></div>
+      <div class="ft-spacer"></div>
+      <div class="ft-col ft-nav"><a href="/#founder">About</a><a href="/services/">Services</a><a href="/case-studies/">Our Work</a><a href="/podcast/">Podcast</a><a href="#apply">Book a Consult</a></div>
+    </div>
+    <div class="ft-rule"></div>
+    <div class="ft-bot">
+      <span class="ft-copy">&copy; 2026 Category of One Branding, LLC.<span class="br"> All Rights Reserved.</span></span>
+      <span class="ft-legal"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobileMenu');
+if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('open');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');t.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
+var nav=document.getElementById('nav');function s(){if(window.scrollY>40)nav.classList.add('nav-solid');else nav.classList.remove('nav-solid');}
+window.addEventListener('scroll',s,{passive:true});s();})();
+</script>
+<script id="stickyjs">(function(){var b=document.querySelector('.sticky-cta-bar'),h=document.querySelector('.hero');if(!b||!h)return;function f(){b.classList.toggle('show',h.getBoundingClientRect().bottom<60);}window.addEventListener('scroll',f,{passive:true});window.addEventListener('resize',f);f();})();</script>
+<script src="https://link.categoryofonebranding.com/js/form_embed.js"></script>
+</body>
+</html>
