@@ -332,7 +332,7 @@ html body .mobile-menu .mm-bottom:not(#x){padding-top:28px;}
    2 Text-card edges: Ebony / Payne's Gray / Sage
    3 Sage hairline: closers, dividers, quote marks
    Image/logo cards (client work) get no accents. */
-:root{--ebony:#5D685B;--paynes:#607077;--cadet:#789094;--sage:#A4A082;--russet:#915335;}
+:root{--ebony:#5D685B;--paynes:#607077;--sage:#A4A082;--russet:#915335;}
 /* 1 · SEQUENCE ACCENT — ordered stages: Payne's Gray → Ebony → Russet */
 html body .osa.a:not(#q1):not(#q2) .cols{border-top:none !important;padding-top:0 !important}
 html body .osa.a:not(#q1):not(#q2) .cols>div{border-top:3px solid var(--paynes);padding-top:28px}
