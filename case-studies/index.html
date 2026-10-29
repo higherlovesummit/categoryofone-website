@@ -4,6 +4,19 @@
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Case Studies &mdash; Category of One Branding</title>
   <meta name="description" content="Select success stories from Category of One Branding &mdash; founder-led B2B and B2C brands repositioned into category-defining leaders." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Category of One Branding" />
+  <meta property="og:title" content="Case Studies &mdash; Category of One Branding" />
+  <meta property="og:description" content="Select success stories from Category of One Branding &mdash; founder-led B2B and B2C brands repositioned into category-defining leaders." />
+  <meta property="og:url" content="https://categoryofonebranding.com/case-studies/" />
+  <meta property="og:image" content="https://categoryofonebranding.com/og-home.png?v=2" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Build a Category of One brand. Most brands compete for attention. We build the ones that command it." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Studies &mdash; Category of One Branding" />
+  <meta name="twitter:description" content="Select success stories from Category of One Branding &mdash; founder-led B2B and B2C brands repositioned into category-defining leaders." />
+  <meta name="twitter:image" content="https://categoryofonebranding.com/og-home.png?v=2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -81,6 +94,25 @@
 .card.is-hidden{display:none !important;}
 @media(max-width:900px){.cs-filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 32px;padding:0;overflow:visible;}.cs-filter{flex:0 1 auto;font-size:10.5px !important;letter-spacing:.12em !important;padding:10px 12px !important;white-space:normal;text-align:left;line-height:1.3;}}
 </style>
+<style id="csdropdown">
+.cs-dd{display:none;position:relative;margin:0 0 32px;}
+.cs-dd-btn{width:100%;min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 18px;background:#fff;border:1px solid #000;border-radius:0;cursor:pointer;text-align:left;}
+.cs-dd-txt{display:flex;flex-direction:column;gap:3px;}
+html body .cs-dd-lbl:not(#x){font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#7E6243 !important;}
+html body .cs-dd-val:not(#x){font-size:15px;font-weight:600;color:#000 !important;}
+html body .cs-dd-n:not(#x){font-weight:500;color:rgba(31,27,22,.5) !important;}
+.cs-dd-chev{flex:0 0 auto;transition:transform .2s;}
+.cs-dd.open .cs-dd-chev{transform:rotate(180deg);}
+.cs-dd-list{border:1px solid #000;border-top:0;background:#fff;}
+.cs-dd-list[hidden]{display:none;}
+.cs-dd-opt{width:100%;min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 18px;background:#fff;border:0;border-top:1px solid rgba(0,0,0,.1);border-radius:0;cursor:pointer;text-align:left;font-size:15px;font-weight:500;color:#000;}
+.cs-dd-opt:first-child{border-top:0;}
+.cs-dd-opt.on{background:#FAF7F1;font-weight:700;}
+html body .cs-dd-opt .n:not(#x){display:flex;align-items:center;gap:12px;font-weight:500;color:rgba(31,27,22,.5) !important;}
+html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight:700;visibility:hidden;}
+.cs-dd-opt.on .ck{visibility:visible !important;}
+@media(max-width:900px){.cs-filters{display:none !important;}.cs-dd{display:block;}}
+</style>
 <link rel="stylesheet" href="/css/site.css?v=20261028f">
 </head>
 <body>
@@ -112,6 +144,16 @@
 <section class="work">
   <div class="work-in">
     <div class="work-head"></div>
+    <div class="cs-dd" id="csDd">
+      <button type="button" class="cs-dd-btn" aria-expanded="false" aria-controls="csDdList"><span class="cs-dd-txt"><span class="cs-dd-lbl">Filter by industry</span><span class="cs-dd-val"><span class="cs-dd-cur">All</span> <span class="cs-dd-n">&middot; <span class="cs-dd-cnt"></span></span></span></span><svg class="cs-dd-chev" width="14" height="9" viewBox="0 0 14 9" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="#000" stroke-width="1.6" fill="none"/></svg></button>
+      <div class="cs-dd-list" id="csDdList" hidden>
+        <button type="button" class="cs-dd-opt on" data-f="all" data-short="All">All industries<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="consulting" data-short="Consulting">Consulting &amp; Professional Services<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="tech" data-short="Tech &amp; Agency">Technology &amp; Agency Services<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="education" data-short="Education">Education &amp; Learning<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="consumer" data-short="Consumer">Consumer &amp; Lifestyle<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+      </div>
+    </div>
     <div class="cs-filters" role="tablist" aria-label="Filter case studies"><button type="button" class="cs-filter on" data-f="all" aria-pressed="true">All</button><button type="button" class="cs-filter" data-f="consulting" aria-pressed="false">Consulting &amp; Professional Services</button><button type="button" class="cs-filter" data-f="tech" aria-pressed="false">Technology &amp; Agency Services</button><button type="button" class="cs-filter" data-f="education" aria-pressed="false">Education &amp; Learning</button><button type="button" class="cs-filter" data-f="consumer" aria-pressed="false">Consumer &amp; Lifestyle</button></div>
     <div class="cards">
       <a class="card" data-cat="education" href="/case-studies/odyssey-test-prep/" style="--cbg:#32D2BE">
@@ -224,5 +266,15 @@ window.addEventListener('scroll',s,{passive:true});s();})();
 </script>
 <script src="https://link.categoryofonebranding.com/js/form_embed.js"></script>
 <script id="csfiltersjs">(function(){var b=document.querySelectorAll('.cs-filter'),c=document.querySelectorAll('.cards .card');b.forEach(function(x){x.addEventListener('click',function(){var f=x.getAttribute('data-f');b.forEach(function(y){var on=y===x;y.classList.toggle('on',on);y.setAttribute('aria-pressed',on?'true':'false');});c.forEach(function(k){k.classList.toggle('is-hidden',f!=='all'&&k.getAttribute('data-cat')!==f);});});});})();</script>
+<script id="csdropdownjs">(function(){var d=document.getElementById('csDd');if(!d)return;var btn=d.querySelector('.cs-dd-btn'),list=d.querySelector('.cs-dd-list'),opts=d.querySelectorAll('.cs-dd-opt'),cards=document.querySelectorAll('.cards .card');
+function count(f){var n=0;cards.forEach(function(k){if(f==='all'||k.getAttribute('data-cat')===f)n++;});return n;}
+opts.forEach(function(o){o.querySelector('.c').textContent=count(o.getAttribute('data-f'));});
+function setOpen(v){list.hidden=!v;d.classList.toggle('open',v);btn.setAttribute('aria-expanded',v?'true':'false');}
+function sync(f){opts.forEach(function(o){var on=o.getAttribute('data-f')===f;o.classList.toggle('on',on);if(on){d.querySelector('.cs-dd-cur').textContent=o.getAttribute('data-short');}});d.querySelector('.cs-dd-cnt').textContent=count(f);}
+btn.addEventListener('click',function(){setOpen(list.hidden);});
+opts.forEach(function(o){o.addEventListener('click',function(){var f=o.getAttribute('data-f'),chip=document.querySelector('.cs-filter[data-f="'+f+'"]');if(chip)chip.click();sync(f);setOpen(false);});});
+document.querySelectorAll('.cs-filter').forEach(function(c){c.addEventListener('click',function(){sync(c.getAttribute('data-f'));});});
+document.addEventListener('click',function(e){if(!d.contains(e.target))setOpen(false);});
+sync('all');})();</script>
 </body>
 </html>
