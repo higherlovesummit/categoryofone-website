@@ -192,7 +192,7 @@ footer{background:#000 !important;}
 .csC-meta h3{white-space:nowrap;}
 .mobile-menu .mm-list a span,h1 .eyebrow,h2 .eyebrow{font-family:"Schibsted Grotesk",sans-serif !important;}
 /* footer descriptor: body sans, smaller */
-footer .ft-brand p{font-family:"Schibsted Grotesk",sans-serif !important;font-size:15px !important;line-height:1.6 !important;letter-spacing:0 !important;text-transform:none !important;color:rgba(255,255,255,.72) !important;max-width:34ch !important;}
+footer .ft-brand p{font-family:"Schibsted Grotesk",sans-serif !important;font-size:15px !important;line-height:1.6 !important;letter-spacing:0 !important;text-transform:none !important;color:rgba(255,255,255,.72) !important;max-width:46ch !important;}
 /* logo: EB Garamond Bold wordmark */
 .nav-logo img{height:54px !important;width:auto !important;}
 footer .ft-brand img{height:52px !important;width:auto !important;}
@@ -305,7 +305,7 @@ html body .cta :is(.btn-gold,.btn-primary,.btn):not(#x):hover{background:#fff !i
 footer .ft-brand p .ln{display:block;}
 @media(max-width:600px){
   .hero .sub .ln{display:block;white-space:nowrap;}
-  .hero .sub{font-size:min(17px,4.1vw) !important;}
+  .hero .sub{font-size:min(17px,3.75vw) !important;max-width:none !important;}
 }
 /* Black nav bar sitewide (2026-10-28): reverse logo, white links, white-outline CTA */
 html body nav#nav:not(#x),html body nav#nav.nav-solid:not(#x){background:#000 !important;border-bottom:1px solid rgba(255,255,255,.12) !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
