@@ -108,11 +108,6 @@ html body .svc-card:nth-child(3):hover:not(#q1):not(#q2){background:#0E0B08 !imp
 html body .svc-card:hover .opt-label:not(#x){color:#A07F56 !important}
 html body .svc-card:hover h3:not(#x){color:#fff !important}
 html body .svc-card:hover .opt-copy:not(#x){color:rgba(255,255,255,.85) !important}
-html body .os-band:not(#x){margin-top:44px;padding:30px 8px 32px;border-top:1px solid rgba(0,0,0,.14);border-bottom:1px solid rgba(0,0,0,.14);text-align:center}
-html body .os-band .eyebrow:not(#x){display:block;margin:0 0 10px;font-size:11px !important;letter-spacing:.24em !important}
-html body .os-line:not(#x){margin:0;font-family:"Cormorant Garamond",Georgia,serif !important;font-style:italic !important;font-weight:500 !important;font-size:clamp(24px,2.6vw,34px) !important;line-height:1.25 !important;text-transform:none !important;letter-spacing:.01em !important}
-html body .os-line .jet:not(#x){color:#0E0B08 !important;font-family:"Cormorant Garamond",Georgia,serif !important;font-style:italic !important;font-weight:500 !important}
-html body .os-line .gold:not(#x){color:#A07F56 !important;font-family:"Cormorant Garamond",Georgia,serif !important;font-style:italic !important;font-weight:500 !important}
 html body .svc-cta:not(#x){text-align:center;margin-top:48px}
 html body .hx.proof:not(#x){background:#fff !important;color:#1F1B16 !important;border-bottom:1px solid rgba(0,0,0,.12)}
 html body .hx.proof .wall-in:not(#x),
@@ -146,11 +141,15 @@ html body .hx .c.case .av:not(#x){background:transparent;border-color:rgba(255,2
 html body .hx .c.case .rd:not(#x){font-family:"Schibsted Grotesk",sans-serif !important;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:#C7A574 !important}
 html body .proof-all:not(#x){text-align:center;margin:28px 0 0;font-family:"Schibsted Grotesk",sans-serif !important;font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
 html body .proof-all a:not(#x){color:#7E6243 !important;text-decoration:none}
-html body .svc-method:not(#x){background:#fff !important;padding:84px 56px;text-align:center;border-bottom:1px solid rgba(0,0,0,.12);color:#000}
-html body .svc-method .eyebrow:not(#x){display:block;margin:0 0 18px}
-html body .svc-words:not(#x){margin:0;font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600 !important;font-size:clamp(34px,5vw,60px) !important;letter-spacing:.06em !important;text-transform:uppercase !important;color:#000 !important;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:0 22px;line-height:1.05 !important}
-html body .svc-words span:not(#x){font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600 !important;color:#000 !important}
-html body .svc-words .dot:not(#x){color:#A07F56 !important}
+html body .hx .c.ink:not(#x),
+html body .hx .c.ink:nth-child(3n):not(#x),
+html body .hx .c.ink:nth-child(3n+2):not(#x){background:#0E0B08 !important;border-color:#0E0B08 !important;border-top:3px solid #A07F56 !important;color:#fff !important}
+html body .hx .c.S.ink .q:not(#x)::before{content:"\201C";display:block;font-family:"Cormorant Garamond",Georgia,serif !important;font-weight:600;font-size:48px;line-height:.55;color:#A07F56 !important;margin:0 0 4px}
+html body .hx .c.S.ink .q p:not(#x){color:#fff !important}
+html body .hx .c.ink .who:not(#x){border-top-color:rgba(255,255,255,.14)}
+html body .hx .c.ink .who b:not(#x){color:#A07F56 !important}
+html body .hx .c.ink .who i:not(#x){color:rgba(255,255,255,.72) !important}
+html body .hx .c.ink .av:not(#x){border-color:rgba(255,255,255,.25)}
 html body .svc-close:not(#x){background:#000 !important;color:#fff !important;padding:110px 56px;text-align:center}
 html body .svc-close-in:not(#x){max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px}
 html body .svc-close .eyebrow:not(#x){color:#A07F56 !important;margin:0}
@@ -168,12 +167,10 @@ html body .svc-close p:not(#x){margin:0;font-family:"Schibsted Grotesk",sans-ser
 @media (max-width:900px){
   html body .svc:not(#x){padding:56px 24px 64px}
   html body .hx.proof .win:not(#x){padding:76px 24px 70px}
-  html body .svc-method:not(#x){padding:64px 24px}
   html body .svc-close:not(#x){padding:84px 24px}
   html body .svc-card:not(#x){padding:34px 24px 28px}
   html body .svc-card .opt-copy:not(#x){font-size:16.5px !important}
   html body .svc-cta .btn-gold:not(#x){display:block;text-align:center;padding:18px 20px}
-  html body .os-band:not(#x){padding:24px 4px 26px}
 }
 @media (max-width:680px){
   html body .hx .cols:not(#x){columns:1}
@@ -238,10 +235,6 @@ html body .svc-close p:not(#x){margin:0;font-family:"Schibsted Grotesk",sans-ser
         <p class="opt-copy">Your business runs on decisions and content, but AI doesn&rsquo;t know your brand. Our Brand OS install loads your strategy, voice and visual rules into Grok Bot, your AI teammate. It becomes a second brain for the business, informing decisions, keeping marketing and messaging consistent, and building assets faster to save time, money and energy.</p>
       </article>
     </div>
-    <div class="os-band">
-      <span class="eyebrow">Brand OS</span>
-      <p class="os-line"><span class="jet">Most brands use AI.</span> <span class="gold">Category of One brands teach it who they are.</span></p>
-    </div>
     <div class="svc-cta"><a href="#apply" class="btn-gold">Book a Consult</a></div>
   </div>
 </section>
@@ -272,23 +265,16 @@ html body .svc-close p:not(#x){margin:0;font-family:"Schibsted Grotesk",sans-ser
       <figure class="c M"><blockquote class="q"><p>We hired Re Perez to do a complete rebrand of our HVAC &amp; Plumbing business. We had just made an acquisition and were struggling with how to merge the companies together. … The end result was a modern, forward-facing business that has allowed us to stand out among our competition and attract top talent.</p></blockquote><figcaption class="who"><span class="av" aria-hidden="true">BS</span><span><b>Brandon Sady</b><i>Four Quarters · HVAC, Plumbing &amp; Home Services</i></span></figcaption></figure>
       <figure class="c S"><span class="res">Tripled in size</span><blockquote class="q"><p>Re Perez&rsquo;s understanding of our business was incredible. Since rebranding, we&rsquo;ve tripled in size.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/adam-hailstone.jpg" width="46" height="46" alt="Adam Hailstone" loading="lazy" decoding="async"><span><b>Adam Hailstone</b><i>CMO, Williamsburg Learning</i></span></figcaption></figure>
       <figure class="c S"><span class="res">50% newsletter open rate</span><blockquote class="q"><p>Re Perez and his team created a brand that&rsquo;s traditional enough for Fortune 500 clientele, yet stands out as innovative and forward-thinking. Our newsletter now has a 50% open rate.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/andrea-adams.jpg" width="46" height="46" alt="Andrea Adams" loading="lazy" decoding="async"><span><b>Andrea Adams</b><i>Founder, Triumpha</i></span></figcaption></figure>
-      <figure class="c S"><blockquote class="q"><p>Re Perez is a branding genius. He can quickly jump in a new project and &ldquo;co-create&rdquo; with his clients.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/chase-damiano.jpg" width="46" height="46" alt="Chase Damiano" loading="lazy" decoding="async"><span><b>Chase Damiano</b><i>Fractional COO + Operations Consultant</i></span></figcaption></figure>
+      <figure class="c S ink"><blockquote class="q"><p>Re Perez is a branding genius. He can quickly jump in a new project and &ldquo;co-create&rdquo; with his clients.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/chase-damiano.jpg" width="46" height="46" alt="Chase Damiano" loading="lazy" decoding="async"><span><b>Chase Damiano</b><i>Fractional COO + Operations Consultant</i></span></figcaption></figure>
     </div>
     <p class="proof-all"><a href="/testimonials/">See all testimonials</a></p>
   </div>
 </section>
 
-<section class="svc-method" aria-label="Methodology">
-  <p class="eyebrow">Every option runs through</p>
-  <p class="svc-words"><span>Organize</span><span class="dot" aria-hidden="true">&middot;</span><span>Simplify</span><span class="dot" aria-hidden="true">&middot;</span><span>Amplify</span></p>
-</section>
-
 <section class="svc-close" aria-label="Close">
   <div class="svc-close-in">
-    <span class="eyebrow">Work With Us</span>
     <h2>Why be in a category of many when you can be a <em>Category of One?</em></h2>
     <p>Let&rsquo;s find the right option for your brand.</p>
-    <a href="#apply" class="btn-gold">Book a Consult</a>
   </div>
 </section>
 
