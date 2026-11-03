@@ -240,6 +240,56 @@ html body .marq-track:not(#x) img{filter:none !important;-webkit-filter:none !im
 html body section#founder.founder:not(#x){background:#fff !important}
 html body section#testimonials.tst:not(#x){background:#FAF7F1 !important}
 </style>
+<style id="hx">
+.hx{--egg:#FAF7F1;--brown:#A07F56;--dbrown:#7E6243;--ink:#1F1B16;--muted:rgba(31,27,22,.66);--line:rgba(0,0,0,.12);--ebony:#5D685B;--paynes:#607077;--sage:#A4A082;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;font-family:var(--sans) !important;color:var(--ink) !important;font-size:16px;line-height:1.6}
+.hx *{box-sizing:border-box}.hx p{margin:0}
+.hx .ey{display:block;font-family:var(--sans) !important;font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--dbrown) !important;margin-bottom:18px}
+.hx h2{font-family:var(--serif) !important;font-weight:600;text-transform:uppercase;line-height:1;font-size:clamp(34px,4.6vw,62px);margin:0;color:#000 !important;letter-spacing:.02em}
+.feat .fin{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:104px 56px;align-items:start}
+.feat.flip .lead{order:2}
+.feat .mk{display:block;font-family:var(--serif) !important;font-weight:700;font-size:110px;line-height:.55;color:var(--sage) !important;margin-bottom:18px}
+.feat .big{font-family:var(--serif) !important;font-weight:600;text-transform:uppercase;line-height:1.02;font-size:clamp(32px,3.5vw,52px);color:#000 !important;text-wrap:balance}
+.feat .big em{font-style:normal;color:var(--brown) !important}
+.feat .body p{font-size:17px;line-height:1.7}.feat .body p+p{margin-top:16px}
+.feat .who{display:flex;align-items:center;gap:14px;padding-top:30px}
+.hx .av{width:52px;height:52px;border-radius:50%;flex:none;object-fit:cover;background:#F4F1EB;display:flex;align-items:center;justify-content:center;font-family:var(--serif) !important;font-weight:700;font-size:18px;color:var(--dbrown) !important;border:1px solid var(--line)}
+.hx .who b{display:block;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#000 !important}
+.hx .who i{display:block;font-style:normal;font-size:13.5px;color:var(--muted) !important;line-height:1.4}
+.hx .res{display:inline-block;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dbrown) !important;border:1px solid var(--sage);padding:7px 10px;margin-bottom:20px}
+.feat .rd{display:inline-block;margin-top:24px;font-weight:700;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dbrown) !important;border-bottom:1px solid currentColor;padding-bottom:5px}
+.feat.eg{background:var(--egg)}.feat.wh{background:#fff;border-top:1px solid var(--line)}
+.feat.dk{background:#000;color:rgba(255,255,255,.86) !important}
+.feat.dk .big{color:#fff !important}.feat.dk .mk{color:var(--brown) !important}.feat.dk .who b{color:#fff !important}.feat.dk .who i{color:rgba(255,255,255,.6) !important}
+.feat.dk .res{color:#D8C59C !important;border-color:rgba(216,197,156,.5)}.feat.dk .rd{color:#D8C59C !important}.feat.dk .av{border-color:rgba(255,255,255,.2)}
+.wall{background:var(--egg)}.wall .win{max-width:1180px;margin:0 auto;padding:104px 56px 112px}
+.wall.eg .win{padding-top:24px}
+.whd{text-align:center;margin-bottom:56px}.chap{background:var(--egg)}.chd{text-align:center;padding:112px 24px 8px}
+.wall .cols{columns:3;column-gap:24px}
+.hx .c{background:#fff;border:1px solid var(--line);border-top:3px solid var(--ebony);padding:30px 30px 26px;break-inside:avoid;margin:0 0 24px;display:flex;flex-direction:column;gap:20px}
+.hx .c:nth-child(3n+2){border-top-color:var(--paynes)}.hx .c:nth-child(3n){border-top-color:var(--sage)}
+.hx .c .res{align-self:flex-start;margin:0}
+.hx .c .q{margin:0}.hx .c .q p{font-size:16px;line-height:1.65}
+.hx .c.S .q p{font-family:var(--serif) !important;font-weight:600;font-size:25px;line-height:1.18;color:#000 !important}
+.hx .c .who{display:flex;align-items:center;gap:14px;padding-top:18px;border-top:1px solid var(--line)}
+.hx .c .av{width:46px;height:46px}
+.wl{text-align:center;margin-top:32px}
+.hx .btn{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;background:#7E6243;color:#fff !important;padding:18px 30px}
+.hx .btn:hover{background:#000}
+.strip{background:#000;color:#fff !important;overflow:hidden;padding:38px 0}
+.strip .track{display:flex;gap:64px;width:max-content;animation:hxmq 80s linear infinite}
+.strip:hover .track{animation-play-state:paused}
+.strip span{font-family:var(--serif) !important;font-weight:600;font-size:30px;white-space:nowrap}
+.strip span::before{content:"\201C";color:var(--brown) !important;margin-right:6px}
+.strip span i{font-style:normal;font-family:var(--sans) !important;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brown) !important;margin-left:18px}
+@keyframes hxmq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.strip .track{animation:none}}
+@media (max-width:1000px){.wall .cols{columns:2}}
+@media (max-width:680px){.feat .fin{grid-template-columns:1fr;gap:34px;padding:76px 24px}.feat.flip .lead{order:0}.wall .win{padding:76px 24px 84px}.wall .cols{columns:1}.chd{padding-top:84px}.strip span{font-size:24px}.hx .c{padding:24px}}
+.feat .big em{font-family:var(--serif) !important}
+.feat.dk .body p{color:rgba(255,255,255,.82) !important}
+.feat.eg .body p,.feat.wh .body p{color:var(--ink) !important}
+
+</style>
 </head>
 <body>
 <nav id="nav">
@@ -287,15 +337,7 @@ html body section#testimonials.tst:not(#x){background:#FAF7F1 !important}
   <p class="mf-body">AI has made a good-looking brand table stakes. Looking the part is no longer the advantage. Being felt is. AI can think, but it can&rsquo;t feel, and branding has always been about feeling. People connect to values, to ethos, to a point of view, and to a brand that makes them feel fully seen. That can&rsquo;t be generated. It has to be lived.</p>
   <p class="mf-body mf-close"><span class="ln">Stop competing in a category of many.</span> <span class="ln">Instead, be a <b>Category of One</b>.</span></p>
 </section>
-<section class="tst tst-strip" aria-label="Client results">
-  <div class="tst-in">
-    <div class="twall">
-      <div class="tw"><p class="q">We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez and his team.</p><div class="who"><img class="avi" src="/testimonial-photos/justin-berg.jpg" width="56" height="56" alt="Justin Berg" loading="lazy" decoding="async"><div><div class="nm">Justin Berg</div><div class="ti">CEO, Purple Care</div></div></div></div>
-      <div class="tw"><p class="q">In just a month after rebranding, we grew 399%. Fast forward to today, we've nearly 10x'd our business.</p><div class="who"><img class="avi" src="/testimonial-photos/jon-mccarty.jpg" width="56" height="56" alt="Jon McCarty" loading="lazy" decoding="async"><div><div class="nm">Jon McCarty</div><div class="ti">CEO, Odyssey Test Prep</div></div></div></div>
-      <div class="tw"><p class="q">The leadership of Re Perez and his team helped us stand out. Immediately after rebranding, we landed a $1M contract.</p><div class="who"><img class="avi" src="/testimonial-photos/chris-koomey.jpg" width="56" height="56" alt="Chris Koomey" loading="lazy" decoding="async"><div><div class="nm">Chris Koomey</div><div class="ti">COO, Thorben</div></div></div></div>
-    </div>
-  </div>
-</section>
+<section class="hx feat dk" aria-label="Testimonial from Brent Weaver"><div class="fin"><div class="lead"><span class="mk" aria-hidden="true">&ldquo;</span><p class="big">I consider Re Perez one of the very best brand and <em>business strategists</em> I’ve ever worked with.</p><div class="who"><img class="av" src="/testimonial-photos/brent-weaver.jpg" width="52" height="52" alt="Brent Weaver" loading="lazy" decoding="async"><span><b>Brent Weaver</b><i>CEO, E2M Solutions</i></span></div></div><blockquote class="body"><p>I consider Re Perez of Category of One Branding one of the very best brand and business strategists I’ve ever worked with. He is my go-to oracle when it comes to branding, communications, and business strategy.</p><p>Re has been fundamental in helping me transform multiple companies I’ve owned and operated. His work goes far beyond surface-level branding. He helps uncover the true core of a business and then translates that into a differentiated brand and strategy that aligns the organization around a clear mission, vision, and values. The result is not just growth, but clarity, focus, and cultural alignment.</p><a class="rd" href="/testimonials/#brent">Read the full recommendation &rarr;</a></blockquote></div></section>
 <section class="work" id="work">
   <div class="work-in">
     <div class="whead"><div><span class="eyebrow">Our Work</span><h2>Featured Case Studies</h2></div></div>
@@ -308,6 +350,7 @@ html body section#testimonials.tst:not(#x){background:#FAF7F1 !important}
     <div class="pf-cta"><a href="/case-studies/" class="btn-gold">View All Case Studies</a></div>
   </div>
 </section>
+<section class="hx feat dk flip" aria-label="Testimonial from Jon McCarty"><div class="fin"><div class="lead"><span class="mk" aria-hidden="true">&ldquo;</span><p class="big">We were up <em>400%</em> the very next month that we launched.</p><div class="who"><img class="av" src="/testimonial-photos/jon-mccarty.jpg" width="52" height="52" alt="Jon McCarty" loading="lazy" decoding="async"><span><b>Jon McCarty</b><i>Founder, Odyssey Test Preparation</i></span></div></div><blockquote class="body"><span class="res">Up 400% the next month</span><p>About 5 or 6 years ago, my company was still small and we had a serious condition of brand shame. I reached out to Re Perez and he was able to guide me through the process.</p><p>When I was looking at what we had going on, I thought we needed a new website, but without any of the branding, I thought there’s no real way to improve my website into a cohesive, meaningful statement that we’re trying to bring to the market. I got in touch with Re Perez who sold me on this package that I thought was absurdly priced. However, the value on that far, far, far exceeded the amount that I paid.</p><p>It was just an amazing process. Once we finished the process and launched the brand, we were up 400% the very next month that we launched.</p><p>It was one of the most meaningful investments that I had made to grow my business to grow the impact that we have on the people we serve. … If you think about using them, definitely do it. I would sign up today.</p></blockquote></div></section>
 <section class="osa a" id="how"><div class="in"><div class="hd"><span class="osa-ey">How We Work</span><h2>Our Methodology</h2></div>
 <svg class="bt" viewBox="0 0 1000 400" role="img" aria-label="Organize, Simplify, Amplify: everything we gather narrows to one strategy, then expands across every touchpoint">
 <defs><linearGradient id="gL" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#FAF7F1"/><stop offset="1" stop-color="#A88F6E"/></linearGradient>
@@ -328,21 +371,8 @@ html body section#testimonials.tst:not(#x){background:#FAF7F1 !important}
     
   </div>
 </section>
-<section class="tst" id="testimonials">
-  <span class="glyph" aria-hidden="true">&ldquo;</span>
-  <div class="tst-in">
-    <span class="eyebrow">Testimonials</span>
-    <h2>What People Are Saying</h2>
-    <div class="twall">
-      <div class="tw"><p class="q">I&rsquo;ve worked with top NYC branding firms and they don&rsquo;t hold a torch to the beautiful, stunning precision Re Perez and his team delivers.</p><div class="who"><img class="avi" src="/testimonial-photos/angelique-rewers.jpg" width="56" height="56" alt="Angelique Rewers" loading="lazy" decoding="async"><div><div class="nm">Angelique Rewers</div><div class="ti">CEO, BoldHaus</div></div></div></div>
-      <div class="tw"><p class="q">Re Perez of Category of One Branding is my go-to oracle for branding, communications, and business strategy. Fundamental in transforming multiple companies I&rsquo;ve owned.</p><div class="who"><img class="avi" src="/testimonial-photos/brent-weaver.jpg" width="56" height="56" alt="Brent Weaver" loading="lazy" decoding="async"><div><div class="nm">Brent Weaver</div><div class="ti">CEO, E2M Solutions</div></div></div></div>
-      <div class="tw"><p class="q">Re Perez and his team created a brand that&rsquo;s traditional enough for Fortune 500 clientele, yet stands out as innovative and forward-thinking. Our newsletter now has a 50% open rate.</p><div class="who"><img class="avi" src="/testimonial-photos/andrea-adams.jpg" width="56" height="56" alt="Andrea Adams" loading="lazy" decoding="async"><div><div class="nm">Andrea Adams</div><div class="ti">Founder, Triumpha</div></div></div></div>
-      <div class="tw"><p class="q">Re Perez&rsquo;s understanding of our business was incredible. Since rebranding, we&rsquo;ve tripled in size.</p><div class="who"><img class="avi" src="/testimonial-photos/adam-hailstone.jpg" width="56" height="56" alt="Adam Hailstone" loading="lazy" decoding="async"><div><div class="nm">Adam Hailstone</div><div class="ti">CMO, Williamsburg Learning</div></div></div></div>
-      <div class="tw"><p class="q">Re Perez&rsquo;s intuition and creative flair are unmatched. He&rsquo;s one of the most thought-provoking, caring, genuine people I&rsquo;ve met.</p><div class="who"><img class="avi" src="/testimonial-photos/drew-cameron.jpg" width="56" height="56" alt="Drew Cameron" loading="lazy" decoding="async"><div><div class="nm">Drew Cameron</div><div class="ti">CEO, Flow Odyssey</div></div></div></div>
-      <div class="tw"><p class="q">Re exceeded all my expectations. His thought-provoking questions guided me to explore my brand in a completely new way.</p><div class="who"><img class="avi" src="/testimonial-photos/melanie-merkling.jpg" width="56" height="56" alt="Melanie Merkling" loading="lazy" decoding="async"><div><div class="nm">Melanie Merkling</div><div class="ti">CEO, SoulFire</div></div></div></div></div></div></div>
-    </div>
-  </div>
-</section>
+<section class="hx feat dk" aria-label="Testimonial from Dr. Eric J. Roman"><div class="fin"><div class="lead"><span class="mk" aria-hidden="true">&ldquo;</span><p class="big">I won’t ever operate again without a <em>Brand Strategist.</em></p><div class="who"><img class="av" src="/testimonial-photos/eric-roman.jpg" width="52" height="52" alt="Dr. Eric J. Roman" loading="lazy" decoding="async"><span><b>Dr. Eric J. Roman</b><i>Group Dentistry Leader</i></span></div></div><blockquote class="body"><p>I’ve had the pleasure of working with Re Perez of Category of One Branding in a number of different ways. First, I engaged him as a Brand Strategist for a personal brand. Compared to the processes and engagements I’d had in the past with others, Re’s process, insight, and delivery were extraordinary. As a result of the success of that engagement, my business chose to engage Re Perez as a Fractional Branding Officer.</p><p>In that role, Re works intimately with our leadership team providing Brand Consulting and Brand Strategy support, which has been critical for our early-stage company as it finds its best go-to-market strategy. Re provides insight that isn’t a portion of the normal expectation set for traditional CMOs or CROs. He ensures that everything we do aligns with the comprehensive brand strategy that was originally designed. At the same time, he’s extraordinarily gifted at noting where adjustments may need to be made to maximize our output and performance. I won’t ever operate again without a Brand Strategist, and I expect Re Perez to be my guy.</p></blockquote></div></section>
+<section class="hx wall" aria-label="More testimonials"><div class="win"><div class="whd"><span class="ey">More From Our Clients</span><h2>In Their Words</h2></div><div class="cols"><figure class="c S" id="justin"><span class="res">1,900% customer growth</span><blockquote class="q"><p>We went from 100 to 2,000 customers, a whopping 1,900% increase after rebranding with Re Perez and his team.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/justin-berg.jpg" width="46" height="46" alt="Justin Berg" loading="lazy" decoding="async"><span><b>Justin Berg</b><i>CEO, Purple Care</i></span></figcaption></figure><figure class="c M" id="chris"><span class="res">$1M contract after launch</span><blockquote class="q"><p>While marketing is important, Re Perez made it clear that if your brand is not standing out your company will be lost in the shuffle or become a commodity no matter how much marketing you do. Re’s leadership and insight has helped my wife’s IT company stand out from other IT firms and is fueling our growth and transformation.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/chris-koomey.jpg" width="46" height="46" alt="Chris Koomey" loading="lazy" decoding="async"><span><b>Chris Koomey</b><i>COO, Thorben</i></span></figcaption></figure><figure class="c S" id="angelique"><blockquote class="q"><p>I’ve worked with top NYC branding firms and they don’t hold a torch to the beautiful, stunning precision Re Perez and his team delivers.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/angelique-rewers.jpg" width="46" height="46" alt="Angelique Rewers" loading="lazy" decoding="async"><span><b>Angelique Rewers</b><i>CEO, BoldHaus</i></span></figcaption></figure><figure class="c M" id="craig"><span class="res">Saved $50–80K</span><blockquote class="q"><p>We actually hired two other branding companies before meeting Re Perez. His approach was easier to understand, he had a better process and he worked with the entire team to come up with a nice set of names and ideas that got everyone excited. … All in all I think we saved about 50 to 80K in working with Re and his team and ended up with so much better content.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/craig-handley.jpg" width="46" height="46" alt="Craig A. Handley" loading="lazy" decoding="async"><span><b>Craig A. Handley</b><i>Founder, ListenTrust and SocialClose</i></span></figcaption></figure><figure class="c S" id="adam"><span class="res">Tripled in size</span><blockquote class="q"><p>Re Perez’s understanding of our business was incredible. Since rebranding, we’ve tripled in size.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/adam-hailstone.jpg" width="46" height="46" alt="Adam Hailstone" loading="lazy" decoding="async"><span><b>Adam Hailstone</b><i>CMO, Williamsburg Learning</i></span></figcaption></figure><figure class="c S" id="andrea"><span class="res">50% newsletter open rate</span><blockquote class="q"><p>Re Perez and his team created a brand that’s traditional enough for Fortune 500 clientele, yet stands out as innovative and forward-thinking. Our newsletter now has a 50% open rate.</p></blockquote><figcaption class="who"><img class="av" src="/testimonial-photos/andrea-adams.jpg" width="46" height="46" alt="Andrea Adams" loading="lazy" decoding="async"><span><b>Andrea Adams</b><i>Founder, Triumpha</i></span></figcaption></figure></div><div class="wl"><a class="btn" href="/testimonials/">Read All 16 Testimonials</a></div></div></section>
 <section class="cta" id="apply">
   <div class="cta-in">
     <span class="eyebrow">Work With Us</span>
