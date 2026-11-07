@@ -114,6 +114,7 @@ html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight
 @media(max-width:900px){.cs-filters{display:none !important;}.cs-dd{display:block;}}
 </style>
 <link rel="stylesheet" href="/css/site.css?v=20261103c">
+<style id="cs7">@media(min-width:1101px){html body .cs-filters:not(#x){gap:8px;}html body .cs-filters .cs-filter:not(#x){padding:11px 13px;letter-spacing:.13em;}}</style>
 </head>
 <body>
 <nav id="nav">
@@ -149,24 +150,25 @@ html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight
       <button type="button" class="cs-dd-btn" aria-expanded="false" aria-controls="csDdList"><span class="cs-dd-txt"><span class="cs-dd-lbl">Filter by category</span><span class="cs-dd-val"><span class="cs-dd-cur">All</span> <span class="cs-dd-n">&middot; <span class="cs-dd-cnt"></span></span></span></span><svg class="cs-dd-chev" width="14" height="9" viewBox="0 0 14 9" aria-hidden="true"><path d="M1 1l6 6 6-6" stroke="#000" stroke-width="1.6" fill="none"/></svg></button>
       <div class="cs-dd-list" id="csDdList" hidden>
         <button type="button" class="cs-dd-opt on" data-f="all" data-short="All">All categories<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
-        <button type="button" class="cs-dd-opt" data-f="consulting" data-short="Consulting">Consulting &amp; Professional Services<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
-        <button type="button" class="cs-dd-opt" data-f="tech" data-short="Tech &amp; Agency">Technology &amp; Agency Services<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
-        <button type="button" class="cs-dd-opt" data-f="education" data-short="Education">Education &amp; Learning<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
-        <button type="button" class="cs-dd-opt" data-f="consumer" data-short="Consumer">Consumer &amp; Lifestyle<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="prof" data-short="Professional Services">Professional Services<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="education" data-short="Education &amp; Training">Education &amp; Training<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="health" data-short="Health &amp; Wellness">Health &amp; Wellness<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="finance" data-short="Finance &amp; Wealth">Finance &amp; Wealth<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
+        <button type="button" class="cs-dd-opt" data-f="consumer" data-short="Consumer &amp; Lifestyle">Consumer &amp; Lifestyle<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
         <button type="button" class="cs-dd-opt" data-f="personal" data-short="Personal Brands">Personal Brands<span class="n"><span class="c"></span><span class="ck">&#10003;</span></span></button>
       </div>
     </div>
-    <div class="cs-filters" role="tablist" aria-label="Filter case studies"><button type="button" class="cs-filter on" data-f="all" aria-pressed="true">All</button><button type="button" class="cs-filter" data-f="consulting" aria-pressed="false">Professional Services</button><button type="button" class="cs-filter" data-f="tech" aria-pressed="false">Tech &amp; Agency</button><button type="button" class="cs-filter" data-f="education" aria-pressed="false">Education</button><button type="button" class="cs-filter" data-f="consumer" aria-pressed="false">Consumer &amp; Lifestyle</button><button type="button" class="cs-filter" data-f="personal" aria-pressed="false">Personal Brands</button></div>
+    <div class="cs-filters" role="tablist" aria-label="Filter case studies"><button type="button" class="cs-filter on" data-f="all" aria-pressed="true">All</button><button type="button" class="cs-filter" data-f="prof" aria-pressed="false">Professional Services</button><button type="button" class="cs-filter" data-f="education" aria-pressed="false">Education &amp; Training</button><button type="button" class="cs-filter" data-f="health" aria-pressed="false">Health &amp; Wellness</button><button type="button" class="cs-filter" data-f="finance" aria-pressed="false">Finance &amp; Wealth</button><button type="button" class="cs-filter" data-f="consumer" aria-pressed="false">Consumer &amp; Lifestyle</button><button type="button" class="cs-filter" data-f="personal" aria-pressed="false">Personal Brands</button></div>
     <div class="cards">
       <a class="card" data-cat="education" href="/case-studies/odyssey-test-prep/" style="--cbg:#32D2BE">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/odyssey-test-prep.png" alt="Odyssey Test Prep" loading="lazy"/><img class="photo" src="/case-studies/img/odyssey-test-prep/odyssey-test-prep-ipad.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Nearly 10x revenue growth</span><h3>Odyssey Test Prep</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="tech" href="/case-studies/e2m-solutions/" style="--cbg:#1638fb">
+      <a class="card" data-cat="prof" href="/case-studies/e2m-solutions/" style="--cbg:#1638fb">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/e2m-solutions.svg" alt="E2M Solutions" loading="lazy"/><img class="photo" src="/case-studies/img/e2m-solutions/e2m-solutions-website-v2-category-of-one-branding.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Now sells on quality, not price</span><h3>E2M Solutions</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/boldhaus/" style="--cbg:#E43C24">
+      <a class="card" data-cat="prof" href="/case-studies/boldhaus/" style="--cbg:#E43C24">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/boldhaus.png" alt="BoldHaus" loading="lazy"/><img class="photo" src="/case-studies/img/boldhaus/boldhaus-laptop-after-mockup-1.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Category authority reclaimed</span><h3>BoldHaus</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
@@ -174,7 +176,7 @@ html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight
         <div class="cover"><img class="logo" src="/case-studies/img/logos/cheeky-scientist.png" alt="Cheeky Scientist" loading="lazy"/><img class="photo" src="/case-studies/img/cheeky-scientist/cheeky-scientist-laptop.jpg" alt="" loading="lazy"/></div>
         <span class="cat">The definitive leader in PhD careers</span><h3>Cheeky Scientist</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/thorben/" style="--cbg:#0ABE82">
+      <a class="card" data-cat="prof" href="/case-studies/thorben/" style="--cbg:#0ABE82">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/thorben.png" alt="Thorben" loading="lazy"/><img class="photo" src="/case-studies/img/thorben/thorben-laptop-1.jpg" alt="" loading="lazy"/></div>
         <span class="cat">$1M contract within weeks of launch</span><h3>Thorben</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
@@ -182,15 +184,15 @@ html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight
         <div class="cover"><img class="logo" src="/case-studies/img/logos/purple-care.png" alt="Purple Care" loading="lazy"/><img class="photo" src="/case-studies/img/purple-care/purple-care-billboard.jpg" alt="" loading="lazy"/></div>
         <span class="cat">1,900% customer growth</span><h3>Purple Care</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="tech" href="/case-studies/optx/" style="--cbg:#FA960A">
+      <a class="card" data-cat="consumer" href="/case-studies/optx/" style="--cbg:#FA960A">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/optx.png" alt="OPTX" loading="lazy"/><img class="photo" src="/case-studies/img/optx/optx-billboard.jpg" alt="" loading="lazy"/></div>
         <span class="cat">One promise across every product line</span><h3>OPTX</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="tech" href="/case-studies/esencia/" style="--cbg:#0A3282">
+      <a class="card" data-cat="prof" href="/case-studies/esencia/" style="--cbg:#0A3282">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/esencia.png" alt="Esencia" loading="lazy"/><img class="photo" src="/case-studies/img/esencia/esencia-billboard.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Inc. 5000 fastest-growing honoree</span><h3>Esencia</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consumer" href="/case-studies/changing-habits/" style="--cbg:#0CB4B4">
+      <a class="card" data-cat="health" href="/case-studies/changing-habits/" style="--cbg:#0CB4B4">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/changing-habits.png" alt="Changing Habits" loading="lazy"/><img class="photo" src="/case-studies/img/changing-habits/changing-habits-packaging.jpg" alt="" loading="lazy"/></div>
         <span class="cat">One brand across every product line</span><h3>Changing Habits</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
@@ -206,15 +208,15 @@ html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight
         <div class="cover"><img class="logo" src="/case-studies/img/logos/hinkle-outdoor-living.png" alt="Hinkle Outdoor Living" loading="lazy"/><img class="photo" src="/case-studies/img/hinkle-outdoor-living/hinkle-website.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A brand that matches its premium pricing</span><h3>Hinkle Outdoor Living</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/xchange/" style="--cbg:#08BCBC">
+      <a class="card" data-cat="prof" href="/case-studies/xchange/" style="--cbg:#08BCBC">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/xchange.png" alt="xchange" loading="lazy"/><img class="photo" src="/case-studies/img/xchange/xchange-visual-system.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A brand engineered for scale</span><h3>xchange</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/triumpha/" style="--cbg:#3296BE">
+      <a class="card" data-cat="prof" href="/case-studies/triumpha/" style="--cbg:#3296BE">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/triumpha.png" alt="Triumpha" loading="lazy"/><img class="photo" src="/case-studies/img/triumpha/triumpha-02.jpg" alt="" loading="lazy"/></div>
         <span class="cat">50% newsletter open rate</span><h3>Triumpha</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="tech" href="/case-studies/future-flow-media/" style="--cbg:#0A46E6">
+      <a class="card" data-cat="prof" href="/case-studies/future-flow-media/" style="--cbg:#0A46E6">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/future-flow-media.png" alt="Future Flow Media" loading="lazy"/><img class="photo" src="/case-studies/img/future-flow-media/future-flow-media-billboard.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A one-line position agencies get</span><h3>Future Flow Media</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
@@ -222,7 +224,7 @@ html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight
         <div class="cover"><img class="logo" src="/case-studies/img/logos/bendt-distilling.png" alt="BENDT Distilling Co." loading="lazy"/><img class="photo" src="/case-studies/img/bendt-distilling/bendt-cans.jpg" alt="" loading="lazy"/></div>
         <span class="cat">House of brands, bottle to can</span><h3>BENDT Distilling Co.</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/hawkins-laakso/" style="--cbg:#0C2454">
+      <a class="card" data-cat="finance" href="/case-studies/hawkins-laakso/" style="--cbg:#0C2454">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/hawkins-laakso.png" alt="Hawkins Laakso" loading="lazy"/><img class="photo" src="/case-studies/img/hawkins-laakso/hl-site.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A premium brand for high-net-worth clients</span><h3>Hawkins Laakso</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
@@ -230,31 +232,31 @@ html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight
         <div class="cover"><img class="logo" src="/case-studies/img/logos/williamsburg-learning.png" alt="Williamsburg Learning" loading="lazy"/><img class="photo" src="/case-studies/img/williamsburg-learning/williamsburg-apparel.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Reframed alternative education</span><h3>Williamsburg Learning</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/extraordinary-life/" style="--cbg:#80441C">
+      <a class="card" data-cat="prof" href="/case-studies/extraordinary-life/" style="--cbg:#80441C">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/extraordinary-life.png" alt="Extraordinary Life" loading="lazy"/><img class="photo" src="/case-studies/img/extraordinary-life/extraordinary-life-website.jpg" alt="" loading="lazy"/></div>
         <span class="cat">New name, identity &amp; website</span><h3>Extraordinary Life</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="personal" href="/case-studies/dr-eric-roman/" style="--cbg:#FF6B01">
+      <a class="card" data-cat="personal health" href="/case-studies/dr-eric-roman/" style="--cbg:#FF6B01">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/dr-eric-roman.png" alt="Dr. Eric J. Roman" loading="lazy"/><img class="photo" src="/case-studies/img/dr-eric-roman/dejr-homepage.jpg" alt="" loading="lazy"/></div>
         <span class="cat">From dentist to executive, speaker &amp; advisor</span><h3>Dr. Eric J. Roman</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/bloom-executive-coaching/" style="--cbg:#011F41">
+      <a class="card" data-cat="prof" href="/case-studies/bloom-executive-coaching/" style="--cbg:#011F41">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/bloo-executive-coaching.png" alt="Bloom Executive Coaching" loading="lazy"/><img class="photo" src="/case-studies/img/bloom-executive-coaching/bloom-homepage.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A brand with boardroom presence</span><h3>Bloom Executive Coaching</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="education" href="/case-studies/life-force-academy/" style="--cbg:#003B4B">
+      <a class="card" data-cat="health" href="/case-studies/life-force-academy/" style="--cbg:#003B4B">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/life-force-academy.png" alt="Life-Force Academy" loading="lazy"/><img class="photo" src="/case-studies/img/life-force-academy/lfa-homepage.jpg" alt="" loading="lazy"/></div>
         <span class="cat">One brand for members in 60+ countries</span><h3>Life-Force Academy</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/the-cfo-agency/" style="--cbg:#F0C442">
+      <a class="card" data-cat="finance" href="/case-studies/the-cfo-agency/" style="--cbg:#F0C442">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/the-cfo-agency.png" alt="The CFO Agency" loading="lazy"/><img class="photo" src="/case-studies/img/the-cfo-agency/cfo-website.jpg" alt="" loading="lazy"/></div>
         <span class="cat">Two brands unified under one new name</span><h3>The CFO Agency</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="consulting" href="/case-studies/human-at-scale/" style="--cbg:#770EE4">
+      <a class="card" data-cat="prof" href="/case-studies/human-at-scale/" style="--cbg:#770EE4">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/human-at-scale.png" alt="Human at Scale" loading="lazy"/><img class="photo" src="/case-studies/img/human-at-scale/has-laptop.jpg" alt="" loading="lazy"/></div>
         <span class="cat">From a personal name to a company brand</span><h3>Human at Scale</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="education" href="/case-studies/mastering-mindfulness-institute/" style="--cbg:#1D4547">
+      <a class="card" data-cat="health" href="/case-studies/mastering-mindfulness-institute/" style="--cbg:#1D4547">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/mastering-mindfulness.png" alt="Mastering Mindfulness Institute" loading="lazy"/><img class="photo" src="/case-studies/img/mastering-mindfulness-institute/mmi-photography.jpg" alt="" loading="lazy"/></div>
         <span class="cat">From solo program to a well-known institution</span><h3>Mastering Mindfulness Institute</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
@@ -262,7 +264,7 @@ html body .cs-dd-opt .ck:not(#x){width:14px;color:#7E6243 !important;font-weight
         <div class="cover"><img class="logo" src="/case-studies/img/logos/driven.png" alt="Driven" loading="lazy"/><img class="photo" src="/case-studies/img/driven/driven-website.jpg" alt="" loading="lazy"/></div>
         <span class="cat">One brand from business card to event stage</span><h3>Driven</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
-      <a class="card" data-cat="personal" href="/case-studies/emily-prendiville/" style="--cbg:#1C483A">
+      <a class="card" data-cat="personal finance" href="/case-studies/emily-prendiville/" style="--cbg:#1C483A">
         <div class="cover"><img class="logo" src="/case-studies/img/logos/emily-prendiville.png" alt="Emily Prendiville" loading="lazy"/><img class="photo" src="/case-studies/img/emily-prendiville/ep-website.jpg" alt="" loading="lazy"/></div>
         <span class="cat">A personal brand with room to grow</span><h3>Emily Prendiville</h3><span class="rd">Read Case Study &rarr;</span>
       </a>
@@ -299,9 +301,9 @@ var nav=document.getElementById('nav');function s(){if(window.scrollY>40)nav.cla
 window.addEventListener('scroll',s,{passive:true});s();})();
 </script>
 <script src="https://link.categoryofonebranding.com/js/form_embed.js"></script>
-<script id="csfiltersjs">(function(){var b=document.querySelectorAll('.cs-filter'),c=document.querySelectorAll('.cards .card');b.forEach(function(x){x.addEventListener('click',function(){var f=x.getAttribute('data-f');b.forEach(function(y){var on=y===x;y.classList.toggle('on',on);y.setAttribute('aria-pressed',on?'true':'false');});c.forEach(function(k){k.classList.toggle('is-hidden',f!=='all'&&k.getAttribute('data-cat')!==f);});});});})();</script>
+<script id="csfiltersjs">(function(){var b=document.querySelectorAll('.cs-filter'),c=document.querySelectorAll('.cards .card');b.forEach(function(x){x.addEventListener('click',function(){var f=x.getAttribute('data-f');b.forEach(function(y){var on=y===x;y.classList.toggle('on',on);y.setAttribute('aria-pressed',on?'true':'false');});c.forEach(function(k){k.classList.toggle('is-hidden',f!=='all'&&(' '+k.getAttribute('data-cat')+' ').indexOf(' '+f+' ')<0);});});});})();</script>
 <script id="csdropdownjs">(function(){var d=document.getElementById('csDd');if(!d)return;var btn=d.querySelector('.cs-dd-btn'),list=d.querySelector('.cs-dd-list'),opts=d.querySelectorAll('.cs-dd-opt'),cards=document.querySelectorAll('.cards .card');
-function count(f){var n=0;cards.forEach(function(k){if(f==='all'||k.getAttribute('data-cat')===f)n++;});return n;}
+function count(f){var n=0;cards.forEach(function(k){if(f==='all'||(' '+k.getAttribute('data-cat')+' ').indexOf(' '+f+' ')>-1)n++;});return n;}
 opts.forEach(function(o){o.querySelector('.c').textContent=count(o.getAttribute('data-f'));});
 function setOpen(v){list.hidden=!v;d.classList.toggle('open',v);btn.setAttribute('aria-expanded',v?'true':'false');}
 function sync(f){opts.forEach(function(o){var on=o.getAttribute('data-f')===f;o.classList.toggle('on',on);if(on){d.querySelector('.cs-dd-cur').textContent=o.getAttribute('data-short');}});d.querySelector('.cs-dd-cnt').textContent=count(f);}
